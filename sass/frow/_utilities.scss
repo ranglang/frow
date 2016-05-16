@@ -19,12 +19,6 @@
     height: 100%;
 }
 
-// Hidden rule
-// -------------------------
-.letsGo-hide {
-    display: none !important;
-}
-
 // Card shadows
 // -------------------------
 .card-shadow {
@@ -41,4 +35,10 @@
   content: "";
   display: table;
   clear: both;
+}
+
+// Hide rule from letsGo
+// -------------------------
+.letsGo-hide {
+    display: none !important;
 }

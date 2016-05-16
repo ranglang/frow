@@ -116,21 +116,21 @@ p {
     z-index: 10;
 }
 
-#mobile-sidebar.frow-hide-remove {
+#mobile-sidebar.letsGo-hide-remove {
     transition: transform 0.3s;
     transform: translateX(-100%);
 }
 
-#mobile-sidebar.frow-hide-remove.frow-hide-remove-active {
+#mobile-sidebar.letsGo-hide-remove.letsGo-hide-remove-active {
     transform: translateX(0);
 }
 
-#mobile-sidebar.frow-hide-add {
+#mobile-sidebar.letsGo-hide-add {
     transition: transform 0.3s;
     transform: translateX(0);
 }
 
-#mobile-sidebar.frow-hide-add.frow-hide-add-active {
+#mobile-sidebar.letsGo-hide-add.letsGo-hide-add-active {
     transform: translateX(-100%);
 }
 
@@ -172,21 +172,21 @@ p {
     z-index: 9;
 }
 
-#click-cover.frow-hide-remove {
+#click-cover.letsGo-hide-remove {
     transition: opacity 0.3s;
     opacity: 0;
 }
 
-#click-cover.frow-hide-remove.frow-hide-remove-active {
+#click-cover.letsGo-hide-remove.letsGo-hide-remove-active {
     opacity: 0.7;
 }
 
-#click-cover.frow-hide-add {
+#click-cover.letsGo-hide-add {
     transition: opacity 0.3s;
     opacity: 0.7;
 }
 
-#click-cover.frow-hide-add.frow-hide-add-active {
+#click-cover.letsGo-hide-add.letsGo-hide-add-active {
     opacity: 0;
 }
 
@@ -210,26 +210,25 @@ p {
     margin-bottom: 0;
 }
 
-a.header {
-    display: block;
+.header {
     background-color: #03A9F4;
     height: 140px;
     color: #fff;
 }
 
-a.header.home {
+.header.home {
     height: 400px;
 }
 
-a.header:hover, a.header:focus, a.header:active, a.header:visited {
-    color: #fff;
-    text-decoration: none;
-}
-
 @media (max-width: 991px) {
-    a.header, a.header.home {
+    .header, .header.home {
         height: 100px;
     }
+}
+
+.header a:hover, .header a:focus, .header a:active, .header a:visited {
+    color: #fff;
+    text-decoration: none;
 }
 
 .tab-bar {
@@ -410,7 +409,7 @@ a.header:hover, a.header:focus, a.header:active, a.header:visited {
     font-weight: 300;
 }
 
-a.next-page, a.next-page:hover {
+a.next-page {
     font-size: 30px;
     text-align: center;
     background-color: #03A9F4;
@@ -419,6 +418,10 @@ a.next-page, a.next-page:hover {
     border-radius: 3px;
     text-decoration: none;
     font-weight: 300;
+}
+
+a.next-page:hover {
+    background-color: #008fda;
 }
 
 .by-line {
@@ -583,37 +586,37 @@ a.next-page, a.next-page:hover {
     to {opacity: 0;}
 }
 
-/*#test.frow-hide-remove {
+/*#test.letsGo-hide-remove {
     transition: opacity 2s, color 2s;
     opacity: 0;
 }
 
-#test.frow-hide-remove.frow-hide-remove-active {
+#test.letsGo-hide-remove.letsGo-hide-remove-active {
     opacity: 1;
 }
 
-#test.frow-hide-add {
+#test.letsGo-hide-add {
     transition: opacity 2s, color 2s;
     opacity: 1;
 }
 
-#test.frow-hide-add-active {
+#test.letsGo-hide-add-active {
     opacity: 0;
 }*/
 
-#test.frow-hide-remove {
+#test.letsGo-hide-remove {
     animation: appear 2s;
 }
 
-#test.frow-hide-add {
+#test.letsGo-hide-add {
     animation: disappear 2s;
 }
 
-.col-md-1-2.frow-hide-remove {
+.col-md-1-2.letsGo-hide-remove {
     animation: appear 2s;
 }
 
-.col-md-1-2.frow-hide-add {
+.col-md-1-2.letsGo-hide-add {
     animation: disappear 2s;
 }
 
