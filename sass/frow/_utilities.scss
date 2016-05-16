@@ -3,15 +3,7 @@
 // --------------------------------------------------
 
 
-// Clearfix
-// -------------------------
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-// Cursor pointer and improvement to AngularJS's ng-click
+// Cursor pointer classes
 // -------------------------
 .clickable, *[onclick], *[ng-click] {
     cursor: pointer !important;
@@ -27,9 +19,9 @@
     height: 100%;
 }
 
-// Hidden rules
+// Hidden rule
 // -------------------------
-.frow-hide {
+.letsGo-hide {
     display: none !important;
 }
 
@@ -41,4 +33,12 @@
 
 .dark-card-shadow {
     box-shadow: $dark-card-shadow;
+}
+
+// Clearfix
+// -------------------------
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
