@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 
-// Cursor pointer and improvement to AngularJS's ng-click
+// Cursor pointer classes
 // -------------------------
 .clickable, *[onclick], *[ng-click] {
     cursor: pointer !important;
@@ -21,7 +21,7 @@
 
 // Hidden rules
 // -------------------------
-.frow-hide {
+.letsGo-hide {
     display: none !important;
 }
 
