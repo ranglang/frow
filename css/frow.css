@@ -425,6 +425,12 @@ li {
     align-items: center;
     align-content: center;
     height: 100%; }
+  .frow.centered-column {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    height: 100%; }
   .frow.row-start {
     flex-direction: row;
     justify-content: flex-start; }
