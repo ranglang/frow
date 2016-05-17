@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Frow</title>
+        <link rel="alternate" type="application/rss+xml" href="https://github.com/Beg-in/frow/releases.atom">
         <link rel="icon" type="image/png" href="favicon.png">
         <meta name="theme-color" content="#03A9F4">
         <link rel="icon" sizes="192x192" href="highres.png">
-        <link href='https://fonts.googleapis.com/css?family=Inconsolata|Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Inconsolata|Roboto:400,100,100italic,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/frow.css" media="screen" title="Frow CSS">
         <link rel="stylesheet" href="static-css/main.css" media="screen">
 
@@ -31,6 +32,7 @@
             <div class="mobile-sidebar-content">
                 <ul class="frow column-start">
                     <li><a href="getting-started.html">Getting Started</a></li>
+                    <li><a href="basics.html">Basics</a></li>
                     <li><a href="column-system.html"><b>Column System</b></a></li>
                     <li><a href="responsive-design.html">Responsive Design</a></li>
                     <li><a href="frow-shortcuts.html">Frow Shortcuts</a></li>
@@ -65,6 +67,7 @@
                 <div class="tab-bar">
                     <ul class="frow items-center">
                         <li><a href="getting-started.html">Getting Started</a></li>
+                        <li><a href="basics.html">Basics</a></li>
                         <li><a href="column-system.html"><b>Column System</b></a></li>
                         <li><a href="responsive-design.html">Responsive Design</a></li>
                         <li><a href="frow-shortcuts.html">Frow Shortcuts</a></li>
@@ -83,9 +86,9 @@
                         Columns Divide up the Rows
                     </h4>
                     <p>
-                        After declaring a ".frow", or flex row, the inside content of the div becomes CSS display: flex. With this you can use columns to break content apart via fractions. For example .col-md-1-3 creates a column that is one third of the row. With the default Frow settings, you can use any fraction from halfs to twelths.
+                        After declaring a ".frow", or flex row, the inside content of the div becomes CSS display:flex. With this you can use columns to break content apart via fractions. For example .col-md-1-3 creates a column that is one third of the row. With the default Frow settings, you can use any fraction from halfs to twelths.
                     </p>
-                    <div class="grid-example">
+                    <div class="grid-example" style="margin-bottom: 0px;">
                         <div class="frow">
                             <div class="col-md-1-1 col-sm-1-1 col-xs-1-1">
                                 <div class="grid-example-div frow centered">
@@ -332,6 +335,7 @@
                             </div>
                         </div>
                     </div>
+                    <p style="margin-bottom: 60px;"><b>Important Note:</b> When using any of the .col-*'s, they MUST be direct children of a .frow element.</p>
                     <h4>
                         Mix and Match Columns
                     </h4>
@@ -397,48 +401,48 @@
                         Flex Is Love, Flex Is Life
                     </h4>
                     <p>
-                        So after that basic gridwork, lets see where Frow stands out. Bootstrap could already handle most of the previous examples, but now lets dive into the deep end!
+                        So after that basic gridwork, let's see where Frow stands out.
                     </p>
                     <p>
-                        If the fractions add up to less than a whole, Frow makes them centered and nice. Or use simple rules to change the behaviour.
+                        If the fractions add up to less than a whole, Frow centers them. Don't like it? A quick class switches the behaviour. See all of the available classes in <a href="frow-shortcuts.html">Frow Shortcuts</a>.</span>
                     </p>
                     <div class="grid-frow-code">
                         class="frow" <span class="fake-comment">// Centers columns horizontally by default</span>
                     </div>
                     <div class="grid-example">
                         <div class="frow">
-                            <div class="col-md-6-10 col-sm-6-10 col-xs-6-10">
+                            <div class="col-md-3-5 col-sm-3-5 col-xs-3-5">
                                 <div class="grid-example-div frow centered">
                                     <p>
-                                        .col-md-6-10
+                                        .col-md-3-5
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="grid-frow-code">
-                        class="frow row-start"
+                        class="frow row-start" <span class="fake-comment">// Switches to the typical left align</span>
                     </div>
                     <div class="grid-example">
                         <div class="frow row-start">
-                            <div class="col-md-6-10 col-sm-6-10 col-xs-6-10">
+                            <div class="col-md-3-5 col-sm-3-5 col-xs-3-5">
                                 <div class="grid-example-div frow centered">
                                     <p>
-                                        .col-md-6-10
+                                        .col-md-3-5
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="grid-frow-code">
-                        class="frow row-end"
+                        class="frow row-end" <span class="fake-comment">// Switches to right align</span>
                     </div>
                     <div class="grid-example">
                         <div class="frow row-end">
-                            <div class="col-md-6-10 col-sm-6-10 col-xs-6-10">
+                            <div class="col-md-3-5 col-sm-3-5 col-xs-3-5">
                                 <div class="grid-example-div frow centered">
                                     <p>
-                                        .col-md-6-10
+                                        .col-md-3-5
                                     </p>
                                 </div>
                             </div>
@@ -465,7 +469,7 @@
                         Vertical Grids Work Too
                     </h4>
                     <p>
-                        Frow can layout elements in vertical columns! Just add .column-center, .column-start, or .column-end.
+                        Frow can also layout elements in vertical columns! Just add .column-center, .column-start, or .column-end.
                     </p>
                     <div class="grid-frow-code">
                         class="frow column-center" <span class="fake-comment">// See all shortcuts: <a href="frow-shortcuts.html">Frow Shortcuts</a></span>
@@ -499,7 +503,7 @@
                         Gutters
                     </h4>
                     <p>
-                        Frow is designed to work both as your grid system as well as on design styles within the grid. For your page's main grid system, gutters between the columns are probably a good idea. Just add the .gutters class to the .frow and you're done. With default settings, the gutters are 30 pixels wide.
+                        For your website's main grid system, make everything have uniform distance between them via gutters. Just add the .gutters class to the .frow and you're done. With default settings, the gutters are 30 pixels wide.
                     </p>
                     <div class="grid-frow-code">
                         class="frow gutters"
@@ -533,12 +537,12 @@
                         Column System Optional
                     </h4>
                     <p>
-                        The rules for Frow all effect the CSS display:flex, so a .frow can, and should, be used even when not conforming to a particular grid system. Use a .frow for any group of elements on the page and take full advantage of display:flex's awesome power. A list of images, buttons, icons, or whatever else, anything can be sorted with a .frow.
+                        While the .col-*'s must be within a .frow, a .frow doesn't have to contain any .col-*'s. In fact, many won't. Wrap anything in a .frow to manipulate it via CSS's display:flex rules. Use it to keep buttons near each other, put spacing between elements, or display a grid of photos. Anything can be sorted with a .frow!
                     </p>
                     <div class="grid-frow-code">
                         class="frow row-start"
                     </div>
-                    <div class="grid-example">
+                    <div class="grid-example" style="margin-bottom: 0px;">
                         <div class="frow row-start">
                             <div class="freeform-example"></div>
                             <div class="freeform-example"></div>
@@ -573,6 +577,7 @@
                             <div class="freeform-example"></div>
                         </div>
                     </div>
+                    <p><b>Important Note:</b> I can not stress enough about using .frow/display:flex on everything in your page. As you grow more comfortable with using display:flex, you'll start realizing more clever ways to replace existing code with more streamlined versions. Anytime you have any elements grouped together, consider what options wrapping them in a .frow would give you.</p>
                 </div>
             </div>
             <div class="frow column-center">
@@ -584,6 +589,7 @@
             <p class="by-line">
                 Frow is from <a href="http://codysherman.com">Cody Sherman</a> via <a href="http://beg.in">Beg.in</a>
             </p>
+            <!--<div class="show-frows card-shadow" onclick="letsGo('.frow', 'toggle', '.highlight-frows')">Show .frow's</div>-->
         </div>
     </body>
 </html>
