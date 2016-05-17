@@ -254,7 +254,7 @@
                     <div class="frow gutters" style="margin-top: 60px;">
                         <div class="col-md-1-2">
                             <div class="grid-example" style="margin: 0; height: 420px;">
-                                <div id="square-example" class="frow" style="height: 420px;">
+                                <div id="square-example" class="frow" style="height: 390px;">
                                     <div class="grid-example-square frow centered">
                                         <p>
                                             1
@@ -325,16 +325,6 @@
                                             14
                                         </p>
                                     </div>
-                                    <div class="grid-example-square frow centered">
-                                        <p>
-                                            15
-                                        </p>
-                                    </div>
-                                    <div class="grid-example-square frow centered">
-                                        <p>
-                                            16
-                                        </p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -355,21 +345,23 @@
                                     </p>
                                     <h5>Preferred download source:</h5>
                                     <label class="control control--radio"
-                                           onclick="letsGo('#square-example', 'add', 'class=frow');">
-                                        Standard
+                                           onclick="letsGo('.home-grid-example', 'hide');
+                                                    letsGo('#square-example', 'add', 'class=frow');">
+                                        Rows
                                         <input id="radio-install-npm" type="radio" name="install" checked="checked"/>
                                         <div class="control__indicator"></div>
                                     </label>
                                     <label class="control control--radio"
-                                           onclick="letsGo('#square-example', 'add', 'class=frow column-start');">
-                                        Column
+                                           onclick="letsGo('.home-grid-example', 'hide');
+                                                    letsGo('#square-example', 'add', 'class=frow column-start');">
+                                        Columns
                                         <input id="radio-install-bower" type="radio" name="install"/>
                                         <div class="control__indicator"></div>
                                     </label>
                                     <label class="control control--radio"
                                            onclick="letsGo('.section-install', 'hide', true);
                                                     letsGo('.section-install-download', 'show', true);">
-                                        Manual Download
+                                        Centered Title
                                         <input id="radio-install-download" type="radio" name="install"/>
                                         <div class="control__indicator"></div>
                                     </label>
