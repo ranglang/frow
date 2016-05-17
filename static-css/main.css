@@ -321,6 +321,16 @@ p {
     font-size: 15px;
 }
 
+.frow.grid-example-square {
+    background-color: #03A9F4;
+    height: 70px;
+    width: 70px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
 .frow.grid-example-div.dotted-div {
     background-color: transparent;
     border: 2px dashed #333;
@@ -339,7 +349,7 @@ p {
     font-size: 16px;
 }
 
-.grid-example-div p {
+.grid-example-div p, .grid-example-square p {
     text-align: center;
     color: #fff;
     margin: 0;
