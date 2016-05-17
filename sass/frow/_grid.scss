@@ -104,14 +104,14 @@
     }
 
     // Wrap
-    &.nowrap {
-        flex-wrap: nowrap;
-    }
     &.wrap {
         flex-wrap: wrap;
     }
     &.wrap-reverse {
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;;
+    }
+    &.nowrap {
+        flex-wrap: nowrap;
     }
 
     // Flex-direction

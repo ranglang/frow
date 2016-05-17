@@ -455,12 +455,12 @@ li {
     align-items: flex-end;
     align-content: flex-end;
     justify-content: flex-start; }
-  .frow.nowrap {
-    flex-wrap: nowrap; }
   .frow.wrap {
     flex-wrap: wrap; }
   .frow.wrap-reverse {
-    flex-wrap: wrap; }
+    flex-wrap: wrap-reverse; }
+  .frow.nowrap {
+    flex-wrap: nowrap; }
   .frow.direction-row {
     flex-direction: row; }
   .frow.direction-reverse {
