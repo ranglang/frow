@@ -34,6 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: flex-start;
 
     &.gutters {
         margin-left: -$grid-gutter-width / 2;
