@@ -412,7 +412,8 @@ li {
 .frow {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  align-content: flex-start; }
   .frow.gutters {
     margin-left: -15px;
     margin-right: -15px; }
