@@ -101,24 +101,30 @@
                         Frow's Responsive Sizes
                     </h4>
                     <p>
-                        Frow uses four sizes...
+                        Frow uses four sizes as breakpoints on the grid. Each one is designed to cover "typically" a type of device.
                     </p>
-                    <div class="" style="margin-bottom: 60px;">
-                        <ul>
-                            <li>XS - Phones / Tablets</li>
-                            <li>SM - Portrait Tablets</li>
-                            <li>MD - Computers</li>
-                            <li>LG - Widescreen Computers</li>
-                        </ul>
-                    </div>
+                    <ul class="responsive-list" style="margin-bottom: 60px; font-family:Inconsolata;">
+                        <li>XS&nbsp;-&nbsp;(&nbsp;Screens&nbsp;&nbsp;&nbsp;&nbsp;0px - 767px&nbsp;&nbsp;wide&nbsp;)&nbsp;-&nbsp;Phones / Small Tablets</li>
+                        <li>SM&nbsp;-&nbsp;(&nbsp;Screens&nbsp;&nbsp;768px - 991px&nbsp;&nbsp;wide&nbsp;)&nbsp;-&nbsp;Tablets</li>
+                        <li>MD&nbsp;-&nbsp;(&nbsp;Screens&nbsp;&nbsp;991px - 1199px&nbsp;wide&nbsp;)&nbsp;-&nbsp;Computers</li>
+                        <li>LG&nbsp;-&nbsp;(&nbsp;Screens&nbsp;1200px+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wide&nbsp;)&nbsp;-&nbsp;Widescreen Computers</li>
+                    </ul>
                     <h4>
                         Mobile Column Stacking
                     </h4>
                     <p>
-                        Columns automatically switch to fill mobile screens and stack on top of each other, despite their .col-md fraction.
+                        On XS and SM screens, the column's fractions automatically are treated as 1-1. These three columns will just stack on top of each other on mobile by default, no extra code needed.
                     </p>
+                    <div class="fake-code" style="margin-bottom: 20px;">
+                        <span class="fake-comment">// Nothing new here</span><br>
+                        &lt;div class="frow"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-3"&gt;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-3"&gt;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-3"&gt;&lt;div&gt;<br>
+                        &lt;/div&gt;<br>
+                    </div>
                     <div class="grid-frow-code">
-                        <span class="fake-comment">// Shrink your browser window to see the columns stack</span>
+                        <span class="fake-comment">// Shrink your browser window to see the columns stack as if they were 1-1 instead of 1-3</span>
                     </div>
                     <div class="grid-example">
                         <div class="frow">
@@ -146,33 +152,76 @@
                         </div>
                     </div>
                     <h4>
-                        Responsive Design
+                        Responsive Classes
                     </h4>
                     <p>
-                        Columns can be also given .col-sm and .col-xs fractions to make them still appear as fractions on mobile.
+                        Columns can be also given .col-sm and .col-xs fractions to overrule switching to 1-1 on mobile devices, to fill their entire content.
                     </p>
+                    <div class="fake-code" style="margin-bottom: 20px;">
+                        &lt;div class="frow"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-xs-1-3 col-sm-1-3 col-md-1-3"&gt;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-xs-1-3 col-sm-1-3 col-md-1-3"&gt;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-xs-1-3 col-sm-1-3 col-md-1-3"&gt;&lt;div&gt;<br>
+                        &lt;/div&gt;<br>
+                    </div>
                     <div class="grid-frow-code">
                         <span class="fake-comment">// Shrink your browser window to see the columns remain columns</span>
                     </div>
                     <div class="grid-example">
                         <div class="frow">
-                            <div class="col-md-1-3 col-sm-1-3 col-xs-1-3">
+                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
                                 <div class="grid-example-div frow centered">
                                     <p>
-                                        .col-md-1-3 .col-sm-1-3 .col-xs-1-3
+                                        .col-xs-1-3 .col-sm-1-3 .col-md-1-3
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-md-1-3 col-sm-1-3 col-xs-1-3">
+                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
                                 <div class="grid-example-div frow centered">
                                     <p>
-                                        .col-md-1-3 .col-sm-1-3 .col-xs-1-3
+                                        .col-xs-1-3 .col-sm-1-3 .col-md-1-3
                                     </p>
                                 </div>
-                            </div><div class="col-md-1-3 col-sm-1-3 col-xs-1-3">
+                            </div>
+                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
                                 <div class="grid-example-div frow centered">
                                     <p>
-                                        .col-md-1-3 .col-sm-1-3 .col-xs-1-3
+                                        .col-xs-1-3 .col-sm-1-3 .col-md-1-3
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        You can get clever with your designs, here is 1-4 into 1-2 on mobile
+                    </p>
+                    <div class="grid-example">
+                        <div class="frow">
+                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-xs-1-2 .col-sm-1-2 .col-md-1-4
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-xs-1-2 .col-sm-1-2 .col-md-1-4
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-xs-1-2 .col-sm-1-2 .col-md-1-4
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-xs-1-2 .col-sm-1-2 .col-md-1-4
                                     </p>
                                 </div>
                             </div>
@@ -306,37 +355,56 @@
                         </div>
                     </div>
                     <h4>
-                        Media Query Maker
+                        Using Media Queries for XS, SM, MD, LG
                     </h4>
                     <p>
-                        You can use media queries to have your code change alongside the
+                        You can use media queries to have your code change alongside the same breakpoints that Frow uses. Here are some pre-made media queries of the most popular cases.
                     </p>
                     <div class="fake-code" style="margin-bottom: 60px;">
-                        // XS<br>
+                        /* XS */<br>
                         @media (max-width: 767px) {<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;<br>
                         }<br>
                         <br>
-                        // SM<br>
-                        @media (min-width: 768px) and (max-width: 991px) {<br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<br>
-                        }<br>
-                        <br>
-                        // XS, SM<br>
+                        /* XS, SM */<br>
                         @media (max-width: 991px) {<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;<br>
                         }<br>
                         <br>
-                        // MD<br>
+                        /* SM */<br>
+                        @media (min-width: 768px) and (max-width: 991px) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                        }<br>
+                        <br>
+                        /* MD */<br>
                         @media (min-width: 992px) and (max-width: 1199px) {<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;<br>
                         }<br>
                         <br>
-                        // LG<br>
-                        @media (min-width: 1200px) {<br>
+                        /* MD, LG */<br>
+                        @media (min-width: 992px) {<br>
                             &nbsp;&nbsp;&nbsp;&nbsp;<br>
                         }<br>
                         <br>
+                        /* LG */<br>
+                        @media (min-width: 1200px) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<br>
+                        }<br>
+                    </div>
+                    <p>
+                        Make sure to place the media queries after the original class. For example, here is code to make h1's shrink to a smaller text size on phones and tablets:
+                    </p>
+                    <div class="fake-code" style="margin-bottom: 60px;">
+                        h1 {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 30px;<br>
+                        }<br>
+                        <br>
+                        /* XS, SM */<br>
+                        @media (max-width: 991px) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;h1 {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 20px;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        }<br>
                     </div>
                 </div>
             </div>

@@ -86,9 +86,48 @@
                         Columns Divide up the Rows
                     </h4>
                     <p>
-                        After declaring a ".frow", or flex row, the inside content of the div becomes CSS display:flex. With this you can use columns to break content apart via fractions. For example .col-md-1-3 creates a column that is one third of the row. With the default Frow settings, you can use any fraction from halfs to twelths.
+                        For building your websites overall framework, you can use columns.
                     </p>
+                    <p>
+                        Columns break up each .frow based on fractions. For example, a .col-md-1-3 creates a column that is one third of the row. With the default Frow settings, you can use any fraction from halfs to twelths.
+                    </p>
+                    <div class="fake-code" style="margin-bottom: 20px;">
+                        &lt;div class="frow"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-3"&gt;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-3"&gt;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-3"&gt;&lt;div&gt;<br>
+                        &lt;/div&gt;<br>
+                    </div>
                     <div class="grid-example" style="margin-bottom: 0px;">
+                        <div class="frow">
+                            <div class="col-md-1-3 col-sm-1-3 col-xs-1-3">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-md-1-3
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-1-3 col-sm-1-3 col-xs-1-3">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-md-1-3
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-1-3 col-sm-1-3 col-xs-1-3">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-md-1-3
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-bottom: 60px;"><b>Important Note:</b> When using any of the .col-*'s, they MUST be direct children of a .frow element.</p>
+                    <p>
+                        With the default Frow settings, you can use any fraction from halfs to twelths.
+                    </p>
+                    <div class="grid-example">
                         <div class="frow">
                             <div class="col-md-1-1 col-sm-1-1 col-xs-1-1">
                                 <div class="grid-example-div frow centered">
@@ -335,7 +374,6 @@
                             </div>
                         </div>
                     </div>
-                    <p style="margin-bottom: 60px;"><b>Important Note:</b> When using any of the .col-*'s, they MUST be direct children of a .frow element.</p>
                     <h4>
                         Mix and Match Columns
                     </h4>
@@ -533,6 +571,30 @@
                             </div>
                         </div>
                     </div>
+                    <h4>
+                        Another Note on Best Practices
+                    </h4>
+                    <p>
+                        Just like the .frow elements, <b>don't combine your own personal classes with .col-* classes</b>.
+                    </p>
+                    <div class="fake-code" style="margin-bottom: 20px;">
+                        <span class="fake-comment">// WRONG</span><br>
+                        &lt;div class="frow"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-1 red-background"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+                        &lt;/div&gt;<br>
+                        <br>
+                        <span class="fake-comment">// RIGHT</span><br>
+                        &lt;div class="frow"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-1"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="red-background"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+                        &lt;/div&gt;<br>
+                    </div>
+                    <p style="margin-bottom: 60px;">
+                        Again, it seems redundant, but it's worth just getting into the habit to avoid the headache of accidentally adding a conflicting class.
+                    </p>
                     <h4>
                         Column System Optional
                     </h4>

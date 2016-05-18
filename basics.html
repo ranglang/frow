@@ -91,16 +91,19 @@
                     <p>
                         Here is the magical CSS that makes up a .frow</i>:
                     </p>
-                    <div class="fake-code" style="margin-bottom: 60px;">
+                    <div class="fake-code">
                         .frow {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;display: flex; <span class="fake-comment">// The key ingredient!</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;display: flex; <span class="fake-comment">/*  The key ingredient! */</span><br>
                         &nbsp;&nbsp;&nbsp;&nbsp;flex-wrap: wrap;<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;justify-content: center;<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;align-content: flex-start;<br>
                         }<br>
                     </div>
+                    <p style="margin-bottom: 60px;">
+                        No need to anything with this code, it's already included in your frow.css you imported, but now you at least have a basic idea of what it's doing.
+                    </p>
                     <p>
-                        Every element with a .frow class is given the CSS property display:flex and becomes a horizontal (f)row. Here is a basic .frow containing some squares:
+                        Every element with a .frow class is given the CSS property display:flex and becomes a horizontal row. Here is a basic .frow containing some squares:
                     </p>
                     <div class="fake-code" style="margin-bottom: 20px;">
                         &lt;div class="frow"&gt; <span class="fake-comment">// This div is a Frow, containing three divs</span><br>
@@ -143,8 +146,11 @@
                             <div class="grid-example-square"></div>
                         </div>
                     </div>
+                    <h4>
+                        A Frow = Flex Row. Rooooow. Row.
+                    </h4>
                     <p>
-                        Take notice that each .frow takes up the whole horizontal row, so the next one will be underneath the last.
+                        Notice that each .frow <b>takes up the whole horizontal row</b>, so the next one will be <b>underneath</b> the last.
                     </p>
                     <div class="fake-code" style="margin-bottom: 20px;">
                         &lt;div class="frow"&gt; <span class="fake-comment">// The first Frow</span><br>
@@ -200,10 +206,10 @@
                         </div>
                     </div>
                     <h4>
-                        Best Practices
+                        A Note on Best Practices
                     </h4>
                     <p>
-                        Let's say you wanted to change what one of your Frows looks like. You want it to have a red background color, so you create a .red-background class in your CSS.
+                        Just to get this quick tip out of the way now, let's say you wanted to change what one of your Frows looks like. You want it to have a red background color, so you create a .red-background class in your CSS.
                     </p>
                     <p>
                         The obvious thing to do would be to add your class to the .frow div:
@@ -241,7 +247,7 @@
                             </div>
                         </div>
                     </div>
-                    <p>
+                    <p style="margin-bottom: 60px;">
                         It can seem redundant, but it's worth just getting into the habit to avoid the headache of accidentally adding a conflicting class.
                     </p>
                 </div>
