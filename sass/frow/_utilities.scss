@@ -2,6 +2,12 @@
 // Utility classes
 // --------------------------------------------------
 
+// Squishy design
+// -------------------------
+.squishy, .squishy *:not(.letsGo-animate):not(.ng-animate) {
+    transition: width 0.4s, height 0.4s, font-size 0.4s, font-weight 0.4s;
+    animation: none 0s;
+}
 
 // Cursor pointer classes
 // -------------------------
