@@ -1,8 +1,13 @@
 /*Don't forget to vendor prefix!*/
 
-html, body {
-    margin: 0 0 25px;
-    padding: 0;
+/* Squishy */
+*:not(.letsGo-animate) {
+    transition: width 0.4s, height 0.4s, font-size 0.4s, font-weight 0.4s;
+    animation: none 0s;
+}
+
+body {
+    margin-bottom: 25px;
     font-family: 'Roboto';
     font-size: 18px;
 }
@@ -20,7 +25,7 @@ h1 {
 }
 
 h1 svg {
-    width: 150px;
+    width: 120px;
     fill: #fff;
 }
 
@@ -103,6 +108,22 @@ h5 {
 
 p {
     margin: 15px 0;
+    font-size: 18px;
+}
+
+p a {
+    font-size: 18px;
+}
+
+/* XS, SM */
+@media (max-width: 991px) {
+    p, p a {
+        font-size: 15px;
+    }
+}
+
+.bottom-margin {
+    margin-bottom: 60px !important;
 }
 
 #mobile-sidebar {
@@ -138,7 +159,7 @@ p {
 
 .mobile-sidebar-header {
     display: block;
-    background-color: #03A9F4;
+    background-color: #2A6A9A;
     padding: 45px;
 }
 
@@ -213,7 +234,7 @@ p {
 }
 
 .header {
-    background-color: #03A9F4;
+    background-color: #2A6A9A;
     height: 140px;
     color: #fff;
 }
@@ -256,12 +277,19 @@ p {
     margin-right: 0px;
 }
 
+.tab-bar ul li a {
+    font-size: 18px;
+}
+
 .tab-bar a:hover, .tab-bar a:focus, .tab-bar a:active, .tab-bar a:visited {
     text-decoration: none;
 }
 
-.mobile-tab {
-    padding: 10px 0;
+/* XS, SM */
+@media (max-width: 991px) {
+    .tab-bar ul li a {
+        font-size: 15px;
+    }
 }
 
 .tagline {
@@ -281,6 +309,7 @@ p {
     color: #E6E6E6;
     font-family: 'Inconsolata', sans-serif;
     font-size: 16px;
+    margin-bottom: 20px;
 }
 
 .grid-frow-code {
@@ -320,12 +349,12 @@ p {
     margin-bottom: 30px;
 }
 
-.grid-example-group .grid-example:last-of-type {
+.grid-example-group .grid-example:last-of-type, .grid-example-group .grid-example:last-of-type {
     margin-bottom: 60px;
 }
 
 .frow.grid-example-div {
-    background-color: #03A9F4;
+    background-color: #2A6A9A;
     min-height: 70px;
     margin-bottom: 10px;
     border: 1px solid #eee;
@@ -334,7 +363,7 @@ p {
 }
 
 .grid-example-square {
-    background-color: #03A9F4;
+    background-color: #2A6A9A;
     height: 70px;
     width: 70px;
     margin: 1px;
@@ -364,7 +393,7 @@ p {
 }
 
 .grid-example-stretch {
-    background-color: #03A9F4;
+    background-color: #2A6A9A;
     color: #fff;
     border: 1px solid #eee;
     border-radius: 3px;
@@ -393,49 +422,6 @@ p {
     .grid-example:not(.always-margin)>.frow:last-of-type>div:last-child .grid-example-div {
         margin: 0;
     }
-}
-
-.freeform-example {
-    height: 55px;
-    width: 55px;
-    margin: 5px;
-    background-color: #03A9F4;
-}
-
-.freeform-example:nth-child(9n+0) {
-    background-color: #2196F3; /* Blue */
-}
-
-.freeform-example:nth-child(9n+1) {
-    background-color: #009688; /* Teal */
-}
-
-.freeform-example:nth-child(9n+2) {
-    background-color: #FF5722; /* Deep Orange */
-}
-
-.freeform-example:nth-child(9n+3) {
-    background-color: #4CAF50; /* Green */
-}
-
-.freeform-example:nth-child(9n+4) {
-    background-color: #673AB7; /* Deep Purple */
-}
-
-.freeform-example:nth-child(9n+5) {
-    background-color: #00BCD4; /* Cyan */
-}
-
-.freeform-example:nth-child(9n+6) {
-    background-color: #FFC107; /* Amber */
-}
-
-.freeform-example:nth-child(9n+7) {
-    background-color: #3F51B5; /* Indigo */
-}
-
-.freeform-example:nth-child(9n+8) {
-    background-color: #FF9800; /* Orange */
 }
 
 .home-example.letsGo-hide-add {
@@ -516,7 +502,7 @@ p {
 a.next-page {
     font-size: 25px;
     text-align: center;
-    background-color: #03A9F4;
+    background-color: #2A6A9A;
     color: #fff;
     padding: 10px;
     border-radius: 3px;
@@ -525,7 +511,7 @@ a.next-page {
 }
 
 a.next-page:hover {
-    background-color: #008fda;
+    background-color: #105080;
 }
 
 .by-line {
@@ -538,7 +524,7 @@ a.next-page:hover {
 }
 
 .card-shadow-demo p {
-    color: #03A9F4;
+    color: #2A6A9A;
 }
 
 .card-shadow-demo>.frow>.col-md-1-2>.frow {
@@ -649,13 +635,13 @@ a.next-page:hover {
 
 /* Checked state */
 .control input:checked ~ .control__indicator {
-    background: #03A9F4;
+    background: #2A6A9A;
 }
 
 /* Hover state whilst checked */
 .control:hover input:not([disabled]):checked ~ .control__indicator,
 .control input:checked:focus ~ .control__indicator {
-    background: #03A9F4;
+    background: #2A6A9A;
 }
 
 /* Disabled state */
