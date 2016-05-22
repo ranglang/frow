@@ -1,6 +1,7 @@
-/*Don't forget to vendor prefix!*/
+/* Don't forget to vendor prefix! */
 
 *:not(.letsGo-animate) {
+    -webkit-transition: width 0.4s, height 0.4s, font-size 0.4s, font-weight 0.4s;
     transition: width 0.4s, height 0.4s, font-size 0.4s, font-weight 0.4s;
 }
 
