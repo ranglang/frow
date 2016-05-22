@@ -1184,9 +1184,6 @@ li {
   .frow.hidden-lg {
     display: none !important; } }
 
-*:not(.letsGo-animate):not(.ng-animate) {
-  transition: width 0.4s, height 0.4s, font-size 0.4s, font-weight 0.4s; }
-
 .clickable, *[onclick], *[ng-click] {
   cursor: pointer !important; }
 
