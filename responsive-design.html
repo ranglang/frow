@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="squishy">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -34,7 +34,7 @@
                     <li><a href="index.html">Introduction</a></li>
                     <li><a href="getting-started.html">Getting Started</a></li>
                     <li><a href="basics.html">Basics</a></li>
-                    <li><a href="column-system.html">Column System</a></li>
+                    <li><a href="grid-system.html">Grid System</a></li>
                     <li><a href="responsive-design.html"><b>Responsive Design</b></a></li>
                     <li><a href="frow-shortcuts.html">Frow Shortcuts</a></li>
                     <li><a href="goodies.html">Goodies</a></li>
@@ -69,7 +69,7 @@
                     <ul class="frow items-center">
                         <li><a href="getting-started.html">Getting Started</a></li>
                         <li><a href="basics.html">Basics</a></li>
-                        <li><a href="column-system.html">Column System</a></li>
+                        <li><a href="grid-system.html">Grid System</a></li>
                         <li><a href="responsive-design.html"><b>Responsive Design</b></a></li>
                         <li><a href="frow-shortcuts.html">Frow Shortcuts</a></li>
                         <li><a href="goodies.html">Goodies</a></li>
@@ -124,7 +124,8 @@
                         &lt;/div&gt;<br>
                     </div>
                     <div class="grid-frow-code">
-                        <span class="fake-comment">// Shrink your browser window to see the columns stack as if they were 1-1 instead of 1-3</span>
+                        <span class="fake-comment visible-md visible-lg">// Shrink your browser window to see the columns stack as if they were 1-1 instead of 1-3</span>
+                        <span class="fake-comment visible-xs visible-sm">// Expand your browser window to see these seemingly 1-1 columns appear as 1-3</span>
                     </div>
                     <div class="grid-example">
                         <div class="frow">
@@ -165,25 +166,26 @@
                         &lt;/div&gt;<br>
                     </div>
                     <div class="grid-frow-code">
-                        <span class="fake-comment">// Shrink your browser window to see the columns remain columns</span>
+                        <span class="fake-comment visible-md visible-lg">// Shrink your browser window to see the columns remain columns</span>
+                        <span class="fake-comment visible-xs visible-sm">// Expand your browser window to see the columns remain columns</span>
                     </div>
                     <div class="grid-example">
                         <div class="frow">
-                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
+                            <div class="col-xs-1-3 col-sm-1-3 col-md-1-3">
                                 <div class="grid-example-div frow centered">
                                     <p>
                                         .col-xs-1-3 .col-sm-1-3 .col-md-1-3
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
+                            <div class="col-xs-1-3 col-sm-1-3 col-md-1-3">
                                 <div class="grid-example-div frow centered">
                                     <p>
                                         .col-xs-1-3 .col-sm-1-3 .col-md-1-3
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
+                            <div class="col-xs-1-3 col-sm-1-3 col-md-1-3">
                                 <div class="grid-example-div frow centered">
                                     <p>
                                         .col-xs-1-3 .col-sm-1-3 .col-md-1-3
@@ -193,35 +195,77 @@
                         </div>
                     </div>
                     <p>
-                        You can get clever with your designs. Here, these four columns on desktops become two columns on mobile devices.
+                        The .col-* rules always extend upwards to the larger breakpoints, unless those are defined as well. Here we are only defining .col-sm-1-3. This rule will be inherited by .col-md and .col-lg since we don't define those, but not .col-xs because it is smaller than .col-sm.
                     </p>
+                    <div class="fake-code">
+                        &lt;div class="frow"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-sm-1-3"&gt;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-sm-1-3"&gt;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-sm-1-3"&gt;&lt;div&gt;<br>
+                        &lt;/div&gt;<br>
+                    </div>
+                    <div class="grid-frow-code">
+                        <span class="fake-comment">// .col-sm-1-3 will also be 1-3 on everything larger, but .col-xs will be the default 1-1</span>
+                    </div>
                     <div class="grid-example">
                         <div class="frow">
-                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
+                            <div class="col-sm-1-3">
                                 <div class="grid-example-div frow centered">
                                     <p>
-                                        .col-xs-1-2 .col-sm-1-2 .col-md-1-4
+                                        .col-sm-1-3
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
+                            <div class="col-sm-1-3">
                                 <div class="grid-example-div frow centered">
                                     <p>
-                                        .col-xs-1-2 .col-sm-1-2 .col-md-1-4
+                                        .col-sm-1-3
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
+                            <div class="col-sm-1-3">
                                 <div class="grid-example-div frow centered">
                                     <p>
-                                        .col-xs-1-2 .col-sm-1-2 .col-md-1-4
+                                        .col-sm-1-3
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-xs-1-2 col-sm-1-2 col-md-1-4">
+                        </div>
+                    </div>
+                    <p>
+                        You can get clever with your designs. Here, these four columns on desktops become two columns on mobile devices.
+                    </p>
+                    <div class="grid-frow-code">
+                        <span class="fake-comment visible-md visible-lg">// Shrink your browser window to see the four quarters snap into two rows of halves</span>
+                        <span class="fake-comment visible-xs visible-sm">// Expand your browser window to see the two rows of halves snap into four quarters</span>
+                    </div>
+                    <div class="grid-example">
+                        <div class="frow">
+                            <div class="col-xs-1-2 col-md-1-4">
                                 <div class="grid-example-div frow centered">
                                     <p>
-                                        .col-xs-1-2 .col-sm-1-2 .col-md-1-4
+                                        .col-xs-1-2 .col-md-1-4
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-1-2 col-md-1-4">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-xs-1-2 .col-md-1-4
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-1-2 col-md-1-4">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-xs-1-2 .col-md-1-4
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-xs-1-2 col-md-1-4">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-xs-1-2 .col-md-1-4
                                     </p>
                                 </div>
                             </div>
@@ -234,7 +278,9 @@
                         You can easily make whole divs, etc. appear or disappear based on the screen size. Adding .hidden-xs makes content disappear on phones, while .visible-md makes content only appear on medium sized displays.
                     </p>
                     <div class="grid-frow-code">
-                        <span class="fake-comment">// Shrink your browser window to see which responsive rules are active</span>
+                        <span class="fake-comment visible-lg">// Shrink your browser window to see which responsive rules are active</span>
+                        <span class="fake-comment visible-sm visible-md">// Shrink or expand your browser window to see which responsive rules are active</span>
+                        <span class="fake-comment visible-xs">// Expand your browser window to see which responsive rules are active</span>
                     </div>
                     <div class="grid-example">
                         <div class="frow">
@@ -354,11 +400,58 @@
                             </div>
                         </div>
                     </div>
+                    <p>
+                        Here are four divs where two of them are told to just not appear on mobile devices.
+                    </p>
+                    <div class="fake-code">
+                        &lt;div class="frow"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-4"&gt;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-4"&gt;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-4 hidden-xs hidden-sm"&gt;&lt;div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-4 hidden-xs hidden-sm"&gt;&lt;div&gt;<br>
+                        &lt;/div&gt;<br>
+                    </div>
+                    <div class="grid-frow-code">
+                        <span class="fake-comment visible-md visible-lg">// Shrink your browser window to see two divs disappear</span>
+                        <span class="fake-comment visible-xs visible-sm">// Expand your browser window to see two divs appear</span>
+                    </div>
+                    <div class="grid-example">
+                        <div class="frow">
+                            <div class="col-md-1-4">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-md-1-4
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-1-4">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-md-1-4
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-1-4 hidden-xs hidden-sm">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-md-1-4
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-1-4 hidden-xs hidden-sm">
+                                <div class="grid-example-div frow centered">
+                                    <p>
+                                        .col-md-1-4
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <h4>
                         Using Media Queries for XS, SM, MD, LG
                     </h4>
                     <p>
-                        You can use media queries to have your code change alongside the same breakpoints that Frow uses.
+                        You can use media queries in your CSS to have your code change alongside the same breakpoints that Frow uses.
                     </p>
                     <p>
                         Make sure to place the media queries after the original class. For example, here is code to make h1's shrink to a smaller text size on phones and tablets:

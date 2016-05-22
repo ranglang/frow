@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="squishy">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -34,7 +34,7 @@
                     <li><a href="index.html">Introduction</a></li>
                     <li><a href="getting-started.html">Getting Started</a></li>
                     <li><a href="basics.html">Basics</a></li>
-                    <li><a href="column-system.html">Column System</a></li>
+                    <li><a href="grid-system.html">Grid System</a></li>
                     <li><a href="responsive-design.html">Responsive Design</a></li>
                     <li><a href="frow-shortcuts.html">Frow Shortcuts</a></li>
                     <li><a href="goodies.html"><b>Goodies</b></a></li>
@@ -69,7 +69,7 @@
                     <ul class="frow items-center">
                         <li><a href="getting-started.html">Getting Started</a></li>
                         <li><a href="basics.html">Basics</a></li>
-                        <li><a href="column-system.html">Column System</a></li>
+                        <li><a href="grid-system.html">Grid System</a></li>
                         <li><a href="responsive-design.html">Responsive Design</a></li>
                         <li><a href="frow-shortcuts.html">Frow Shortcuts</a></li>
                         <li><a href="goodies.html"><b>Goodies</b></a></li>
@@ -81,12 +81,27 @@
             <div class="frow">
                 <div class="col-md-10-12">
                     <div class="frow-setup">
-                        <h3>
+                        <h3 style="margin-bottom:0px;">
                             Goodies
                         </h3>
-                        <h4>
+                        <div class="tagline">
                             Classes to Add Some Extra Utilities
-                        </h4>
+                        </div>
+                        <h5>
+                            Squishy Responsive
+                        </h5>
+                        <p>
+                            Add some 'wow' to your website's responsiveness by using the .squishy class. It animates the website as the dimensions change, such as when resizing the browser or rotating a mobile device.
+                        </p>
+                        <p>
+                            This website has the .squishy class applied, try resizing your browser! (Looks best on the <a href="index.html">homepage</a>)
+                        </p>
+                        <div class="fake-code bottom-margin">
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html class="squishy"&gt;<span class="fake-comment"> // Works best applied directly to &lt;html&gt;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                            &lt;/html&gt;<br>
+                        </div>
                         <h5>
                             Clickable/Not-Clickable
                         </h5>
@@ -137,7 +152,7 @@
                             <span class="fake-comment"> // For dark-colored backgrounds</span><br>
                             &lt;div class="dark-card-shadow"&gt;&lt;/div&gt;<br>
                         </div>
-                        <div class="card-shadow-demo bottom-margin">
+                        <div class="card-shadow-demo">
                             <div class="frow gutters">
                                 <div class="col-md-1-2">
                                     <div class="frow centered">
@@ -153,6 +168,9 @@
                                 </div>
                             </div>
                         </div>
+                        <p class="bottom-margin">
+                            <b>Important Note:</b> These classes only provide the drop-shadow, nothing else. This makes it usable on any type of element, such as buttons, etc.
+                        </p>
                         <h5>
                             Clearfix
                         </h5>
