@@ -11,7 +11,7 @@ var letsGo = function(target, command, attribute, queue) {
         if (queueMatters && lastOne) {
             letsGoQueue.shift();
             if (letsGoQueue.length > 0) {
-                router(letsGoQueue[0][0], letsGoQueue[0][1], letsGoQueue[0][3]);
+                router(letsGoQueue[0][0], letsGoQueue[0][1], letsGoQueue[0][2]);
             } else {
                 letsGoRunning = false;
             }
@@ -274,7 +274,7 @@ var letsGo = function(target, command, attribute, queue) {
             letsGoQueue.push([target, command, attribute]);
             if (!letsGoRunning) {
                 letsGoRunning = true;
-                router(letsGoQueue[0][0], letsGoQueue[0][1], letsGoQueue[0][3]);
+                router(letsGoQueue[0][0], letsGoQueue[0][1], letsGoQueue[0][2]);
             }
         }, 0);
     };
