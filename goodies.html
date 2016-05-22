@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="squishy">
+<html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,16 +91,16 @@
                             Squishy Responsive
                         </h5>
                         <p>
-                            Add some 'wow' to your website's responsiveness by using the .squishy class. It animates the website as the dimensions change, such as when resizing the browser or rotating a mobile device.
+                            By default, Frow adds a 'squishy' animation as the website's the dimensions change, such as when resizing the browser or rotating a mobile device. Try resizing your browser on the <a href="index.html">homepage</a> to see it in action!
                         </p>
                         <p>
-                            This website has the .squishy class applied, try resizing your browser! (Looks best on the <a href="index.html">homepage</a>)
+                            If you don't like the animation, just add this class to the start of your personal CSS (after Frow).
                         </p>
                         <div class="fake-code bottom-margin">
-                            &lt;!DOCTYPE html&gt;<br>
-                            &lt;html class="squishy"&gt;<span class="fake-comment"> // Works best applied directly to &lt;html&gt;</span><br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;...<br>
-                            &lt;/html&gt;<br>
+                            *:not(.letsGo-animate):not(.ng-animate) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;transition: all 0s ease 0s;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;animation: none 0s ease 0s 1 normal none running;<br>
+                            }
                         </div>
                         <h5>
                             Clickable/Not-Clickable
