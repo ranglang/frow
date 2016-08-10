@@ -78,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <div class="frow-container">
+        <div id="temp-frow-container" class="frow-container">
             <div class="frow">
                 <div class="col-md-5-6">
                     <h3>
@@ -88,9 +88,9 @@
                         Frow Container
                     </h4>
                     <p>
-                        A .frow-container wraps the main content of the page and prevents it from expanding to 100% width, and adds in responsive design breakpoints at 768px, 992px and 1200px. <b>It is optional, but encouraged.</b>
+                        A .frow-container wraps the main content of the page and prevents it from expanding to 100% width, and adds in responsive design breakpoints at 768px, 992px and 1200px. In simplest terms it just stops page from stetching too wide on large displays. <b>It is optional, but encouraged.</b>
                     </p>
-                    <div class="fake-code bottom-margin">
+                    <div class="fake-code">
                         &lt;html&gt;<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="frow-container"&gt;<br>
@@ -99,6 +99,10 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
                         &lt;/html&gt;<br>
                     </div>
+                    <p>
+                        <span class="clickable" style="text-decoration: underline;" onclick="letsGo('#temp-frow-container', 'toggle', '.frow-container');">Click here</span> on a MD or LG screen device to actually toggle on/off the container for this page.
+                    </p>
+                    <p class="bottom-margin"><b>Important Note:</b> It doesn't need to wrap everything. Place content that you DO want to be full-width outside of the .frow-container. For example, on this page the header comes before the container, allowing it to span 100% width.</p>
                     <h4>
                         Frow's Responsive Sizes
                     </h4>
