@@ -12,10 +12,20 @@
     cursor: default !important;
 }
 
-// Full height rule
+// Height and width rules
 // -------------------------
 .height-100 {
     height: 100%;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+// Hidden rule
+// -------------------------
+.letsGo-hide {
+    display: none !important;
 }
 
 // Card shadows
