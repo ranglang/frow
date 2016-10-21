@@ -429,6 +429,15 @@ ul {
 li {
   list-style-type: none; }
 
+button, html [type="button"], [type="reset"], [type="submit"] {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  line-height: 100%;
+  padding: 0; }
+
 .frow-container {
   margin-right: auto;
   margin-left: auto;
@@ -448,6 +457,7 @@ li {
     width: 1170px; } }
 
 .frow {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

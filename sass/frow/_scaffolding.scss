@@ -40,3 +40,14 @@ ul {
 li {
     list-style-type: none;
 }
+
+// Buttons
+button, html [type="button"], [type="reset"], [type="submit"] {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    line-height: 100%;
+    padding: 0;
+}

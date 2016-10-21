@@ -30,7 +30,7 @@
 // Flexible rows contain your columns.
 
 .frow {
-    // @extend .row;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
