@@ -8,7 +8,7 @@
     cursor: pointer !important;
 }
 
-.not-clickable {
+.not-clickable, .not-clickable[onclick], .not-clickable[ng-click], .not-clickable[ng-click] {
     cursor: default !important;
 }
 
