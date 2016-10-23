@@ -67,3 +67,67 @@ button, html [type="button"], [type="reset"], [type="submit"] {
         cursor: default;
     }
 }
+
+label {
+    font-size: 14px;
+    padding: 4px 5px;
+    color: $gray-light;
+}
+
+// Inputs
+input:not(.reset) {
+    border: none;
+    border-bottom: 2px solid $gray-light;
+    padding: 4px 5px;
+    width: 100%;
+    margin-bottom: $form-bottom-margin;
+    font-size: 16px;
+
+    &:focus {
+        border-color: $gray-darker;
+    }
+}
+
+// Selects
+select:not(.reset) {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    height: 29px;
+    padding: 5px 24px 5px 5px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 0;
+    // background-color: $gray-lighter;
+    border-bottom: 2px solid $gray-light;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-bottom: $form-bottom-margin;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='rgb(51,51,51)'/></g></svg>");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+// Textareas
+textarea:not(.reset) {
+    border: none;
+    border-bottom: 2px solid $gray-light;
+    // background-color: $gray-lighter;
+    padding: 10px;
+    resize: vertical;
+    font-size: 16px;
+    min-height: 50px;
+    width: 100%;
+    margin-bottom: $form-bottom-margin;
+    border-radius: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
