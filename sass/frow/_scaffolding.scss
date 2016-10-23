@@ -68,7 +68,8 @@ button, html [type="button"], [type="reset"], [type="submit"] {
     }
 }
 
-label {
+// Labels
+label:not(.reset) {
     font-size: 14px;
     padding: 4px 5px;
     color: $gray-light;
@@ -79,7 +80,6 @@ input:not(.reset) {
     border: none;
     border-bottom: 2px solid $gray-light;
     padding: 4px 5px;
-    width: 100%;
     margin-bottom: $form-bottom-margin;
     font-size: 16px;
 
@@ -95,7 +95,6 @@ select:not(.reset) {
     font-size: 16px;
     height: 29px;
     padding: 5px 24px 5px 5px;
-    width: 100%;
     font-size: 15px;
     border-radius: 0;
     // background-color: $gray-lighter;
@@ -117,7 +116,6 @@ textarea:not(.reset) {
     resize: vertical;
     font-size: 16px;
     min-height: 50px;
-    width: 100%;
     margin-bottom: $form-bottom-margin;
     border-radius: 0;
 }
