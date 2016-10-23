@@ -460,7 +460,8 @@ input:not(.reset) {
   margin-bottom: 20px;
   font-size: 16px; }
   input:not(.reset):focus {
-    border-color: #4F4F51; }
+    border-color: #4F4F51;
+    outline: none; }
 
 select:not(.reset) {
   background: transparent;
@@ -477,6 +478,8 @@ select:not(.reset) {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='rgb(51,51,51)'/></g></svg>");
   background-repeat: no-repeat;
   background-position: right center; }
+  select:not(.reset):focus {
+    outline: none; }
 
 textarea:not(.reset) {
   border: none;
@@ -487,6 +490,8 @@ textarea:not(.reset) {
   min-height: 50px;
   margin-bottom: 20px;
   border-radius: 0; }
+  textarea:not(.reset):focus {
+    outline: none; }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
