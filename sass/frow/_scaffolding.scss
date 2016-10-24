@@ -69,15 +69,16 @@ button, html [type="button"], [type="reset"], [type="submit"] {
 }
 
 // Labels
-label:not(.reset) {
+label:not(.#{$reset}) {
     font-size: 14px;
     padding: 4px 5px;
     color: $gray-light;
 }
 
 // Inputs
-input:not(.reset) {
+input:not(.#{$reset}) {
     border: none;
+    border-radius: 0;
     border-bottom: 2px solid $gray-light;
     padding: 4px 5px;
     margin-bottom: $form-bottom-margin;
@@ -87,10 +88,20 @@ input:not(.reset) {
         border-color: $gray-darker;
         outline: none;
     }
+
+    &[type=number] {
+        -moz-appearance:textfield;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0
+        }
+    }
 }
 
 // Selects
-select:not(.reset) {
+select:not(.#{$reset}) {
     background: transparent;
     border: none;
     font-size: 16px;
@@ -113,7 +124,7 @@ select:not(.reset) {
 }
 
 // Textareas
-textarea:not(.reset) {
+textarea:not(.#{$reset}) {
     border: none;
     border-bottom: 2px solid $gray-light;
     // background-color: $gray-lighter;
@@ -127,14 +138,4 @@ textarea:not(.reset) {
     &:focus {
         outline: none;
     }
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0
-}
-
-input[type=number] {
-    -moz-appearance:textfield;
 }
