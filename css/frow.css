@@ -455,6 +455,7 @@ label:not(.reset) {
 
 input:not(.reset) {
   border: none;
+  border-radius: 0;
   border-bottom: 2px solid #9E9E9E;
   padding: 4px 5px;
   margin-bottom: 20px;
@@ -462,6 +463,11 @@ input:not(.reset) {
   input:not(.reset):focus {
     border-color: #4F4F51;
     outline: none; }
+  input:not(.reset)[type=number] {
+    -moz-appearance: textfield; }
+    input:not(.reset)[type=number]::-webkit-inner-spin-button, input:not(.reset)[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
 
 select:not(.reset) {
   background: transparent;
@@ -492,14 +498,6 @@ textarea:not(.reset) {
   border-radius: 0; }
   textarea:not(.reset):focus {
     outline: none; }
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
-
-input[type=number] {
-  -moz-appearance: textfield; }
 
 .frow-container {
   margin-right: auto;
