@@ -11,6 +11,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 var src = 'sass/';
 var dest = 'css/';
+var copy = 'docs/css/';
 
 gulp.task('styles', function() {
     return gulp.src(path.join(src, '_frow.scss'))
@@ -22,10 +23,12 @@ gulp.task('styles', function() {
         .pipe(rename("frow.css"))
         // .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(dest))
+        .pipe(gulp.dest(copy))
         .pipe(cssnano())
         .pipe(rename("frow.min.css"))
         //.pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(dest));
+        .pipe(gulp.dest(dest))
+        .pipe(gulp.dest(copy));
 });
 
 gulp.task('default', ['styles']);
