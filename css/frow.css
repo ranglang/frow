@@ -443,6 +443,7 @@ button:not(.reset), [type="button"]:not(.reset), [type="reset"]:not(.reset), [ty
   outline: none;
   padding: 9px; }
   button:not(.reset):hover, button:not(.reset):focus, button:not(.reset):active, [type="button"]:not(.reset):hover, [type="button"]:not(.reset):focus, [type="button"]:not(.reset):active, [type="reset"]:not(.reset):hover, [type="reset"]:not(.reset):focus, [type="reset"]:not(.reset):active, [type="submit"]:not(.reset):hover, [type="submit"]:not(.reset):focus, [type="submit"]:not(.reset):active {
+    background-color: #29292a;
     outline: none;
     text-decoration: none; }
   button:not(.reset):active, [type="button"]:not(.reset):active, [type="reset"]:not(.reset):active, [type="submit"]:not(.reset):active {
@@ -469,8 +470,8 @@ input:not(.reset) {
   margin-bottom: 20px;
   padding: 4px 5px;
   width: 100%; }
-  input:not(.reset):focus {
-    border-color: #4F4F51;
+  input:not(.reset):hover, input:not(.reset):focus {
+    border-color: #787878;
     outline: none; }
   input:not(.reset):disabled {
     border-bottom: 1px dotted #9E9E9E;
@@ -498,8 +499,8 @@ select:not(.reset) {
   margin-bottom: 20px;
   padding: 3px 24px 3px 5px;
   width: 100%; }
-  select:not(.reset):focus {
-    outline: none; }
+  select:not(.reset):hover, select:not(.reset):focus {
+    border-color: #787878; }
   select:not(.reset):disabled {
     border-bottom: 1px dotted #9E9E9E;
     cursor: default !important; }
@@ -516,7 +517,8 @@ textarea:not(.reset) {
   padding: 10px;
   resize: vertical;
   width: 100%; }
-  textarea:not(.reset):focus {
+  textarea:not(.reset):hover, textarea:not(.reset):focus {
+    border-color: #787878;
     outline: none; }
   textarea:not(.reset):disabled {
     border-bottom: 1px dotted #9E9E9E;

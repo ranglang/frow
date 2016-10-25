@@ -57,6 +57,7 @@ button:not(.#{$reset}), [type="button"]:not(.#{$reset}), [type="reset"]:not(.#{$
     padding: 9px;
 
     &:hover, &:focus, &:active {
+        background-color: darken($gray-darker, 15%);
         outline: none;
         text-decoration: none;
     }
@@ -93,8 +94,8 @@ input:not(.#{$reset}) {
     padding: 4px 5px;
     width: 100%;
 
-    &:focus {
-        border-color: $gray-darker;
+    &:hover, &:focus {
+        border-color: darken($gray-light, 15%);
         outline: none;
     }
 
@@ -133,8 +134,8 @@ select:not(.#{$reset}) {
     padding: 3px 24px 3px 5px;
     width: 100%;
 
-    &:focus {
-        outline: none;
+    &:hover, &:focus {
+        border-color: darken($gray-light, 15%);
     }
 
     &:disabled {
@@ -157,7 +158,8 @@ textarea:not(.#{$reset}) {
     resize: vertical;
     width: 100%;
 
-    &:focus {
+    &:hover, &:focus {
+        border-color: darken($gray-light, 15%);
         outline: none;
     }
 

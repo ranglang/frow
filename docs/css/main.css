@@ -1,7 +1,6 @@
 /* Don't forget to vendor prefix! */
 
 *:not(.letsGo-animate) {
-    -webkit-transition: width 0.4s, height 0.4s, font-size 0.4s, font-weight 0.4s;
     transition: width 0.4s, height 0.4s, font-size 0.4s, font-weight 0.4s;
 }
 
@@ -142,31 +141,21 @@ p a {
 }
 
 #mobile-sidebar.letsGo-hide-remove {
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 #mobile-sidebar.letsGo-hide-remove.letsGo-hide-remove-active {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
 }
 
 #mobile-sidebar.letsGo-hide-add {
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
 }
 
 #mobile-sidebar.letsGo-hide-add.letsGo-hide-add-active {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 
 .mobile-sidebar-header {
@@ -208,7 +197,6 @@ p a {
 }
 
 #click-cover.letsGo-hide-remove {
-    -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
     opacity: 0;
 }
@@ -218,7 +206,6 @@ p a {
 }
 
 #click-cover.letsGo-hide-add {
-    -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
     opacity: 0.7;
 }
@@ -469,7 +456,6 @@ p a {
 }
 
 .home-example.letsGo-hide-add {
-    -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
     opacity: 1;
 }
@@ -478,21 +464,14 @@ p a {
     opacity: 0;
 }
 
-@-webkit-keyframes pop-in {
-    0% { -webkit-transform: scale(0); transform: scale(0); opacity: 0.0; }
-    50% { -webkit-transform: scale(1.04); transform: scale(1.04); opacity: 1.0; }
-    100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1.0; }
-}
-
 @keyframes pop-in {
-    0% { -webkit-transform: scale(0); transform: scale(0); opacity: 0.0; }
-    50% { -webkit-transform: scale(1.04); transform: scale(1.04); opacity: 1.0; }
-    100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1.0; }
+    0% { transform: scale(0); opacity: 0.0; }
+    50% { transform: scale(1.04); opacity: 1.0; }
+    100% { transform: scale(1); opacity: 1.0; }
 }
 
 .home-example.letsGo-hide-remove {
-    -webkit-animation: pop-in 0.3s;
-            animation: pop-in 0.3s;
+    animation: pop-in 0.3s;
 }
 
 .groups-example-card {
@@ -617,10 +596,8 @@ a.next-page[type="button"]:hover {
 /* XS, SM */
 @media (max-width: 991px) {
     .reverse {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
-                flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
 }
 
@@ -733,8 +710,7 @@ a.next-page[type="button"]:hover {
     left: 8px;
     width: 3px;
     height: 8px;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
     border: solid #fff;
     border-width: 0 2px 2px 0;
 }
@@ -790,6 +766,10 @@ button.blue {
     background-color: CornflowerBlue;
 }
 
+button.blue:hover, button.blue:active, button.blue:focus  {
+    background-color: CornflowerBlue;
+}
+
 button.rounded {
     width: 90px;
     border-radius: 25px;
@@ -801,29 +781,27 @@ button.rounded {
     color: MediumVioletRed;
 }
 
+button.rounded:hover, button.rounded:active, button.rounded:focus {
+    background-color: transparent;
+}
+
 button.my-custom-button {
     background: none;
     border: 2px solid lightseagreen;
     color: lightseagreen;
 }
 
+button.my-custom-button:hover, button.my-custom-button:active, button.my-custom-button:focus {
+    background-color: transparent;
+}
+
 
 
 /*TESTING CLASSES*/
 
-@-webkit-keyframes appear {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
 @keyframes appear {
     from {opacity: 0;}
     to {opacity: 1;}
-}
-
-@-webkit-keyframes disappear {
-    from {opacity: 1;}
-    to {opacity: 0;}
 }
 
 @keyframes disappear {
