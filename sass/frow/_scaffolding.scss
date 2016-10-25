@@ -42,7 +42,9 @@ li {
 }
 
 // Buttons
-button:not(.#{$reset}), html [type="button"]:not(.#{$reset}), [type="reset"]:not(.#{$reset}), [type="submit"]:not(.#{$reset}) {
+button:not(.#{$reset}), [type="button"]:not(.#{$reset}), [type="reset"]:not(.#{$reset}), [type="submit"]:not(.#{$reset}) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     background: none;
     background-color: $gray-darker;
     border: none;
@@ -56,6 +58,7 @@ button:not(.#{$reset}), html [type="button"]:not(.#{$reset}), [type="reset"]:not
 
     &:hover, &:focus, &:active {
         outline: none;
+        text-decoration: none;
     }
 
     &:active {

@@ -551,18 +551,13 @@ p a {
     font-weight: 300;
 }
 
-a.next-page {
+a.next-page[type="button"] {
     font-size: 25px;
-    text-align: center;
     background-color: #2A6A9A;
-    color: #fff;
     padding: 10px;
-    border-radius: 3px;
-    text-decoration: none;
-    font-weight: 400;
 }
 
-a.next-page:hover {
+a.next-page[type="button"]:hover {
     background-color: #105080;
 }
 

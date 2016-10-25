@@ -429,7 +429,9 @@ ul {
 li {
   list-style-type: none; }
 
-button:not(.reset), html [type="button"]:not(.reset), [type="reset"]:not(.reset), [type="submit"]:not(.reset) {
+button:not(.reset), [type="button"]:not(.reset), [type="reset"]:not(.reset), [type="submit"]:not(.reset) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background: none;
   background-color: #4F4F51;
   border: none;
@@ -440,11 +442,12 @@ button:not(.reset), html [type="button"]:not(.reset), [type="reset"]:not(.reset)
   line-height: 100%;
   outline: none;
   padding: 9px; }
-  button:not(.reset):hover, button:not(.reset):focus, button:not(.reset):active, html [type="button"]:not(.reset):hover, html [type="button"]:not(.reset):focus, html [type="button"]:not(.reset):active, [type="reset"]:not(.reset):hover, [type="reset"]:not(.reset):focus, [type="reset"]:not(.reset):active, [type="submit"]:not(.reset):hover, [type="submit"]:not(.reset):focus, [type="submit"]:not(.reset):active {
-    outline: none; }
-  button:not(.reset):active, html [type="button"]:not(.reset):active, [type="reset"]:not(.reset):active, [type="submit"]:not(.reset):active {
+  button:not(.reset):hover, button:not(.reset):focus, button:not(.reset):active, [type="button"]:not(.reset):hover, [type="button"]:not(.reset):focus, [type="button"]:not(.reset):active, [type="reset"]:not(.reset):hover, [type="reset"]:not(.reset):focus, [type="reset"]:not(.reset):active, [type="submit"]:not(.reset):hover, [type="submit"]:not(.reset):focus, [type="submit"]:not(.reset):active {
+    outline: none;
+    text-decoration: none; }
+  button:not(.reset):active, [type="button"]:not(.reset):active, [type="reset"]:not(.reset):active, [type="submit"]:not(.reset):active {
     transform: scale(0.96); }
-  button:not(.reset):disabled, html [type="button"]:not(.reset):disabled, [type="reset"]:not(.reset):disabled, [type="submit"]:not(.reset):disabled {
+  button:not(.reset):disabled, [type="button"]:not(.reset):disabled, [type="reset"]:not(.reset):disabled, [type="submit"]:not(.reset):disabled {
     cursor: default !important;
     opacity: 0.7;
     box-shadow: none; }
