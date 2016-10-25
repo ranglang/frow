@@ -433,43 +433,45 @@ button:not(.reset), html [type="button"]:not(.reset), [type="reset"]:not(.reset)
   background: none;
   background-color: #4F4F51;
   border: none;
-  outline: none;
-  cursor: pointer;
-  color: #fff;
-  line-height: 100%;
-  padding: 9px;
   border-radius: 3px;
-  font-size: 16px; }
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 100%;
+  outline: none;
+  padding: 9px; }
   button:not(.reset):hover, button:not(.reset):focus, button:not(.reset):active, html [type="button"]:not(.reset):hover, html [type="button"]:not(.reset):focus, html [type="button"]:not(.reset):active, [type="reset"]:not(.reset):hover, [type="reset"]:not(.reset):focus, [type="reset"]:not(.reset):active, [type="submit"]:not(.reset):hover, [type="submit"]:not(.reset):focus, [type="submit"]:not(.reset):active {
     outline: none; }
   button:not(.reset):active, html [type="button"]:not(.reset):active, [type="reset"]:not(.reset):active, [type="submit"]:not(.reset):active {
     transform: scale(0.96); }
   button:not(.reset):disabled, html [type="button"]:not(.reset):disabled, [type="reset"]:not(.reset):disabled, [type="submit"]:not(.reset):disabled {
+    cursor: default !important;
     opacity: 0.7;
-    cursor: default; }
+    box-shadow: none; }
 
 label:not(.reset) {
-  font-size: 14px;
-  padding: 4px 5px;
   color: #9E9E9E;
-  display: block; }
+  display: block;
+  font-size: 14px;
+  padding: 4px 5px; }
 
 input:not(.reset) {
+  background: transparent;
   border: none;
   border-radius: 0;
   border-bottom: 2px solid #9E9E9E;
-  padding: 4px 5px;
   color: #333333;
-  margin-bottom: 20px;
-  font-size: 15px;
-  background: transparent;
   display: block;
+  font-size: 15px;
+  margin-bottom: 20px;
+  padding: 4px 5px;
   width: 100%; }
   input:not(.reset):focus {
     border-color: #4F4F51;
     outline: none; }
   input:not(.reset):disabled {
-    border-bottom: 1px dotted #9E9E9E; }
+    border-bottom: 1px dotted #9E9E9E;
+    cursor: default !important; }
   input:not(.reset)[type=number] {
     -moz-appearance: textfield; }
     input:not(.reset)[type=number]::-webkit-inner-spin-button, input:not(.reset)[type=number]::-webkit-outer-spin-button {
@@ -477,44 +479,45 @@ input:not(.reset) {
       margin: 0; }
 
 select:not(.reset) {
-  background: transparent;
-  border: none;
-  font-size: 15px;
-  height: 27px;
-  padding: 3px 24px 3px 5px;
-  color: #333333;
-  font-size: 15px;
-  border-radius: 0;
-  border-bottom: 2px solid #9E9E9E;
   -webkit-appearance: none;
   -moz-appearance: none;
-  margin-bottom: 20px;
+  background: transparent;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='rgb(51,51,51)'/></g></svg>");
-  background-repeat: no-repeat;
   background-position: right center;
+  background-repeat: no-repeat;
   display: block;
+  border: none;
+  border-bottom: 2px solid #9E9E9E;
+  border-radius: 0;
+  color: #333333;
+  font-size: 15px;
+  height: 27px;
+  margin-bottom: 20px;
+  padding: 3px 24px 3px 5px;
   width: 100%; }
   select:not(.reset):focus {
     outline: none; }
   select:not(.reset):disabled {
-    border-bottom: 1px dotted #9E9E9E; }
+    border-bottom: 1px dotted #9E9E9E;
+    cursor: default !important; }
 
 textarea:not(.reset) {
   border: none;
   border-bottom: 2px solid #9E9E9E;
-  padding: 10px;
-  color: #333333;
-  resize: vertical;
-  font-size: 15px;
-  min-height: 50px;
-  margin-bottom: 20px;
   border-radius: 0;
+  color: #333333;
   display: block;
+  font-size: 15px;
+  margin-bottom: 20px;
+  min-height: 50px;
+  padding: 10px;
+  resize: vertical;
   width: 100%; }
   textarea:not(.reset):focus {
     outline: none; }
   textarea:not(.reset):disabled {
-    border-bottom: 1px dotted #9E9E9E; }
+    border-bottom: 1px dotted #9E9E9E;
+    cursor: default !important; }
 
 .frow-container {
   margin-right: auto;
