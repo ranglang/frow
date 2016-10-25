@@ -280,7 +280,7 @@ p a {
 }
 
 .tab-bar ul li {
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 .tab-bar ul li:first-child {
@@ -385,6 +385,10 @@ p a {
     margin-bottom: 10px;
     border: 1px solid #eee;
     border-radius: 3px;
+    font-size: 15px;
+}
+
+.plain-grid-example-div p {
     font-size: 15px;
 }
 
@@ -567,6 +571,20 @@ a.next-page:hover {
     text-align: center;
 }
 
+.form-example-contain {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.form-example {
+    max-width: 400px;
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    padding: 20px;
+}
+
 .card-shadow-demo {
     margin-top: 30px;
 }
@@ -747,9 +765,52 @@ a.next-page:hover {
 }
 
 
+label.blue {
+    color: CornflowerBlue;
+}
 
+input.blue {
+    border-bottom: 2px solid CornflowerBlue;
+}
 
+select.my-custom-select {
+    border: 0;
+    border-radius: 3px;
+    background-color: lightseagreen;
+    color: #fff;
+}
 
+label.inline, input.inline, select.inline {
+    display: inline;
+    width: auto;
+}
+
+textarea.my-custom-textarea {
+    border: 0;
+    border-radius: 3px;
+    background-color: WhiteSmoke;
+}
+
+button.blue {
+    background-color: CornflowerBlue;
+}
+
+button.rounded {
+    width: 90px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    background: none;
+    border: 2px solid MediumVioletRed;
+    color: MediumVioletRed;
+}
+
+button.my-custom-button {
+    background: none;
+    border: 2px solid lightseagreen;
+    color: lightseagreen;
+}
 
 
 

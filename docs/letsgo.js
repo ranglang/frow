@@ -1,8 +1,14 @@
+/*!
+ * letsGo
+ * http://useletsgo.com/
+ *
+ * By: Cody Sherman <cody@beg.in> (codysherman.com)
+ */
+
 'use strict';
 
 var letsGoRunning = false;
 var letsGoQueue = [];
-
 
 var letsGo = function(target, command, attribute, queue) {
     var queueMatters = false;
@@ -149,6 +155,7 @@ var letsGo = function(target, command, attribute, queue) {
                                     attributeIsClass = true;
                                     attribute = 'letsGo-hide';
                                 }
+                                console.log('atr', attribute);
                                 if (checkIfAttribute(element, attribute, attributeIsClass)) {
                                     alterAttribute(element, styles, false, attribute, attributeIsClass, true);
                                 } else {
@@ -227,6 +234,9 @@ var letsGo = function(target, command, attribute, queue) {
                                     attribute = attribute.substring(1);
                                 } else if (attribute && attribute.charAt(0) === '#') {
                                     attribute = 'id=' + attribute.substring(1);
+                                } else if (!attribute) {
+                                    attributeIsClass = true;
+                                    attribute = 'letsGo-hide';
                                 }
                                 for (var i = 0; i < element.length; i++) {
                                     var styles = window.getComputedStyle(element[i], null);

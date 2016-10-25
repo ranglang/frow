@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Frow CSS</title>
+        <title>Frow CSS | Form Elements</title>
         <link rel="alternate" type="application/rss+xml" href="https://github.com/Beg-in/frow/releases.atom">
         <link rel="icon" type="image/png" href="favicon.png">
         <meta name="theme-color" content="#2A6A9A">
@@ -74,29 +74,179 @@
             <div class="frow">
                 <div class="col-md-5-6">
                     <h3>
-                        Getting Started with Frow
+                        Form Elements
                     </h3>
-                    <h4>
-                        Initial Page Setup
-                    </h4>
-                        <div class="frow justify-start">
-                            <label>label here</label>
-                            <input placeholder="test">
-                            <select class="" name="">
-                                <option value="option">option1</option>
-                                <option value="option">option2</option>
-                                <option value="option">option3</option>
-                                <option value="option">option4</option>
-                            </select>
-                            <textarea name="name"></textarea>
+                    <h5>
+                        Buttons, Inputs, Dropdowns, and More
+                    </h5>
+                    <p>
+                        Frow's goal is not to style your page for you, but rather to make it easier do your own styling. However, there are certain places where the default starting point in browsers just isn't good enough or too inconsistent between the various browsers. One of the most worst areas of this are the various form elements.
+                    </p>
+                    <div class="fake-code">
+                        &lt;label&gt;Name&lt;/label&gt;<br>
+                        &lt;input type="text" placeholder="Placeholder Text"&gt;&lt;/input&gt;<br>
+                        &lt;div class="frow gutters"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Zipcode&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" pattern="\d*" maxlength="5"&gt;&lt;/input&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Color&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Red&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Green&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Blue&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                        &lt;/div&gt;<br>
+                        &lt;label&gt;Text Area&lt;/label&gt;<br>
+                        &lt;textarea&gt;&lt;/textarea&gt;<br>
+                        &lt;div class="frow card-shadow"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;Submit&lt;/button&gt;<br>
+                        &lt;/div&gt;
+                    </div>
+                    <div class="form-example-contain bottom-margin">
+                        <div class="frow centered">
+                            <div class="form-example card-shadow">
+                                <label>Name</label>
+                                <input type="text" placeholder="Placeholder Text"></input>
+                                <label>Disabled Field</label>
+                                <input type="text" placeholder="Placeholder Text" disabled="disabled"></input>
+                                <div class="frow gutters">
+                                    <div class="col-md-1-2">
+                                        <label>Zipcode</label>
+                                        <input type="text" pattern="\d*" maxlength="5"></input>
+                                    </div>
+                                    <div class="col-md-1-2">
+                                        <label>Color</label>
+                                        <select>
+                                            <option>Red</option>
+                                            <option>Green</option>
+                                            <option>Blue</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label>Text Area</label>
+                                <textarea></textarea>
+                                <div class="frow">
+                                    <button>Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>
+                        Reset Available
+                    </h5>
+                    <p>
+                        If you need an element to revert back to its default (non-Frow) styling, just add a .reset class to it. Be warned: it will be ugly again. <span style="text-decoration: underline;" onclick="letsGo('.reset-here', 'toggle', '.reset');letsGo('.reset-text', 'toggle');">Click here</span> to toggle the .reset class below.
+                    </p>
+                    <div class="frow items-stretch bottom-margin">
+                        <div class="col-md-1-2">
+                            <div class="fake-code height-100">
+                                &lt;label class="<span class="reset-text">reset</span>"&gt;Name&lt;/label&gt;<br>
+                                &lt;input class="<span class="reset-text">reset</span>"&gt;&lt;/input&gt;<br>
+                                &lt;div class="frow gutters"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="<span class="reset-text">reset</span>"&gt;Zipcode&lt;/label&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="<span class="reset-text">reset</span>"&gt;&lt;/input&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="<span class="reset-text">reset</span>"&gt;Color&lt;/label&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select class="<span class="reset-text">reset</span>"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Red&lt;/option&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Green&lt;/option&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Blue&lt;/option&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                                &lt;/div&gt;<br>
+                                &lt;label class="<span class="reset-text">reset</span>"&gt;Text Area&lt;/label&gt;<br>
+                                &lt;textarea class="<span class="reset-text">reset</span>"&gt;&lt;/textarea&gt;<br>
+                                &lt;div class="frow card-shadow"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="<span class="reset-text">reset</span>"&gt;Submit&lt;/button&gt;<br>
+                                &lt;/div&gt;
+                            </div>
+                        </div>
+                        <div class="col-md-1-2">
+                            <div class="form-example-contain height-100">
+                                <div class="frow centered-column">
+                                    <h5 class="reset-text">Yuck!</h5>
+                                    <div class="form-example card-shadow">
+                                        <label class="reset reset-here">Name</label>
+                                        <input class="reset reset-here" type="text" placeholder="Placeholder Text"></input>
+                                        <label class="reset reset-here">Disabled Field</label>
+                                        <input class="reset reset-here" type="text" placeholder="Placeholder Text" disabled="disabled"></input>
+                                        <div class="frow gutters">
+                                            <div class="col-md-1-2">
+                                                <label class="reset reset-here">Zipcode</label>
+                                                <input class="reset reset-here" type="text" pattern="\d*" maxlength="5"></input>
+                                            </div>
+                                            <div class="col-md-1-2">
+                                                <label class="reset reset-here">Color</label>
+                                                <select class="reset reset-here">
+                                                    <option>Red</option>
+                                                    <option>Green</option>
+                                                    <option>Blue</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <label class="reset reset-here">Text Area</label>
+                                        <textarea class="reset reset-here"></textarea>
+                                        <div class="frow">
+                                            <button class="reset reset-here">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h5>
+                        Customize Away
+                    </h5>
+                    <p>
+                        Frow's elements are a simple starting point ready for customization. Create your own classes for different colors or styles. Make the design yours!
+                    </p>
+                    <div class="fake-code">
+                        &lt;style&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;select.my-custom-select {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 0;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius: 3px;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightseagreen;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: #fff;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;button.my-custom-button {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: none;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid lightseagreen;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: lightseagreen;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        &lt;/style&gt;
+                    </div>
+                    <div class="form-example-contain bottom-margin">
+                        <div class="frow centered">
+                            <div class="form-example card-shadow">
+                                <label class="blue">Name</label>
+                                <input class="blue" type="text" placeholder="Placeholder Text"></input>
+                                <label class="inline">Color</label>
+                                <select class="my-custom-select inline">
+                                    <option>Red</option>
+                                    <option>Green</option>
+                                    <option>Blue</option>
+                                </select>
+                                <label>Text Area</label>
+                                <textarea class="my-custom-textarea card-shadow"></textarea>
+                                <div class="frow justify-around">
+                                    <button class="blue card-shadow hidden-xs">Submit</button>
+                                    <button class="rounded">Submit</button>
+                                    <button class="my-custom-button">Submit</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="frow column-center">
                 <div class="next">Next:</div>
-                <a class="next-page card-shadow" href="basics.html">
-                    The Basics
+                <a class="next-page card-shadow" href="goodies.html">
+                    Goodies
                 </a>
             </div>
             <p class="by-line">
