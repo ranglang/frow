@@ -22,7 +22,7 @@
     width: 100%;
 }
 
-// Hidden rule
+// Hidden rule for letsGo (letsgojs.com)
 // -------------------------
 .letsGo-hide {
     display: none !important;
@@ -44,10 +44,4 @@
   content: "";
   display: table;
   clear: both;
-}
-
-// Hide rule from letsGo
-// -------------------------
-.letsGo-hide {
-    display: none !important;
 }
