@@ -1342,6 +1342,3 @@ textarea:not(.reset) {
   content: "";
   display: table;
   clear: both; }
-
-.letsGo-hide {
-  display: none !important; }
