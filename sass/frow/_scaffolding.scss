@@ -42,7 +42,11 @@ li {
 }
 
 // Buttons
-button:not(.#{$reset}), [type="button"]:not(.#{$reset}), [type="reset"]:not(.#{$reset}), [type="submit"]:not(.#{$reset}) {
+button:not(.#{$reset}),
+[type="button"]:not(.#{$reset}),
+[type="reset"]:not(.#{$reset}),
+[type="submit"]:not(.#{$reset}),
+input:not(.#{$reset})::-webkit-file-upload-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: none;
@@ -113,6 +117,10 @@ input:not(.#{$reset}) {
             margin: 0
         }
     }
+
+    // button {
+    //     transform: scale(2);
+    // }
 }
 
 // Selects
