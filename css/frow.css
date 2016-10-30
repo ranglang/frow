@@ -410,6 +410,9 @@ template {
 *, :after, :before {
   box-sizing: border-box; }
 
+* {
+  -webkit-tap-highlight-color: transparent; }
+
 a {
   color: #333333;
   text-decoration: none; }

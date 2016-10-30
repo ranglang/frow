@@ -8,6 +8,11 @@
     box-sizing: border-box;
 }
 
+// Remove tap highlight color
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 // Links
 a {
     color: $link-color;
