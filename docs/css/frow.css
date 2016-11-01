@@ -533,6 +533,7 @@ select:not(.reset) {
     cursor: default !important; }
 
 textarea:not(.reset) {
+  background: none;
   border: none;
   border-bottom: 2px solid #9E9E9E;
   border-radius: 0;

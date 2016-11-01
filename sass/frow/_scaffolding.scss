@@ -159,6 +159,7 @@ select:not(.#{$reset}) {
 
 // Textareas
 textarea:not(.#{$reset}) {
+    background: none;
     border: none;
     border-bottom: 2px solid $gray-light;
     border-radius: 0;
