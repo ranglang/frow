@@ -293,7 +293,8 @@ p a {
     }
 }
 
-.tagline {
+.tagline,
+input:not(.reset)::-webkit-file-upload-button {
     margin-bottom: 40px;
     font-size: 25px;
 }

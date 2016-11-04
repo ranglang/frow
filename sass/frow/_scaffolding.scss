@@ -46,12 +46,7 @@ li {
     list-style-type: none;
 }
 
-// Buttons
-button:not(.#{$reset}),
-[type="button"]:not(.#{$reset}),
-[type="reset"]:not(.#{$reset}),
-[type="submit"]:not(.#{$reset}),
-input:not(.#{$reset})::-webkit-file-upload-button {
+@mixin button{
     -webkit-appearance: none;
     -moz-appearance: none;
     background: none;
@@ -80,6 +75,22 @@ input:not(.#{$reset})::-webkit-file-upload-button {
         opacity: 0.7;
         box-shadow: none;
     }
+}
+
+// Buttons
+button:not(.#{$reset}),
+[type="button"]:not(.#{$reset}),
+[type="reset"]:not(.#{$reset}),
+[type="submit"]:not(.#{$reset}) {
+    @include button;
+}
+
+input:not(.#{$reset})::-webkit-file-upload-button {
+    @include button;
+}
+
+input:not(.#{$reset})::-ms-browse {
+    @include button;
 }
 
 // Labels

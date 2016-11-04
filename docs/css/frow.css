@@ -435,8 +435,7 @@ li {
 button:not(.reset),
 [type="button"]:not(.reset),
 [type="reset"]:not(.reset),
-[type="submit"]:not(.reset),
-input:not(.reset)::-webkit-file-upload-button {
+[type="submit"]:not(.reset) {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: none;
@@ -458,24 +457,67 @@ input:not(.reset)::-webkit-file-upload-button {
   [type="reset"]:not(.reset):active,
   [type="submit"]:not(.reset):hover,
   [type="submit"]:not(.reset):focus,
-  [type="submit"]:not(.reset):active,
-  input:not(.reset)::-webkit-file-upload-button:hover,
-  input:not(.reset)::-webkit-file-upload-button:focus,
-  input:not(.reset)::-webkit-file-upload-button:active {
+  [type="submit"]:not(.reset):active {
     background-color: #29292a;
     outline: none;
     text-decoration: none; }
   button:not(.reset):active,
   [type="button"]:not(.reset):active,
   [type="reset"]:not(.reset):active,
-  [type="submit"]:not(.reset):active,
-  input:not(.reset)::-webkit-file-upload-button:active {
+  [type="submit"]:not(.reset):active {
     transform: scale(0.96); }
   button:not(.reset):disabled,
   [type="button"]:not(.reset):disabled,
   [type="reset"]:not(.reset):disabled,
-  [type="submit"]:not(.reset):disabled,
+  [type="submit"]:not(.reset):disabled {
+    cursor: default !important;
+    opacity: 0.7;
+    box-shadow: none; }
+
+input:not(.reset)::-webkit-file-upload-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  background-color: #4F4F51;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 100%;
+  outline: none;
+  padding: 9px; }
+  input:not(.reset)::-webkit-file-upload-button:hover, input:not(.reset)::-webkit-file-upload-button:focus, input:not(.reset)::-webkit-file-upload-button:active {
+    background-color: #29292a;
+    outline: none;
+    text-decoration: none; }
+  input:not(.reset)::-webkit-file-upload-button:active {
+    transform: scale(0.96); }
   input:not(.reset)::-webkit-file-upload-button:disabled {
+    cursor: default !important;
+    opacity: 0.7;
+    box-shadow: none; }
+
+input:not(.reset)::-ms-browse {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  background-color: #4F4F51;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 100%;
+  outline: none;
+  padding: 9px; }
+  input:not(.reset)::-ms-browse:hover, input:not(.reset)::-ms-browse:focus, input:not(.reset)::-ms-browse:active {
+    background-color: #29292a;
+    outline: none;
+    text-decoration: none; }
+  input:not(.reset)::-ms-browse:active {
+    transform: scale(0.96); }
+  input:not(.reset)::-ms-browse:disabled {
     cursor: default !important;
     opacity: 0.7;
     box-shadow: none; }
