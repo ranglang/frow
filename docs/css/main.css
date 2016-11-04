@@ -408,13 +408,13 @@ input:not(.reset)::-webkit-file-upload-button {
     font-size: 20px;
 }
 
-.frow.grid-example-div.dotted-div {
+.grid-example-div.dotted-div {
     background-color: transparent;
     border: 2px dashed #333;
     margin: 0 2px;
 }
 
-.frow.grid-example-div.dotted-div p {
+.grid-example-div.dotted-div p {
     color: #333;
     font-size: 15px;
 }
