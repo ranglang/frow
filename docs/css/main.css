@@ -123,6 +123,11 @@ p a {
     }
 }
 
+.example-toggle-button:not(.reset), .example-toggle-button:not(.reset):hover, .example-toggle-button:not(.reset):active, .example-toggle-button:not(.reset):focus {
+    margin: 20px 0;
+    background-color: #2A6A9A;
+}
+
 .bottom-margin {
     margin-bottom: 60px !important;
 }
@@ -557,6 +562,15 @@ a.next-page[type="button"]:hover {
     display: block;
     background-color: #fff;
     padding: 20px;
+}
+
+@keyframes flash {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.fake-code .reset-text.letsGo-hide-remove {
+    animation: flash 0.3s ease 5 alternate;
 }
 
 .card-shadow-demo {
