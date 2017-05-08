@@ -59,11 +59,11 @@ li {
     font-size: 16px;
     line-height: 100%;
     outline: none;
-    padding: 0 9px;
-    display: flex;
+    padding: 9px;
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
-    transition: background-color $frow-animate-speed;
-    height: 34px;
+    transition: transform 0.1s, background $frow-animate-speed, color $frow-animate-speed, box-shadow $frow-animate-speed;
 
     &:hover, &:focus, &:active {
         background-color: darken($gray-darker, 15%);
@@ -77,10 +77,11 @@ li {
 
     &:disabled {
         cursor: default !important;
-        border: 2px solid $gray-lighter;
-        background: repeating-linear-gradient(-45deg, darken($gray-lighter, 10%), darken($gray-lighter, 10%) 3px, #fff 3px, #fff 6px);
         box-shadow: none;
-        color: $gray-darker;
+        box-shadow: inset 0 0 0 2px $gray-lighter;
+        background: repeating-linear-gradient(-45deg, darken($gray-lighter, 5%), darken($gray-lighter, 5%) 3px, #fff 3px, #fff 6px);
+        background-color: darken($gray-lighter, 5%);
+        color: $gray-light;
     }
 }
 
@@ -104,7 +105,8 @@ input:not(.#{$reset})::-ms-browse {
 label:not(.#{$reset}) {
     color: $gray-light;
     font-size: 14px;
-    padding: 4px 0 0;
+    // padding: 4px 0 0;
+    margin-top: 20px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -120,7 +122,6 @@ input:not(.#{$reset}) {
     color: $near-black;
     display: block;
     font-size: 15px;
-    margin-bottom: $form-bottom-margin;
     padding: 8px 5px 4px;
     width: 100%;
     transition: border-color $frow-animate-speed;
@@ -154,10 +155,17 @@ input:not(.#{$reset}) {
         margin: 0 5px 0 0;
         cursor: pointer;
         border: 2px solid $gray-darker;
-        transition: background-color $frow-animate-speed, border-color $frow-animate-speed;
+        transition: background $frow-animate-speed, border-color $frow-animate-speed, box-shadow $frow-animate-speed;
         
         &:hover, &:focus {
             border-color: darken($gray-darker, 15%);
+        }
+        
+        &:disabled {
+            cursor: default !important;
+            box-shadow: none;
+            border-color: darken($gray-lighter, 5%);
+            background-color: transparent;
         }
         
         &:checked {
@@ -170,6 +178,12 @@ input:not(.#{$reset}) {
             &:hover, &:focus {
                 background-color: darken($gray-darker, 15%);
             }
+            
+            &:disabled {
+                border-color: darken($gray-lighter, 5%);
+                background-color: darken($gray-lighter, 5%);
+            }
+            
         }
     }
     
@@ -182,10 +196,17 @@ input:not(.#{$reset}) {
         cursor: pointer;
         border-radius: 50%;
         border: 2px solid $gray-darker;
-        transition: background-color $frow-animate-speed, border-color $frow-animate-speed, box-shadow $frow-animate-speed;
+        transition: background $frow-animate-speed, border-color $frow-animate-speed, box-shadow $frow-animate-speed;
         
         &:hover, &:focus {
             border-color: darken($gray-darker, 15%);
+        }
+        
+        &:disabled {
+            cursor: default !important;
+            box-shadow: none;
+            border-color: darken($gray-lighter, 5%);
+            background-color: transparent;
         }
     
         &:checked {
@@ -194,6 +215,13 @@ input:not(.#{$reset}) {
             
             &:hover, &:focus {
                 background-color: darken($gray-darker, 15%);
+            }
+            
+            &:disabled {
+                box-shadow: inset 0 0 0 2px #fff;
+                border-color: darken($gray-lighter, 5%);
+                background: none;
+                background-color: darken($gray-lighter, 5%);
             }
         }
     }
@@ -215,13 +243,13 @@ select:not(.#{$reset}) {
     font-size: 15px;
     height: 27px;
     margin-top: 4px;
-    margin-bottom: $form-bottom-margin;
     padding: 7px 24px 3px 5px;
     width: 100%;
     cursor: pointer;
     transition: border-color $frow-animate-speed;
 
     &:hover, &:focus {
+        outline: none;
         border-color: darken($gray-light, 15%);
     }
 
@@ -240,7 +268,6 @@ textarea:not(.#{$reset}) {
     color: $near-black;
     display: block;
     font-size: 15px;
-    margin-bottom: $form-bottom-margin;
     min-height: 50px;
     padding: 14px 10px 10px;
     resize: vertical;

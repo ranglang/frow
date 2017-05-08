@@ -115,7 +115,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;Submit&lt;/button&gt;<br>
                         &lt;/div&gt;
                     </div>
-                    <div class="form-example-contain bottom-margin">
+                    <div class="form-example-contain">
                         <div class="frow centered">
                             <div class="form-example card-shadow content-center">
                                 <label>
@@ -145,18 +145,22 @@
                                     </div>
                                 </div>
                                 <div class="frow">
-                                    <div class="col-md-1-2">
+                                    <div class="col-xs-1-2">
                                         <label class="not-clickable">Checkbox Buttons</label>
                                         <label class="direction-row items-center content-center">
-                                            <input type="checkbox" checked></input>
+                                            <input type="checkbox"></input>
                                             Option 1
                                         </label>
                                         <label class="direction-row items-center content-center">
-                                            <input type="checkbox"></input>
+                                            <input type="checkbox" checked></input>
                                             Option 2
                                         </label>
+                                        <label class="direction-row items-center content-center">
+                                            <input class="toggle-disabled" type="checkbox" disabled></input>
+                                            Disabled Option
+                                        </label>
                                     </div>
-                                    <div class="col-md-1-2">
+                                    <div class="col-xs-1-2">
                                         <label class="not-clickable">Radio Buttons</label>
                                         <label class="direction-row items-center content-center">
                                             <input type="radio" name="group-one" checked></input>
@@ -165,6 +169,10 @@
                                         <label class="direction-row items-center">
                                             <input type="radio" name="group-one"></input>
                                             Option 2
+                                        </label>
+                                        <label class="direction-row items-center">
+                                            <input class="toggle-disabled" type="radio" name="group-one" disabled></input>
+                                            Disabled Option
                                         </label>
                                     </div>
                                 </div>
@@ -176,13 +184,16 @@
                                     Text Area
                                     <textarea></textarea>
                                 </label>
-                                <div class="frow">
-                                    <button disabled="disabled">Disabled</button>
-                                    <button>Submit</button>
-                                    <a href="http://codysherman.com" type="button">Link</a>
+                                <div class="frow justify-around" style="margin-top: 20px;">
+                                    <button class="col-xs-3-10">Regular</button>
+                                    <button class="col-xs-3-10 toggle-disabled" disabled>Disabled</button>
+                                    <a type="button" class="col-xs-3-10">Anchor</a>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="frow bottom-margin">
+                        <button class="example-toggle-button card-shadow" onclick="letsGo('.toggle-disabled', 'toggle', 'disabled');">Toggle Example</button>
                     </div>
                     <h5>
                         Reset Available

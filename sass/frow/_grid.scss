@@ -167,18 +167,6 @@
             padding-right: $grid-gutter-width / 2;
         }
     }
-
-    // &>*:last-child {
-    //     float: none;
-    // }
-
-    // &>div>img {
-    //     width: 100%;
-    // }
-
-    // &>div, &>img {
-    //     height: 100%;
-    // }
     
     @include flexbox-rules;
 }
