@@ -1145,6 +1145,7 @@ template {
   -webkit-tap-highlight-color: transparent; }
 
 a {
+  cursor: pointer;
   color: #333333;
   text-decoration: none; }
   a:hover, a:focus, a:active {
@@ -1179,6 +1180,8 @@ button:not(.reset),
   line-height: 100%;
   outline: none;
   padding: 0 9px;
+  display: flex;
+  align-items: center;
   transition: background-color 0.4s;
   height: 34px; }
   button:not(.reset):hover, button:not(.reset):focus, button:not(.reset):active,
@@ -1222,6 +1225,8 @@ input:not(.reset)::-webkit-file-upload-button {
   line-height: 100%;
   outline: none;
   padding: 0 9px;
+  display: flex;
+  align-items: center;
   transition: background-color 0.4s;
   height: 34px; }
   input:not(.reset)::-webkit-file-upload-button:hover, input:not(.reset)::-webkit-file-upload-button:focus, input:not(.reset)::-webkit-file-upload-button:active {
@@ -1250,6 +1255,8 @@ input:not(.reset)::-ms-browse {
   line-height: 100%;
   outline: none;
   padding: 0 9px;
+  display: flex;
+  align-items: center;
   transition: background-color 0.4s;
   height: 34px; }
   input:not(.reset)::-ms-browse:hover, input:not(.reset)::-ms-browse:focus, input:not(.reset)::-ms-browse:active {
@@ -1529,6 +1536,15 @@ textarea:not(.reset) {
 
 .dark-card-shadow {
   box-shadow: 0px 1px 3px 0px #1B1B1B; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.lowercase {
+  text-transform: lowercase; }
+
+.capitalize {
+  text-transform: capitalize; }
 
 .clearfix:after {
   content: "";

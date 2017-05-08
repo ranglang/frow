@@ -15,6 +15,7 @@
 
 // Links
 a {
+    cursor: pointer;
     color: $link-color;
     text-decoration: none;
 
@@ -59,6 +60,8 @@ li {
     line-height: 100%;
     outline: none;
     padding: 0 9px;
+    display: flex;
+    align-items: center;
     transition: background-color $frow-animate-speed;
     height: 34px;
 

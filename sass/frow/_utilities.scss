@@ -38,6 +38,20 @@
     box-shadow: $dark-card-shadow;
 }
 
+// Text transforms
+// -------------------------
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
 // Clearfix
 // -------------------------
 .clearfix:after {
