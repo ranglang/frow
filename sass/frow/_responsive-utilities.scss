@@ -19,63 +19,65 @@ $frow-hidden-sizes-all: ();
   $frow-hidden-sizes-all: append($frow-hidden-sizes-all, '.frow.hidden-#{$size}', comma);
 }
 
-#{$visible-sizes-all} {
+#{$visible-sizes-all}:not([style*="display: none"]):not([style*="display:none"]) {
   display: none !important;
 }
 
-#{$hidden-sizes-all} {
+#{$hidden-sizes-all}:not([style*="display: none"]):not([style*="display:none"]) {
   display: block !important;
 }
 
-#{$frow-hidden-sizes-all} {
+#{$frow-hidden-sizes-all}:not([style*="display: none"]):not([style*="display:none"]) {
   display: flex !important;
 }
+
+$notDisplayNone: ':not([style*="display: none"]):not([style*="display:none"])';
 
 @each $size in $sizes-names {
   @if index($sizes-names, $size) == 1 {
     @media (max-width: nth(nth($sizes, 2), 2)-1) {
-      .visible-#{$size} {
+      .visible-#{$size}#{$notDisplayNone} {
         display: block !important;
       }
-      .frow.visible-#{$size} {
+      .frow.visible-#{$size}#{$notDisplayNone} {
         display: flex !important;
       }
-      .hidden-#{$size} {
+      .hidden-#{$size}#{$notDisplayNone} {
         display: none !important;
       }
-      .frow.hidden-#{$size} {
+      .frow.hidden-#{$size}#{$notDisplayNone} {
         display: none !important;
       }
     }
   }
   @else if index($sizes-names, $size) != 1 and index($sizes-names, $size) < length($sizes) {
     @media (min-width: map-get($sizes, $size)) and (max-width: nth(nth($sizes, index($sizes-names, $size)+1), 2)-1) {
-      .visible-#{$size} {
+      .visible-#{$size}#{$notDisplayNone} {
         display: block !important;
       }
-      .frow.visible-#{$size} {
+      .frow.visible-#{$size}#{$notDisplayNone} {
         display: flex !important;
       }
-      .hidden-#{$size} {
+      .hidden-#{$size}#{$notDisplayNone} {
         display: none !important;
       }
-      .frow.hidden-#{$size} {
+      .frow.hidden-#{$size}#{$notDisplayNone} {
         display: none !important;
       }
     }
   }
   @else if index($sizes-names, $size) == length($sizes) {
     @media (min-width: nth(nth($sizes, length($sizes)), 2)) {
-      .visible-#{$size} {
+      .visible-#{$size}#{$notDisplayNone} {
         display: block !important;
       }
-      .frow.visible-#{$size} {
+      .frow.visible-#{$size}#{$notDisplayNone} {
         display: flex !important;
       }
-      .hidden-#{$size} {
+      .hidden-#{$size}#{$notDisplayNone} {
         display: none !important;
       }
-      .frow.hidden-#{$size} {
+      .frow.hidden-#{$size}#{$notDisplayNone} {
         display: none !important;
       }
     }

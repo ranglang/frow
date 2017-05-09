@@ -4,11 +4,11 @@
 
 // Cursor pointer classes
 // -------------------------
-.clickable:not([disabled]), *[onclick]:not([disabled]), *[ng-click]:not([disabled]) {
+.clickable:not([disabled]), *[onclick]:not([disabled]) {
   cursor: pointer !important;
 }
 
-.not-clickable, .not-clickable[onclick], .not-clickable[ng-click] {
+.not-clickable, .not-clickable[onclick] {
   cursor: default !important;
 }
 

@@ -1496,59 +1496,59 @@ textarea {
     border-bottom: 1px dotted #9E9E9E;
     cursor: default !important; }
 
-.visible-xs, .visible-sm, .visible-md, .visible-lg {
+.visible-xs, .visible-sm, .visible-md, .visible-lg:not([style*="display: none"]):not([style*="display:none"]) {
   display: none !important; }
 
-.hidden-xs, .hidden-sm, .hidden-md, .hidden-lg:not([style*="display: none"]) {
+.hidden-xs, .hidden-sm, .hidden-md, .hidden-lg:not([style*="display: none"]):not([style*="display:none"]) {
   display: block !important; }
 
-.frow.hidden-xs, .frow.hidden-sm, .frow.hidden-md, .frow.hidden-lg:not([style*="display: none"]) {
+.frow.hidden-xs, .frow.hidden-sm, .frow.hidden-md, .frow.hidden-lg:not([style*="display: none"]):not([style*="display:none"]) {
   display: flex !important; }
 
 @media (max-width: 767px) {
-  .visible-xs:not([style*="display: none"]) {
+  .visible-xs:not([style*="display: none"]):not([style*="display:none"]) {
     display: block !important; }
-  .frow.visible-xs:not([style*="display: none"]) {
+  .frow.visible-xs:not([style*="display: none"]):not([style*="display:none"]) {
     display: flex !important; }
-  .hidden-xs {
+  .hidden-xs:not([style*="display: none"]):not([style*="display:none"]) {
     display: none !important; }
-  .frow.hidden-xs {
+  .frow.hidden-xs:not([style*="display: none"]):not([style*="display:none"]) {
     display: none !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .visible-sm:not([style*="display: none"]) {
+  .visible-sm:not([style*="display: none"]):not([style*="display:none"]) {
     display: block !important; }
-  .frow.visible-sm:not([style*="display: none"]) {
+  .frow.visible-sm:not([style*="display: none"]):not([style*="display:none"]) {
     display: flex !important; }
-  .hidden-sm {
+  .hidden-sm:not([style*="display: none"]):not([style*="display:none"]) {
     display: none !important; }
-  .frow.hidden-sm {
+  .frow.hidden-sm:not([style*="display: none"]):not([style*="display:none"]) {
     display: none !important; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .visible-md:not([style*="display: none"]) {
+  .visible-md:not([style*="display: none"]):not([style*="display:none"]) {
     display: block !important; }
-  .frow.visible-md:not([style*="display: none"]) {
+  .frow.visible-md:not([style*="display: none"]):not([style*="display:none"]) {
     display: flex !important; }
-  .hidden-md {
+  .hidden-md:not([style*="display: none"]):not([style*="display:none"]) {
     display: none !important; }
-  .frow.hidden-md {
+  .frow.hidden-md:not([style*="display: none"]):not([style*="display:none"]) {
     display: none !important; } }
 
 @media (min-width: 1200px) {
-  .visible-lg:not([style*="display: none"]) {
+  .visible-lg:not([style*="display: none"]):not([style*="display:none"]) {
     display: block !important; }
-  .frow.visible-lg:not([style*="display: none"]) {
+  .frow.visible-lg:not([style*="display: none"]):not([style*="display:none"]) {
     display: flex !important; }
-  .hidden-lg {
+  .hidden-lg:not([style*="display: none"]):not([style*="display:none"]) {
     display: none !important; }
-  .frow.hidden-lg {
+  .frow.hidden-lg:not([style*="display: none"]):not([style*="display:none"]) {
     display: none !important; } }
 
-.clickable:not([disabled]), *[onclick]:not([disabled]), *[ng-click]:not([disabled]) {
+.clickable:not([disabled]), *[onclick]:not([disabled]) {
   cursor: pointer !important; }
 
-.not-clickable, .not-clickable[onclick], .not-clickable[ng-click] {
+.not-clickable, .not-clickable[onclick] {
   cursor: default !important; }
 
 .height-100 {
