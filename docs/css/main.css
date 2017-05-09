@@ -10,7 +10,13 @@ body {
   font-size: 18px;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   margin: 0;
   padding: 0;
 }
@@ -123,7 +129,10 @@ p a {
   }
 }
 
-.example-toggle-button:not(.reset), .example-toggle-button:not(.reset):hover, .example-toggle-button:not(.reset):active, .example-toggle-button:not(.reset):focus {
+.example-toggle-button,
+.example-toggle-button:hover,
+.example-toggle-button:active,
+.example-toggle-button:focus {
   margin: 20px 0;
   background-color: #2A6A9A;
 }
@@ -184,7 +193,11 @@ p a {
   width: 100%;
 }
 
-.mobile-sidebar-content a, .mobile-sidebar-content a:hover, .mobile-sidebar-content a:focus, .mobile-sidebar-content a:active, .mobile-sidebar-content a:visited {
+.mobile-sidebar-content a,
+.mobile-sidebar-content a:hover,
+.mobile-sidebar-content a:focus,
+.mobile-sidebar-content a:active,
+.mobile-sidebar-content a:visited {
   display: block;
   padding: 20px 0;
   text-decoration: none;
@@ -251,12 +264,16 @@ p a {
 
 /* XS, SM */
 @media (max-width: 991px) {
-  .header, .header.home {
+  .header,
+  .header.home {
     height: 100px;
   }
 }
 
-.header a:hover, .header a:focus, .header a:active, .header a:visited {
+.header a:hover,
+.header a:focus,
+.header a:active,
+.header a:visited {
   color: #fff;
   text-decoration: none;
 }
@@ -287,7 +304,10 @@ p a {
   font-size: 18px;
 }
 
-.tab-bar a:hover, .tab-bar a:focus, .tab-bar a:active, .tab-bar a:visited {
+.tab-bar a:hover,
+.tab-bar a:focus,
+.tab-bar a:active,
+.tab-bar a:visited {
   text-decoration: none;
 }
 
@@ -367,13 +387,14 @@ p a {
   margin-bottom: 30px;
 }
 
-.grid-example-group .grid-example:last-of-type, .grid-example-group .grid-example:last-of-type {
+.grid-example-group .grid-example:last-of-type,
+.grid-example-group .grid-example:last-of-type {
   margin-bottom: 60px;
 }
 
 .grid-example-div {
   background-color: #5EA6DC;
-  min-height: 70px;
+  height: 70px;
   margin-bottom: 10px;
   border: 1px solid #eee;
   border-radius: 3px;
@@ -431,7 +452,8 @@ p a {
   font-size: 16px;
 }
 
-.grid-example-div p, .grid-example-square p {
+.grid-example-div p,
+.grid-example-square p {
   text-align: center;
   color: #fff;
   margin: 0;
@@ -634,10 +656,9 @@ select.my-custom-select {
   border-radius: 3px;
   background-color: lightseagreen;
   color: #fff;
-}
-
-label.inline, input.inline, select.inline {
-  display: inline;
+  width: auto;
+  margin: 0 0 0 10px;
+  padding-top: 3px;
 }
 
 textarea.my-custom-textarea {

@@ -89,10 +89,11 @@ li {
 @if $enableButtons == true {
   
   // Buttons
-  button:not(.#{$resetClass}),
-  [type="button"]:not(.#{$resetClass}),
-  [type="reset"]:not(.#{$resetClass}),
-  [type="submit"]:not(.#{$resetClass}) {
+  button,
+  html [type="button"],
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
     @include frow-button;
   }
 }
@@ -100,16 +101,16 @@ li {
 // Forms
 @if $enableForms == true {
   
-  input:not(.#{$resetClass})::-webkit-file-upload-button {
+  input::-webkit-file-upload-button {
     @include frow-button;
   }
   
-  input:not(.#{$resetClass})::-ms-browse {
+  input::-ms-browse {
     @include frow-button;
   }
   
   // Labels
-  label:not(.#{$resetClass}) {
+  label {
     color: $gray-light;
     font-size: 14px;
     margin-bottom: 20px;
@@ -120,7 +121,7 @@ li {
   }
   
   // Inputs
-  input:not(.#{$resetClass}) {
+  input {
     background: transparent;
     border: none;
     border-radius: 0;
@@ -234,7 +235,7 @@ li {
   }
   
   // Selects
-  select:not(.#{$resetClass}) {
+  select {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: transparent;
@@ -266,7 +267,7 @@ li {
   }
   
   // Textareas
-  textarea:not(.#{$resetClass}) {
+  textarea {
     background: none;
     border: none;
     border-bottom: 2px solid $gray-light;
