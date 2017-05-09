@@ -119,7 +119,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
             &nbsp;&nbsp;&lt;/div&gt;<br>
             &lt;/div&gt;<br>
-            &lt;div class="frow"&gt;<br>
+            &lt;div class="frow gutters"&gt;<br>
             &nbsp;&nbsp;&lt;div class="col-xs-1-2"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="not-clickable"&gt;Checkbox Buttons&lt;/label&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center content-center"&gt;<br>
@@ -194,7 +194,7 @@
                     </label>
                   </div>
                 </div>
-                <div class="frow">
+                <div class="frow gutters">
                   <div class="col-xs-1-2">
                     <label class="not-clickable">Checkbox Buttons</label>
                     <label class="direction-row items-center content-center">
@@ -242,9 +242,10 @@
               </div>
             </div>
           </div>
-          <div class="frow bottom-margin">
+          <div class="frow">
             <button class="example-toggle-button card-shadow" onclick="letsGo('.toggle-disabled', 'toggle', 'disabled');">Toggle Example</button>
           </div>
+          <p class="bottom-margin"><strong>Important Note:</strong> Not every browser allows all elements to be styled. For example, Firefox doesn't allow much alteration to checkboxes, they will be as ugly or pretty as Mozilla chooses. A quick <a href="https://www.google.com/search?q=pure+css+checkbox" target="_blank" rel="noopener">Google search</a> will turn up many alternative "hacks" to style the things browsers can't natively. Most involve putting the elements in weird, unnatural orders or are using display:none to hide the actual element and hack the label into the shape desired. If you need a specific look for an element, you can of course utilize a hack in your custom CSS, but for simplicity Frow won't include any.</p>
           <h5>
             Customize Away
           </h5>
