@@ -93,26 +93,76 @@
                         Frow's goal is not to style your page for you, but rather to make it easier do your own styling. However, there are certain places where the default starting point in browsers just isn't good enough or too inconsistent between the various browsers. One of the most worst areas of this are the various form elements, so Frow does apply some styling.
                     </p>
                     <div class="fake-code">
-                        &lt;label&gt;Name&lt;/label&gt;<br>
-                        &lt;input type="text" placeholder="Placeholder Text"&gt;&lt;/input&gt;<br>
+                        &lt;label&gt;<br>
+                        &nbsp;&nbsp;Name<br>
+                        &nbsp;&nbsp;&lt;input type="text" placeholder="Placeholder Text"&gt;&lt;/input&gt;<br>
+                        &lt;/label&gt;<br>
+                        &lt;label&gt;<br>
+                        &nbsp;&nbsp;Disabled Field<br>
+                        &nbsp;&nbsp;&lt;input type="text" placeholder="Placeholder Text" disabled="disabled"&gt;&lt;/input&gt;<br>
+                        &lt;/label&gt;<br>
                         &lt;div class="frow gutters"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Zipcode&lt;/label&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="tel" pattern="\d*" maxlength="5"&gt;&lt;/input&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Color&lt;/label&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Red&lt;/option&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Green&lt;/option&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Blue&lt;/option&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zipcode<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="tel" pattern="\d*" maxlength="5"&gt;&lt;/input&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Color<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Red&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Green&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Blue&lt;/option&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&lt;/div&gt;<br>
                         &lt;/div&gt;<br>
-                        &lt;label&gt;Text Area&lt;/label&gt;<br>
-                        &lt;textarea&gt;&lt;/textarea&gt;<br>
-                        &lt;div class="frow card-shadow"&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button&gt;Submit&lt;/button&gt;<br>
+                        &lt;div class="frow"&gt;<br>
+                        &nbsp;&nbsp;&lt;div class="col-xs-1-2"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="not-clickable"&gt;Checkbox Buttons&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center content-center"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox"&gt;&lt;/input&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 1<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center content-center"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" checked&gt;&lt;/input&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 2<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center content-center"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="toggle-disabled" type="checkbox" disabled&gt;&lt;/input&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disabled Option<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&lt;div class="col-xs-1-2"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="not-clickable"&gt;Radio Buttons&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center content-center"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="group-one" checked&gt;&lt;/input&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 1<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="group-one"&gt;&lt;/input&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 2<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="toggle-disabled" type="radio" name="group-one" disabled&gt;&lt;/input&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disabled Option<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
+                        &nbsp;&nbsp;&lt;/div&gt;<br>
+                        &lt;/div&gt;<br>
+                        &lt;label&gt;<br>
+                        &nbsp;&nbsp;File Upload<br>
+                        &nbsp;&nbsp;&lt;input type="file"&gt;&lt;/input&gt;<br>
+                        &lt;/label&gt;<br>
+                        &lt;label&gt;<br>
+                        &nbsp;&nbsp;Text Area<br>
+                        &nbsp;&nbsp;&lt;textarea&gt;&lt;/textarea&gt;<br>
+                        &lt;/label&gt;<br>
+                        &lt;div class="frow justify-around" style="margin-top: 20px;"&gt;<br>
+                        &nbsp;&nbsp;&lt;button class="col-xs-3-10"&gt;Regular&lt;/button&gt;<br>
+                        &nbsp;&nbsp;&lt;button class="col-xs-3-10 toggle-disabled" disabled&gt;Disabled&lt;/button&gt;<br>
+                        &nbsp;&nbsp;&lt;a type="button" class="col-xs-3-10"&gt;Anchor&lt;/a&gt;<br>
                         &lt;/div&gt;
                     </div>
                     <div class="form-example-contain">
@@ -207,25 +257,25 @@
                                 &lt;label class="<span class="reset-text">reset</span>"&gt;Name&lt;/label&gt;<br>
                                 &lt;input class="<span class="reset-text">reset</span>"&gt;&lt;/input&gt;<br>
                                 &lt;div class="frow gutters"&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="<span class="reset-text">reset</span>"&gt;Zipcode&lt;/label&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="<span class="reset-text">reset</span>"&gt;&lt;/input&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="<span class="reset-text">reset</span>"&gt;Color&lt;/label&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select class="<span class="reset-text">reset</span>"&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Red&lt;/option&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Green&lt;/option&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Blue&lt;/option&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="<span class="reset-text">reset</span>"&gt;Zipcode&lt;/label&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="<span class="reset-text">reset</span>"&gt;&lt;/input&gt;<br>
+                                &nbsp;&nbsp;&lt;/div&gt;<br>
+                                &nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="<span class="reset-text">reset</span>"&gt;Color&lt;/label&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;select class="<span class="reset-text">reset</span>"&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Red&lt;/option&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Green&lt;/option&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Blue&lt;/option&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
+                                &nbsp;&nbsp;&lt;/div&gt;<br>
                                 &lt;/div&gt;<br>
                                 &lt;label class="<span class="reset-text">reset</span>"&gt;File Upload&lt;/label&gt;<br>
                                 &lt;input type="file" class="<span class="reset-text">reset</span>"&gt;&lt;/input&gt;<br>
                                 &lt;label class="<span class="reset-text">reset</span>"&gt;Text Area&lt;/label&gt;<br>
                                 &lt;textarea class="<span class="reset-text">reset</span>"&gt;&lt;/textarea&gt;<br>
                                 &lt;div class="frow card-shadow"&gt;<br>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="<span class="reset-text">reset</span>"&gt;Submit&lt;/button&gt;<br>
+                                &nbsp;&nbsp;&lt;button class="<span class="reset-text">reset</span>"&gt;Submit&lt;/button&gt;<br>
                                 &lt;/div&gt;
                             </div>
                         </div>
@@ -275,17 +325,17 @@
                     </p>
                     <div class="fake-code">
                         &lt;style&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;select.my-custom-select {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 0;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius: 3px;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightseagreen;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: #fff;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;button.my-custom-button {<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: none;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid lightseagreen;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: lightseagreen;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;select.my-custom-select {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 0;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 3px;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: lightseagreen;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: #fff;<br>
+                        &nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;button.my-custom-button {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: none;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid lightseagreen;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: lightseagreen;<br>
+                        &nbsp;&nbsp;}<br>
                         &lt;/style&gt;
                     </div>
                     <div class="form-example-contain bottom-margin">

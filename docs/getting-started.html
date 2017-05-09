@@ -89,95 +89,73 @@
                     <h4>
                         Initial Page Setup
                     </h4>
-                        <div class="frow gutters">
-                            <div class="col-md-1-2">
-                                <h5>Preferred download source:</h5>
-                                <label class="reset control control--radio">
-                                    npm
-                                    <input type="radio"
-                                           name="install"
-                                           checked="checked"
-                                           onclick="letsGo('.section-install', 'hide', true);
-                                                    letsGo('.section-install-npm', 'show', true);
-                                                    letsGo('#preferred-css-selector', 'show', true);
-                                                    letsGo('.section-style-all', 'show');
-                                                    letsGo('.section-cdn', 'hide');"/>
-                                    <div class="control__indicator"></div>
-                                </label>
-                                <label class="reset control control--radio">
-                                    Bower
-                                    <input type="radio"
-                                           name="install"
-                                           onclick="letsGo('.section-install', 'hide', true);
-                                                    letsGo('.section-install-bower', 'show', true);
-                                                    letsGo('#preferred-css-selector', 'show', true);
-                                                    letsGo('.section-style-all', 'show');
-                                                    letsGo('.section-cdn', 'hide');"/>
-                                    <div class="control__indicator"></div>
-                                </label>
-                                <label class="reset control control--radio">
-                                    Manual Download
-                                    <input type="radio"
-                                           name="install"
-                                           onclick="letsGo('.section-install', 'hide', true);
-                                                    letsGo('.section-install-download', 'show', true);
-                                                    letsGo('#preferred-css-selector', 'show', true);
-                                                    letsGo('.section-style-all', 'show');
-                                                    letsGo('.section-cdn', 'hide');"/>
-                                    <div class="control__indicator"></div>
-                                </label>
-                                <label class="reset control control--radio">
-                                    None (Use a CDN)
-                                    <input type="radio"
-                                           name="install"
-                                           onclick="letsGo('#preferred-css-selector', 'hide', true);
-                                                    letsGo('.section-install', 'hide', true);
-                                                    letsGo('.section-style-all', 'hide', true);
-                                                    letsGo('.section-cdn', 'show', true);"/>
-                                    <div class="control__indicator"></div>
-                                </label>
-                                <!-- <label class="reset control control--radio">Disabled
-                                    <input type="radio"
-                                           name="radio2"
-                                           disabled="disabled"/>
-                                    <div class="control__indicator"></div>
-                                </label>
-                                <label class="reset control control--radio">Disabled & checked
-                                    <input type="radio"
-                                           name="radio2"
-                                           disabled="disabled"
-                                           checked="checked"/>
-                                    <div class="control__indicator"></div>
-                                </label> -->
-                            </div>
-                            <div class="col-md-1-2">
-                                <span id="preferred-css-selector">
-                                    <h5>Preferred CSS preprocessor:</h5>
-                                    <label class="reset control control--radio">
-                                        Sass
-                                        <input type="radio"
-                                               name="css"
-                                               checked="checked"
-                                               onclick="letsGo('.section-style', 'hide', true);
-                                                        letsGo('.section-style-sass', 'show', true);"/>
-                                        <div class="control__indicator"></div>
-                                    </label>
-                                    <label class="reset control control--radio">
-                                        None (Use just CSS)
-                                        <input type="radio"
-                                               name="css"
-                                               onclick="letsGo('.section-style', 'hide', true);
-                                                        letsGo('.section-style-css', 'show', true);"/>
-                                        <div class="control__indicator"></div>
-                                    </label>
-                                </span>
-                            </div>
+                    <div class="frow gutters">
+                        <div class="col-md-1-2">
+                            <h5>Preferred download source:</h5>
+                            <label class="direction-row items-center content-center">
+                                <input type="radio"
+                                       name="install"
+                                       checked
+                                       onclick="letsGo('.section-install', 'hide', true);
+                                                letsGo('.section-install-npm', 'show', true);
+                                                letsGo('#preferred-css-selector', 'show', true);
+                                                letsGo('.section-style-all', 'show');
+                                                letsGo('.section-cdn', 'hide');"/>
+                                npm
+                            </label>
+                            <label class="direction-row items-center content-center">
+                                <input type="radio"
+                                       name="install"
+                                       onclick="letsGo('.section-install', 'hide', true);
+                                                letsGo('.section-install-bower', 'show', true);
+                                                letsGo('#preferred-css-selector', 'show', true);
+                                                letsGo('.section-style-all', 'show');
+                                                letsGo('.section-cdn', 'hide');"/>
+                                Bower
+                            </label>
+                            <label class="direction-row items-center content-center">
+                                <input type="radio"
+                                       name="install"
+                                       onclick="letsGo('.section-install', 'hide', true);
+                                                letsGo('.section-install-download', 'show', true);
+                                                letsGo('#preferred-css-selector', 'show', true);
+                                                letsGo('.section-style-all', 'show');
+                                                letsGo('.section-cdn', 'hide');"/>
+                                Manual Download
+                            </label>
+                            <label class="direction-row items-center content-center">
+                                <input type="radio"
+                                       name="install"
+                                       onclick="letsGo('#preferred-css-selector', 'hide', true);
+                                                letsGo('.section-install', 'hide', true);
+                                                letsGo('.section-style-all', 'hide', true);
+                                                letsGo('.section-cdn', 'show', true);"/>
+                                None (Use a CDN)
+                            </label>
                         </div>
-                    <!-- <div class="tabs-container">
-                        <button id="radio-install-npm" class="radio-install" disabled="disabled" onclick="letsGo('.section-install', 'hide', true); letsGo('.section-install-npm', 'show', true); letsGo('.radio-install', 'remove', 'disabled=disabled', true); letsGo('#radio-install-npm', 'add', 'disabled=disabled', true);">npm</button>
-                        <button id="radio-install-bower" class="radio-install" onclick="letsGo('.section-install', 'hide', true); letsGo('.section-install-bower', 'show', true); letsGo('.radio-install', 'remove', 'disabled=disabled', true); letsGo('#radio-install-bower', 'add', 'disabled=disabled', true);">Bower</button>
-                        <button id="radio-install-download" class="radio-install" onclick="letsGo('.section-install', 'hide', true); letsGo('.section-install-download', 'show', true); letsGo('.radio-install', 'remove', 'disabled=disabled', true); letsGo('#radio-install-download', 'add', 'disabled=disabled', true);">Manual Download</button>
-                    </div> -->
+                        <div class="col-md-1-2">
+                            <span id="preferred-css-selector">
+                                <h5>Preferred CSS preprocessor:</h5>
+                                <label class="direction-row items-center content-center">
+                                    <input type="radio"
+                                           name="css"
+                                           checked
+                                           onclick="letsGo('.section-style', 'hide', true);
+                                                    letsGo('.section-style-sass', 'show', true);"/>
+                                    <div class="control__indicator"></div>
+                                   Sass
+                                </label>
+                                <label class="direction-row items-center content-center">
+                                    <input type="radio"
+                                           name="css"
+                                           onclick="letsGo('.section-style', 'hide', true);
+                                                    letsGo('.section-style-css', 'show', true);"/>
+                                    <div class="control__indicator"></div>
+                                    None (Use just CSS)
+                                </label>
+                            </span>
+                        </div>
+                    </div>
                     <div class="frow gutters">
                         <div class="col-md-1-1">
                             <div class="frow-setup">
