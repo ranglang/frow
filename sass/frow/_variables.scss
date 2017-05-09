@@ -5,7 +5,7 @@
 
 //== Colors
 //
-//## Gray and colors for use across Flex.
+//## Gray and colors for use across Frow.
 
 $gray-lighter: #eaeaea !default;
 $gray-light: #9E9E9E !default;
@@ -21,19 +21,21 @@ $near-black: #333333 !default;
 //## Settings for some of the most global styles.
 
 //** Background color.
-$background-color:    #F6F6F6 !default;
+$background-color: #F6F6F6 !default;
 //** Global text color on `<body>`.
-$text-color:      $near-black !default;
+$text-color: $near-black !default;
 
 //** Global textual link color.
-$link-color:      $near-black !default;
+$link-color: $near-black !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:    darken($near-black, 15%) !default;
+$link-hover-color: darken($near-black, 15%) !default;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
 
 //** Form values.
-$reset: reset !default;
+$enableButtons: true !default;
+$enableForms: true !default;
+$resetClass: reset !default;
 
 
 //== Media queries breakpoints

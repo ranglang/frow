@@ -1278,7 +1278,7 @@ input:not(.reset)::-ms-browse {
 label:not(.reset) {
   color: #9E9E9E;
   font-size: 14px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   cursor: pointer;
   display: flex;
   flex-direction: column; }
