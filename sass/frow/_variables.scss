@@ -21,14 +21,14 @@ $near-black: #333333 !default;
 //## Settings for some of the most global styles.
 
 //** Background color.
-$background-color:      #F6F6F6 !default;
+$background-color:    #F6F6F6 !default;
 //** Global text color on `<body>`.
-$text-color:            $near-black !default;
+$text-color:      $near-black !default;
 
 //** Global textual link color.
-$link-color:            $near-black !default;
+$link-color:      $near-black !default;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      darken($near-black, 15%) !default;
+$link-hover-color:    darken($near-black, 15%) !default;
 //** Link hover decoration.
 $link-hover-decoration: underline !default;
 
@@ -42,14 +42,14 @@ $reset: reset !default;
 
 //** Small screen / tablet
 $sizes-mobile: (
-    xs: 0px,
-    sm: 768px
+  xs: 0px,
+  sm: 768px
 ) !default;
 
 //** Desktops / laptops
 $sizes-desktop: (
-    md: 992px,
-    lg: 1200px
+  md: 992px,
+  lg: 1200px
 ) !default;
 
 

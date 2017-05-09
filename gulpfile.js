@@ -14,21 +14,21 @@ var dest = 'css/';
 var copy = 'docs/css/';
 
 gulp.task('styles', function() {
-    return gulp.src(path.join(src, '_frow.scss'))
-        .pipe(rename("frow.scss"))
-        // .pipe(sourcemaps.init()) breaks from the file rename?
-        .pipe(sass({
-            includePaths: [src]
-        }))
-        .pipe(rename("frow.css"))
-        // .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(dest))
-        .pipe(gulp.dest(copy))
-        .pipe(cssnano())
-        .pipe(rename("frow.min.css"))
-        //.pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(dest))
-        .pipe(gulp.dest(copy));
+  return gulp.src(path.join(src, '_frow.scss'))
+    .pipe(rename("frow.scss"))
+    // .pipe(sourcemaps.init()) breaks from the file rename?
+    .pipe(sass({
+      includePaths: [src]
+    }))
+    .pipe(rename("frow.css"))
+    // .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(dest))
+    .pipe(gulp.dest(copy))
+    .pipe(cssnano())
+    .pipe(rename("frow.min.css"))
+    //.pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(dest))
+    .pipe(gulp.dest(copy));
 });
 
 gulp.task('default', ['styles']);
