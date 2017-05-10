@@ -92,7 +92,7 @@
           <div class="frow gutters">
             <div class="col-md-1-2">
               <h5>Preferred download source:</h5>
-              <label class="direction-row items-center content-center">
+              <label class="row-start">
                 <input type="radio"
                      name="install"
                      checked
@@ -103,7 +103,7 @@
                         letsGo('.section-cdn', 'hide');"/>
                 npm
               </label>
-              <label class="direction-row items-center content-center">
+              <label class="row-start">
                 <input type="radio"
                      name="install"
                      onclick="letsGo('.section-install', 'hide', true);
@@ -113,7 +113,7 @@
                         letsGo('.section-cdn', 'hide');"/>
                 Bower
               </label>
-              <label class="direction-row items-center content-center">
+              <label class="row-start">
                 <input type="radio"
                      name="install"
                      onclick="letsGo('.section-install', 'hide', true);
@@ -123,7 +123,7 @@
                         letsGo('.section-cdn', 'hide');"/>
                 Manual Download
               </label>
-              <label class="direction-row items-center content-center">
+              <label class="row-start">
                 <input type="radio"
                      name="install"
                      onclick="letsGo('#preferred-css-selector', 'hide', true);
@@ -136,7 +136,7 @@
             <div class="col-md-1-2">
               <span id="preferred-css-selector">
                 <h5>Preferred CSS preprocessor:</h5>
-                <label class="direction-row items-center content-center">
+                <label class="row-start">
                   <input type="radio"
                        name="css"
                        checked
@@ -145,7 +145,7 @@
                   <div class="control__indicator"></div>
                    Sass
                 </label>
-                <label class="direction-row items-center content-center">
+                <label class="row-start">
                   <input type="radio"
                        name="css"
                        onclick="letsGo('.section-style', 'hide', true);

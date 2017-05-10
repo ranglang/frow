@@ -29,13 +29,14 @@ $text-color: $near-black !default;
 $link-color: $near-black !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color: darken($near-black, 15%) !default;
-//** Link hover decoration.
-$link-hover-decoration: underline !default;
 
 //** Form values.
-$enableButtons: true !default;
-$enableForms: true !default;
+$frow-enable-buttons: true !default;
+$frow-enable-forms: true !default;
 
+$frow-form-color: $gray-dark !default;
+$frow-form-color-focus: $gray-dark !default;
+$frow-form-color-disabled: $gray-light !default;
 
 //== Media queries breakpoints
 //

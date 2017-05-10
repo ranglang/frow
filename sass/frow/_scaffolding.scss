@@ -23,7 +23,7 @@ a {
   &:focus,
   &:active {
     color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    text-decoration: underline;
   }
 
   p & {
@@ -86,7 +86,7 @@ li {
 }
 
 // Buttons
-@if $enableButtons == true {
+@if $frow-enable-buttons == true {
   
   // Buttons
   button,
@@ -99,7 +99,7 @@ li {
 }
 
 // Forms
-@if $enableForms == true {
+@if $frow-enable-forms == true {
   
   input::-webkit-file-upload-button {
     @include frow-button;
@@ -143,6 +143,7 @@ li {
       cursor: default !important;
     }
   
+    // Number Input
     &[type="number"] {
       -moz-appearance:textfield;
   
@@ -153,6 +154,23 @@ li {
       }
     }
     
+    // Color Picker
+    &[type="color"] {
+      height: 31px;
+      cursor: pointer;
+      
+      &::-webkit-color-swatch-wrapper {
+        padding: 0;
+      }
+      
+      &::-webkit-color-swatch {
+        border-color: $gray-light;
+        border-radius: 3px;
+      }
+    }
+    
+    
+    // Checkboxes
     &[type="checkbox"] {
       -webkit-appearance: none;
       appearance: none;
@@ -194,6 +212,7 @@ li {
       }
     }
     
+    // Radio Buttons
     &[type="radio"] {
       -webkit-appearance: none;
       appearance: none;
@@ -232,6 +251,152 @@ li {
         }
       }
     }
+    
+    // Range
+    &[type="range"] {
+      border: none;
+      padding: 13px 0px;
+      -webkit-appearance: none;
+      width: 100%;
+    
+      // Reset existing Range styles
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+      }
+      
+      &::-ms-track {
+        width: 100%;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+      
+      // Range Thumb
+      @mixin thumb-styles {
+        cursor: pointer;
+        background: $gray-light;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        transition: background $frow-animate-speed;
+      }
+      
+      @mixin thumb-styles-focus {
+        background: $gray-darker;
+        outline: none;
+      }
+      
+      @mixin thumb-styles-disabled {
+        background: repeating-linear-gradient(-45deg, darken($gray-lighter, 5%), darken($gray-lighter, 5%) 2px, #fff 2px, #fff 4px);
+      }
+      
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        margin-top: -8px;
+        @include thumb-styles;
+      }
+      
+      &::-moz-range-thumb {
+        @include thumb-styles;
+      }
+      
+      &::-ms-thumb {
+        @include thumb-styles;
+      }
+      
+      &:active, &:hover, &:focus {
+        &::-webkit-slider-thumb {
+          @include thumb-styles-focus;
+        }
+      
+        &::-moz-range-thumb {
+          @include thumb-styles-focus;
+        }
+        
+        &::-ms-thumb {
+          @include thumb-styles-focus;
+        }
+      }
+      
+      &:disabled {
+        &::-webkit-slider-thumb {
+          @include thumb-styles-disabled;
+        }
+      
+        &::-moz-range-thumb {
+          @include thumb-styles-disabled;
+        }
+        
+        &::-ms-thumb {
+          @include thumb-styles-disabled;
+        }
+      }
+      
+      // Range Track
+      @mixin track-styles-basics {
+        width: 100%;
+        height: 3px;
+        cursor: pointer;
+        border-radius: 0px;
+      }
+      
+      @mixin track-styles-background {
+        background: $gray-lighter;
+      }
+      
+      @mixin track-styles-focus {
+        background: $gray-lighter;
+        transition: background $frow-animate-speed;
+      }
+      
+      @mixin track-styles {
+        @include track-styles-basics;
+        @include track-styles-background;
+      }
+      
+      &::-webkit-slider-runnable-track {
+        @include track-styles;
+      }
+      
+      &:active::-webkit-slider-runnable-track {
+        @include track-styles-focus;
+      }
+      
+      &::-moz-range-track {
+        @include track-styles;
+      }
+      
+      &:active::-moz-range-track {
+        @include track-styles-focus;
+      }
+      
+      &::-ms-track {
+        @include track-styles-basics;
+        background: transparent;
+        border-color: transparent;
+        border-width: 16px 0;
+        color: transparent;
+      }
+      
+      &::-ms-fill-lower {
+        background: #2a6495;
+        border-radius: 2.6px;
+      }
+      
+      &:active::-ms-fill-lower {
+        @include track-styles-background;
+      }
+      
+      &::-ms-fill-upper {
+        border-radius: 2.6px;
+        @include track-styles-background;
+      }
+      
+      &:active::-ms-fill-upper {
+        @include track-styles-focus;
+      }
+    }
   }
   
   // Selects
@@ -239,7 +404,7 @@ li {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: transparent;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='rgb(51,51,51)'/></g></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{$gray-light}'/></g></svg>");
     background-position: right center;
     background-repeat: no-repeat;
     display: block;
@@ -250,19 +415,22 @@ li {
     font-size: 15px;
     height: 27px;
     margin-top: 4px;
-    padding: 7px 24px 3px 5px;
+    padding: 3px 24px 3px 5px;
     width: 100%;
     cursor: pointer;
     transition: border-color $frow-animate-speed;
   
     &:hover, &:focus {
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{darken($gray-light, 15%)}'/></g></svg>");
       outline: none;
       border-color: darken($gray-light, 15%);
     }
   
     &:disabled {
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{$gray-light}'/></g></svg>");
       border-bottom: 1px dotted $gray-light;
       cursor: default !important;
+      color: $frow-form-color-disabled;
     }
   }
   

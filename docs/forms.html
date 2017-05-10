@@ -110,11 +110,11 @@
             &nbsp;&nbsp;&lt;/div&gt;<br>
             &nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Color<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pets<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Red&lt;/option&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Green&lt;/option&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Blue&lt;/option&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Dog&lt;/option&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cat&lt;/option&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Fish&lt;/option&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
             &nbsp;&nbsp;&lt;/div&gt;<br>
@@ -122,30 +122,30 @@
             &lt;div class="frow gutters"&gt;<br>
             &nbsp;&nbsp;&lt;div class="col-xs-1-2"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="not-clickable"&gt;Checkbox Buttons&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center content-center"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox"&gt;&lt;/input&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 1<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center content-center"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" checked&gt;&lt;/input&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 2<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center content-center"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="toggle-disabled" type="checkbox" disabled&gt;&lt;/input&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disabled Option<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
             &nbsp;&nbsp;&lt;/div&gt;<br>
             &nbsp;&nbsp;&lt;div class="col-xs-1-2"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="not-clickable"&gt;Radio Buttons&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center content-center"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="group-one" checked&gt;&lt;/input&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 1<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="group-one"&gt;&lt;/input&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 2<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="direction-row items-center"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="toggle-disabled" type="radio" name="group-one" disabled&gt;&lt;/input&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disabled Option<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
@@ -185,11 +185,18 @@
                   </div>
                   <div class="col-md-1-2">
                     <label>
-                      Color
+                      Dropdown
                       <select>
-                        <option>Red</option>
-                        <option>Green</option>
-                        <option>Blue</option>
+                        <optgroup label="Group 1">
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                        </optgroup>
+                        <optgroup label="Group 1">
+                          <option>Option 4</option>
+                          <option>Option 5</option>
+                          <option>Option 6</option>
+                        </optgroup>
                       </select>
                     </label>
                   </div>
@@ -197,30 +204,30 @@
                 <div class="frow gutters">
                   <div class="col-xs-1-2">
                     <label class="not-clickable">Checkbox Buttons</label>
-                    <label class="direction-row items-center content-center">
+                    <label class="row-start">
                       <input type="checkbox"></input>
                       Option 1
                     </label>
-                    <label class="direction-row items-center content-center">
+                    <label class="row-start">
                       <input type="checkbox" checked></input>
                       Option 2
                     </label>
-                    <label class="direction-row items-center content-center">
+                    <label class="row-start">
                       <input class="toggle-disabled" type="checkbox" disabled></input>
                       Disabled Option
                     </label>
                   </div>
                   <div class="col-xs-1-2">
                     <label class="not-clickable">Radio Buttons</label>
-                    <label class="direction-row items-center content-center">
+                    <label class="row-start">
                       <input type="radio" name="group-one" checked></input>
                       Option 1
                     </label>
-                    <label class="direction-row items-center">
+                    <label class="row-start">
                       <input type="radio" name="group-one"></input>
                       Option 2
                     </label>
-                    <label class="direction-row items-center">
+                    <label class="row-start">
                       <input class="toggle-disabled" type="radio" name="group-one" disabled></input>
                       Disabled Option
                     </label>
@@ -229,6 +236,10 @@
                 <label>
                   File Upload
                   <input type="file"></input>
+                </label>
+                <label>
+                  Range
+                  <input type="range" disabled></input>
                 </label>
                 <label>
                   Text Area
@@ -245,12 +256,56 @@
           <div class="frow">
             <button class="example-toggle-button card-shadow" onclick="letsGo('.toggle-disabled', 'toggle', 'disabled');">Toggle Example</button>
           </div>
-          <p class="bottom-margin"><strong>Important Note:</strong> Not every browser allows all elements to be styled. For example, Firefox doesn't allow much alteration to checkboxes, they will be as ugly or pretty as Mozilla chooses. A quick <a href="https://www.google.com/search?q=pure+css+checkbox" target="_blank" rel="noopener">Google search</a> will turn up many alternative "hacks" to style the things browsers can't natively. Most involve putting the elements in weird, unnatural orders or are using display:none to hide the actual element and hack the label into the shape desired. If you need a specific look for an element, you can of course utilize a hack in your custom CSS, but for simplicity Frow won't include any.</p>
+          <p class="bottom-margin"><strong>Important Note:</strong> Not every browser allows all elements to be styled. For example, Firefox doesn't allow much alteration to checkboxes, they will be as ugly or pretty as Mozilla chooses. A quick <a href="https://www.google.com/search?q=pure+css+checkbox" target="_blank" rel="noopener">Google search</a> will turn up many alternative "hacks" to style the things browsers can't natively. Most are using display:none to hide the actual element and hack the label into the shape desired. If you need a specific look for an element, you can of course utilize a hack in your custom CSS, but for simplicity Frow won't include any.</p>
           <h5>
-            Customize Away
+            Labels
           </h5>
           <p>
-            Frow's elements are a simple starting point ready for customization. Whether you hate Frow's form styling and want an overhaul or you love them and just want to add a splash of color, Frow has provided you with a great starting point across all browsers. Make the design yours!
+            To improve the usefulness of wrapping labels around form elements, labels by default are display:flex. You can use any of the <a href="frow-shortcuts.html">Frow Shortcuts</a> to alter the behavior of contents within the label.
+          </p>
+          <div class="frow items-stretch bottom-margin">
+            <div class="col-md-1-2">
+              <div class="fake-code height-100">
+                &lt;label&gt;<br>
+                &nbsp;&nbsp;Address<br>
+                &nbsp;&nbsp;&lt;input&gt;&lt;/input&gt;<br>
+                &lt;/label&gt;<br>
+                &lt;label class="column-center"&gt;<br>
+                &nbsp;&nbsp;Address<br>
+                &nbsp;&nbsp;&lt;input&gt;&lt;/input&gt;<br>
+                &lt;/label&gt;<br>
+                &lt;label class="row-start"&gt;<br>
+                &nbsp;&nbsp;Address<br>
+                &nbsp;&nbsp;&lt;input&gt;&lt;/input&gt;<br>
+                &lt;/label&gt;<br>
+              </div>
+            </div>
+            <div class="col-md-1-2">
+              <div class="form-example-contain height-100">
+                <div class="frow centered">
+                  <div class="form-example card-shadow content-center">
+                    <label style="margin-bottom: 40px">
+                      Address
+                      <input></input>
+                    </label>
+                    <label class="column-center" style="margin-bottom: 50px">
+                      Address
+                      <input></input>
+                    </label>
+                    <label class="row-start">
+                      Address
+                      <input></input>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5>
+            Customize To Your Liking
+          </h5>
+          <p>
+            Frow's elements are a simple starting point ready for customization. Whether you love the default look and just want to add a splash of color, or want to do a big overhaul, Frow has provided you with a great starting point across all browsers. Make the design yours!
           </p>
           <div class="fake-code">
             &lt;style&gt;<br>
@@ -276,12 +331,12 @@
                       Name
                       <input class="blue" type="text" placeholder="Placeholder Text"></input>
                     </label>
-                    <label class="direction-row items-center content-center">
-                      Color
+                    <label class="row-start">
+                      Pets
                       <select class="my-custom-select ">
-                        <option>Red</option>
-                        <option selected>Green</option>
-                        <option>Blue</option>
+                        <option>Dog</option>
+                        <option>Cat</option>
+                        <option>Fish</option>
                       </select>
                     </label>
                     <label>
@@ -303,12 +358,12 @@
                       Name
                       <input class="blue" type="text" placeholder="Placeholder Text"></input>
                     </label>
-                    <label class="direction-row items-center content-center">
-                      Color
+                    <label class="row-start">
+                      Pets
                       <select class="my-custom-select ">
-                        <option>Red</option>
-                        <option selected>Green</option>
-                        <option>Blue</option>
+                        <option>Dog</option>
+                        <option>Cat</option>
+                        <option>Fish</option>
                       </select>
                     </label>
                     <label>

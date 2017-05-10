@@ -42,15 +42,28 @@
   }
   &.row-start {
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
   }
   &.row-center {
     flex-direction: row;
+    align-items: center;
     justify-content: center;
   }
   &.row-end {
     flex-direction: row;
+    align-items: center;
     justify-content: flex-end;
+  }
+  &.row-between {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &.row-around {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
   &.column-start {
     flex-direction: column;

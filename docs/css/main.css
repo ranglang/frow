@@ -409,10 +409,6 @@ p a {
   margin-bottom: 0px;
 }
 
-.grid-example-div .frow {
-  min-height: 70px;
-}
-
 .grid-example-square {
   background-color: #5EA6DC;
   height: 71px;
