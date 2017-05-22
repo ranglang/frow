@@ -6,6 +6,7 @@
     <title>Frow CSS | Form Elements</title>
     <link rel="alternate" type="application/rss+xml" href="https://github.com/Beg-in/frow/releases.atom">
     <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="description" content="Frow is an HTML and CSS framework for creating quick, responsive, mobile-first projects on the web.">
     <meta name="theme-color" content="#2A6A9A">
     <link rel="icon" sizes="192x192" href="highres.png">
     <meta property="og:image" content="http://frowcss.com/facebook.png"/>
@@ -66,7 +67,7 @@
       </div>
     </div>
     <div class="frow hidden-xs">
-      <div class="col-md-1-1" id="test">
+      <div class="col-md-1-1">
         <div class="tab-bar">
           <ul class="frow centered">
             <li><a href="getting-started.html">Getting Started</a></li>
@@ -92,163 +93,134 @@
           <p>
             There are certain places where the default styles in browsers just aren't good enough or too inconsistent between the various browsers. One of the most worst areas of this are the various form elements, so Frow provides a consistant starting point across browsers for you to build off of.
           </p>
-          <div class="fake-code" style="display:none">
-            &lt;label&gt;<br>
-            &nbsp;&nbsp;Name<br>
-            &nbsp;&nbsp;&lt;input type="text" placeholder="Placeholder Text"&gt;&lt;/input&gt;<br>
-            &lt;/label&gt;<br>
-            &lt;label&gt;<br>
-            &nbsp;&nbsp;Disabled Field<br>
-            &nbsp;&nbsp;&lt;input type="text" placeholder="Placeholder Text" disabled="disabled"&gt;&lt;/input&gt;<br>
-            &lt;/label&gt;<br>
-            &lt;div class="frow gutters"&gt;<br>
-            &nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zipcode<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="tel" maxlength="5"&gt;&lt;/input&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pets<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Dog&lt;/option&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cat&lt;/option&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Fish&lt;/option&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-            &lt;div class="frow gutters"&gt;<br>
-            &nbsp;&nbsp;&lt;div class="col-xs-1-2"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="not-clickable"&gt;Checkbox Buttons&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox"&gt;&lt;/input&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" checked&gt;&lt;/input&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 2<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="toggle-disabled" type="checkbox" disabled&gt;&lt;/input&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disabled Option<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="col-xs-1-2"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="not-clickable"&gt;Radio Buttons&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="group-one" checked&gt;&lt;/input&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio" name="group-one"&gt;&lt;/input&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Option 2<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="row-start"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class="toggle-disabled" type="radio" name="group-one" disabled&gt;&lt;/input&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disabled Option<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;<br>
-            &nbsp;&nbsp;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-            &lt;label&gt;<br>
-            &nbsp;&nbsp;File Upload<br>
-            &nbsp;&nbsp;&lt;input type="file"&gt;&lt;/input&gt;<br>
-            &lt;/label&gt;<br>
-            &lt;label&gt;<br>
-            &nbsp;&nbsp;Text Area<br>
-            &nbsp;&nbsp;&lt;textarea&gt;&lt;/textarea&gt;<br>
-            &lt;/label&gt;<br>
-            &lt;div class="frow justify-around"&gt;<br>
-            &nbsp;&nbsp;&lt;button class="col-xs-3-10"&gt;Regular&lt;/button&gt;<br>
-            &nbsp;&nbsp;&lt;button class="col-xs-3-10 toggle-disabled" disabled&gt;Disabled&lt;/button&gt;<br>
-            &nbsp;&nbsp;&lt;a type="button" class="col-xs-3-10"&gt;Anchor&lt;/a&gt;<br>
-            &lt;/div&gt;<br>
-          </div>
-          <div class="form-example-contain">
-            <div class="frow centered">
-              <div class="form-example card-shadow content-center">
-                <label>
-                  Name
-                  <input type="text" placeholder="Placeholder Text"></input>
-                </label>
-                <label>
-                  Disabled Field
-                  <input type="text" placeholder="Placeholder Text" disabled="disabled"></input>
-                </label>
-                <div class="frow gutters">
-                  <div class="col-md-1-2">
+          <div class="frow items-stretch">
+            <div class="col-md-1-2">
+              <div class="fake-code height-100">
+                &lt;label&gt;<br>
+                &nbsp;&nbsp;Name<br>
+                &nbsp;&nbsp;&lt;input type="text" placeholder="Placeholder Text"&gt;&lt;/input&gt;<br>
+                &lt;/label&gt;<br>
+                <br>
+                &lt;label&gt;<br>
+                &nbsp;&nbsp;Zipcode<br>
+                &nbsp;&nbsp;&lt;input type="tel" maxlength="5"&gt;&lt;/input&gt;<br>
+                &lt;/label&gt;<br>
+                <br>
+                &lt;label&gt;<br>
+                &nbsp;&nbsp;Dropdown<br>
+                &nbsp;&nbsp;&lt;select&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;optgroup label="Group 1"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Option 1&lt;/option&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Option 2&lt;/option&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Option 3&lt;/option&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/optgroup&gt;<br>
+                &nbsp;&nbsp;&lt;/select&gt;<br>
+                &lt;/label&gt;<br>
+                <br>
+                &lt;label class="row-start"&gt;<br>
+                &nbsp;&nbsp;&lt;input type="checkbox"&gt;&lt;/input&gt;<br>
+                &nbsp;&nbsp;Option 1<br>
+                &lt;/label&gt;<br>
+                <br>
+                &lt;label class="row-start"&gt;<br>
+                &nbsp;&nbsp;&lt;input type="radio" name="group-one" checked&gt;&lt;/input&gt;<br>
+                &nbsp;&nbsp;Option 1<br>
+                &lt;/label&gt;<br>
+                <br>
+                &lt;div class="frow justify-around"&gt;<br>
+                &nbsp;&nbsp;&lt;button class="col-xs-3-10"&gt;Regular&lt;/button&gt;<br>
+                &nbsp;&nbsp;&lt;button class="col-xs-3-10" disabled&gt;Disabled&lt;/button&gt;<br>
+                &nbsp;&nbsp;&lt;a type="button" class="col-xs-3-10"&gt;Anchor&lt;/a&gt;<br>
+                &lt;/div&gt;<br>
+              </div>
+            </div>
+            <div class="col-md-1-2">
+              <div class="form-example-contain height-100">
+                <div class="frow centered">
+                  <div class="form-example card-shadow content-center">
                     <label>
-                      Zipcode
-                      <input type="tel" maxlength="5"></input>
+                      Name
+                      <input type="text" placeholder="Placeholder Text"></input>
                     </label>
-                  </div>
-                  <div class="col-md-1-2">
                     <label>
-                      Dropdown
-                      <select>
-                        <optgroup label="Group 1">
-                          <option>Option 1</option>
-                          <option>Option 2</option>
-                          <option>Option 3</option>
-                        </optgroup>
-                        <optgroup label="Group 1">
-                          <option>Option 4</option>
-                          <option>Option 5</option>
-                          <option>Option 6</option>
-                        </optgroup>
-                      </select>
+                      Disabled Field
+                      <input type="text" placeholder="Placeholder Text" disabled="disabled"></input>
                     </label>
+                    <div class="frow gutters">
+                      <div class="col-md-1-2">
+                        <label>
+                          Zipcode
+                          <input type="tel" maxlength="5" class="toggle-disabled"></input>
+                        </label>
+                      </div>
+                      <div class="col-md-1-2">
+                        <label>
+                          Dropdown
+                          <select class="toggle-disabled">
+                            <optgroup label="Group 1">
+                              <option>Option 1</option>
+                              <option>Option 2</option>
+                              <option>Option 3</option>
+                            </optgroup>
+                            <optgroup label="Group 2">
+                              <option>Option 4</option>
+                              <option>Option 5</option>
+                              <option>Option 6</option>
+                            </optgroup>
+                          </select>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="frow gutters">
+                      <div class="col-xs-1-2">
+                        <label class="not-clickable">Checkbox Buttons</label>
+                        <label class="row-start">
+                          <input type="checkbox"></input>
+                          Option 1
+                        </label>
+                        <label class="row-start">
+                          <input type="checkbox" checked></input>
+                          Option 2
+                        </label>
+                        <label class="row-start">
+                          <input class="toggle-disabled" type="checkbox" disabled></input>
+                          Disabled Option
+                        </label>
+                      </div>
+                      <div class="col-xs-1-2">
+                        <label class="not-clickable">Radio Buttons</label>
+                        <label class="row-start">
+                          <input type="radio" name="group-one" checked></input>
+                          Option 1
+                        </label>
+                        <label class="row-start">
+                          <input type="radio" name="group-one"></input>
+                          Option 2
+                        </label>
+                        <label class="row-start">
+                          <input class="toggle-disabled" type="radio" name="group-one" disabled></input>
+                          Disabled Option
+                        </label>
+                      </div>
+                    </div>
+                    <label>
+                      File Upload
+                      <input type="file" class="toggle-disabled"></input>
+                    </label>
+                    <label>
+                      Range
+                      <input type="range" class="toggle-disabled"></input>
+                    </label>
+                    <label>
+                      Text Area
+                      <textarea class="toggle-disabled"></textarea>
+                    </label>
+                    <div class="frow justify-around">
+                      <button class="col-xs-3-10">Regular</button>
+                      <button class="col-xs-3-10 toggle-disabled" disabled>Disabled</button>
+                      <a type="button" class="col-xs-3-10">Anchor</a>
+                    </div>
                   </div>
-                </div>
-                <div class="frow gutters">
-                  <div class="col-xs-1-2">
-                    <label class="not-clickable">Checkbox Buttons</label>
-                    <label class="row-start">
-                      <input type="checkbox"></input>
-                      Option 1
-                    </label>
-                    <label class="row-start">
-                      <input type="checkbox" checked></input>
-                      Option 2
-                    </label>
-                    <label class="row-start">
-                      <input class="toggle-disabled" type="checkbox" disabled></input>
-                      Disabled Option
-                    </label>
-                  </div>
-                  <div class="col-xs-1-2">
-                    <label class="not-clickable">Radio Buttons</label>
-                    <label class="row-start">
-                      <input type="radio" name="group-one" checked></input>
-                      Option 1
-                    </label>
-                    <label class="row-start">
-                      <input type="radio" name="group-one"></input>
-                      Option 2
-                    </label>
-                    <label class="row-start">
-                      <input class="toggle-disabled" type="radio" name="group-one" disabled></input>
-                      Disabled Option
-                    </label>
-                  </div>
-                </div>
-                <label>
-                  File Upload
-                  <input type="file"></input>
-                </label>
-                <label>
-                  Range
-                  <input type="range" disabled></input>
-                </label>
-                <label>
-                  Text Area
-                  <textarea></textarea>
-                </label>
-                <div class="frow justify-around">
-                  <button class="col-xs-3-10">Regular</button>
-                  <button class="col-xs-3-10 toggle-disabled" disabled>Disabled</button>
-                  <a type="button" class="col-xs-3-10">Anchor</a>
                 </div>
               </div>
             </div>
@@ -256,7 +228,7 @@
           <div class="frow">
             <button class="example-toggle-button card-shadow" onclick="letsGo('.toggle-disabled', 'toggle', 'disabled');">Toggle Example</button>
           </div>
-          <p class="bottom-margin"><strong>Important Note:</strong> Not every browser allows all elements to be styled. For example, Firefox doesn't allow much alteration to checkboxes, they will be as ugly or pretty as Mozilla chooses. A quick <a href="https://www.google.com/search?q=pure+css+checkbox" target="_blank" rel="noopener">Google search</a> will turn up many alternative "hacks" to style the things browsers can't natively. Most are using display:none to hide the actual element and hack the label into the shape desired. If you need a specific look for an element, you can of course utilize a hack in your custom CSS, but for simplicity Frow won't include any.</p>
+          <p class="bottom-margin"><strong>Important Note:</strong> Not every browser allows all elements to be styled. For example, Firefox doesn't allow much alteration to checkboxes, they will be as ugly or pretty as Mozilla chooses. A quick <a href="https://www.google.com/search?q=pure+css+checkbox" target="_blank" rel="noopener">Google search</a> will turn up many alternative "hacks" to style the things browsers can't natively. Most are using display:none to hide the actual element and hack the label into the shape desired. If you need a specific look for an element, you can of course utilize a hack in your custom CSS, but for simplicity Frow doesn't include any so that you may write standard code.</p>
           <h5>
             Labels
           </h5>
@@ -270,10 +242,12 @@
                 &nbsp;&nbsp;Address<br>
                 &nbsp;&nbsp;&lt;input&gt;&lt;/input&gt;<br>
                 &lt;/label&gt;<br>
+                <br>
                 &lt;label class="column-center"&gt;<br>
                 &nbsp;&nbsp;Address<br>
                 &nbsp;&nbsp;&lt;input&gt;&lt;/input&gt;<br>
                 &lt;/label&gt;<br>
+                <br>
                 &lt;label class="row-start"&gt;<br>
                 &nbsp;&nbsp;Address<br>
                 &nbsp;&nbsp;&lt;input&gt;&lt;/input&gt;<br>
@@ -324,33 +298,6 @@
           </div>
           <div class="form-example-contain bottom-margin">
             <div class="frow gutters centered">
-              <div class="col-md-1-2">
-                <div class="frow centered">
-                  <div class="form-example card-shadow">
-                    <label class="blue">
-                      Name
-                      <input class="blue" type="text" placeholder="Placeholder Text"></input>
-                    </label>
-                    <label class="row-start">
-                      Pets
-                      <select class="my-custom-select ">
-                        <option>Dog</option>
-                        <option>Cat</option>
-                        <option>Fish</option>
-                      </select>
-                    </label>
-                    <label>
-                      Text Area
-                      <textarea class="my-custom-textarea card-shadow"></textarea>
-                    </label>
-                    <div class="frow justify-around">
-                      <button class="blue card-shadow hidden-xs">Submit</button>
-                      <button class="rounded">Submit</button>
-                      <button class="my-custom-button">Submit</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div class="col-md-1-2">
                 <div class="frow centered">
                   <div class="form-example card-shadow">

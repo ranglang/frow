@@ -1,8 +1,8 @@
 /* Don't forget to vendor prefix! */
 
-*:not(.letsGo-animate) {
-  transition: width 0.4s, height 0.4s, font-size 0.4s, font-weight 0.4s;
-}
+/**:not(.letsGo-animate) {*/
+/*  transition: width 0.4s, height 0.4s, font-size 0.4s, font-weight 0.4s;*/
+/*}*/
 
 body {
   margin-bottom: 25px;
@@ -337,6 +337,11 @@ p a {
 
 .frow-setup p {
   margin: 10px 0 5px;
+}
+
+.display-selector {
+  color: #333;
+  font-size: 14px;
 }
 
 .fake-code {
