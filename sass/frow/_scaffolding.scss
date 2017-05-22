@@ -58,10 +58,9 @@ li {
 
 @mixin frow-button-disabled {
   cursor: default !important;
-  box-shadow: none;
-  box-shadow: inset 0 0 0 2px $gray-lighter;
+  border: 2px solid $gray-lighter;
   background: repeating-linear-gradient(-45deg, darken($gray-lighter, 5%), darken($gray-lighter, 5%) 3px, #fff 3px, #fff 6px);
-  background-color: darken($gray-lighter, 5%);
+  background-color: darken($gray-lighter, 15%);
   color: $gray-light;
 }
 
@@ -70,7 +69,7 @@ li {
   -moz-appearance: none;
   background: none;
   background-color: $gray-darker;
-  border: none;
+  border: 2px solid $gray-darker;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
@@ -78,14 +77,15 @@ li {
   line-height: 100%;
   text-align: center;
   outline: none;
-  padding: 9px;
-  display: inline-flex;
+  padding: 7px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.1s, background $frow-animate-speed, color $frow-animate-speed, box-shadow $frow-animate-speed;
+  transition: transform 0.1s, background $frow-animate-speed, border-color $frow-animate-speed, color $frow-animate-speed, box-shadow $frow-animate-speed;
   
   &:hover, &:focus, &:active {
     background-color: darken($gray-darker, 15%);
+    border-color: darken($gray-darker, 15%);
     outline: none;
     text-decoration: none;
   }

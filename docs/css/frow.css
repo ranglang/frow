@@ -1192,7 +1192,7 @@ html [type="button"],
   -moz-appearance: none;
   background: none;
   background-color: #4F4F51;
-  border: none;
+  border: 2px solid #4F4F51;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
@@ -1200,11 +1200,11 @@ html [type="button"],
   line-height: 100%;
   text-align: center;
   outline: none;
-  padding: 9px;
-  display: inline-flex;
+  padding: 7px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.1s, background 0.4s, color 0.4s, box-shadow 0.4s; }
+  transition: transform 0.1s, background 0.4s, border-color 0.4s, color 0.4s, box-shadow 0.4s; }
   button:hover, button:focus, button:active,
   html [type="button"]:hover,
   html [type="button"]:focus,
@@ -1216,6 +1216,7 @@ html [type="button"],
   [type="submit"]:focus,
   [type="submit"]:active {
     background-color: #29292a;
+    border-color: #29292a;
     outline: none;
     text-decoration: none; }
   button:active,
@@ -1228,10 +1229,9 @@ html [type="button"],
   [type="reset"]:disabled,
   [type="submit"]:disabled {
     cursor: default !important;
-    box-shadow: none;
-    box-shadow: inset 0 0 0 2px #eaeaea;
+    border: 2px solid #eaeaea;
     background: repeating-linear-gradient(-45deg, #dddddd, #dddddd 3px, #fff 3px, #fff 6px);
-    background-color: #dddddd;
+    background-color: #c4c4c4;
     color: #9E9E9E; }
 
 label {
@@ -1534,7 +1534,7 @@ input::-webkit-file-upload-button {
   -moz-appearance: none;
   background: none;
   background-color: #4F4F51;
-  border: none;
+  border: 2px solid #4F4F51;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
@@ -1542,31 +1542,30 @@ input::-webkit-file-upload-button {
   line-height: 100%;
   text-align: center;
   outline: none;
-  padding: 9px;
-  display: inline-flex;
+  padding: 7px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.1s, background 0.4s, color 0.4s, box-shadow 0.4s; }
+  transition: transform 0.1s, background 0.4s, border-color 0.4s, color 0.4s, box-shadow 0.4s; }
   input::-webkit-file-upload-button:hover, input::-webkit-file-upload-button:focus, input::-webkit-file-upload-button:active {
     background-color: #29292a;
+    border-color: #29292a;
     outline: none;
     text-decoration: none; }
   input::-webkit-file-upload-button:active {
     transform: scale(0.96); }
   input::-webkit-file-upload-button:disabled {
     cursor: default !important;
-    box-shadow: none;
-    box-shadow: inset 0 0 0 2px #eaeaea;
+    border: 2px solid #eaeaea;
     background: repeating-linear-gradient(-45deg, #dddddd, #dddddd 3px, #fff 3px, #fff 6px);
-    background-color: #dddddd;
+    background-color: #c4c4c4;
     color: #9E9E9E; }
 
 input:disabled::-webkit-file-upload-button {
   cursor: default !important;
-  box-shadow: none;
-  box-shadow: inset 0 0 0 2px #eaeaea;
+  border: 2px solid #eaeaea;
   background: repeating-linear-gradient(-45deg, #dddddd, #dddddd 3px, #fff 3px, #fff 6px);
-  background-color: #dddddd;
+  background-color: #c4c4c4;
   color: #9E9E9E; }
 
 input::-ms-browse {
@@ -1574,7 +1573,7 @@ input::-ms-browse {
   -moz-appearance: none;
   background: none;
   background-color: #4F4F51;
-  border: none;
+  border: 2px solid #4F4F51;
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
@@ -1582,31 +1581,30 @@ input::-ms-browse {
   line-height: 100%;
   text-align: center;
   outline: none;
-  padding: 9px;
-  display: inline-flex;
+  padding: 7px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.1s, background 0.4s, color 0.4s, box-shadow 0.4s; }
+  transition: transform 0.1s, background 0.4s, border-color 0.4s, color 0.4s, box-shadow 0.4s; }
   input::-ms-browse:hover, input::-ms-browse:focus, input::-ms-browse:active {
     background-color: #29292a;
+    border-color: #29292a;
     outline: none;
     text-decoration: none; }
   input::-ms-browse:active {
     transform: scale(0.96); }
   input::-ms-browse:disabled {
     cursor: default !important;
-    box-shadow: none;
-    box-shadow: inset 0 0 0 2px #eaeaea;
+    border: 2px solid #eaeaea;
     background: repeating-linear-gradient(-45deg, #dddddd, #dddddd 3px, #fff 3px, #fff 6px);
-    background-color: #dddddd;
+    background-color: #c4c4c4;
     color: #9E9E9E; }
 
 input:disabled::-ms-browse {
   cursor: default !important;
-  box-shadow: none;
-  box-shadow: inset 0 0 0 2px #eaeaea;
+  border: 2px solid #eaeaea;
   background: repeating-linear-gradient(-45deg, #dddddd, #dddddd 3px, #fff 3px, #fff 6px);
-  background-color: #dddddd;
+  background-color: #c4c4c4;
   color: #9E9E9E; }
 
 select {
