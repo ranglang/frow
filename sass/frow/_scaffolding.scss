@@ -118,6 +118,23 @@ li {
 // Forms
 @if $frow-enable-forms == true {
   
+  // Fieldsets
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Legends
+  legend {
+    color: $gray-light;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
   // Labels
   label {
     color: $gray-light;

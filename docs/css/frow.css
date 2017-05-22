@@ -1251,6 +1251,19 @@ html [type="button"],
       background-color: #c4c4c4;
       color: #9E9E9E; }
 
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+legend {
+  color: #9E9E9E;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  display: block; }
+
 label {
   color: #9E9E9E;
   font-size: 14px;
