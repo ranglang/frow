@@ -1233,6 +1233,21 @@ html [type="button"],
     background: repeating-linear-gradient(-45deg, #dddddd, #dddddd 3px, #fff 3px, #fff 6px);
     background-color: #c4c4c4;
     color: #9E9E9E; }
+    button:disabled:hover, button:disabled:focus, button:disabled:active,
+    html [type="button"]:disabled:hover,
+    html [type="button"]:disabled:focus,
+    html [type="button"]:disabled:active,
+    [type="reset"]:disabled:hover,
+    [type="reset"]:disabled:focus,
+    [type="reset"]:disabled:active,
+    [type="submit"]:disabled:hover,
+    [type="submit"]:disabled:focus,
+    [type="submit"]:disabled:active {
+      cursor: default !important;
+      border: 2px solid #eaeaea;
+      background: repeating-linear-gradient(-45deg, #dddddd, #dddddd 3px, #fff 3px, #fff 6px);
+      background-color: #c4c4c4;
+      color: #9E9E9E; }
 
 label {
   color: #9E9E9E;
@@ -1560,6 +1575,12 @@ input::-webkit-file-upload-button {
     background: repeating-linear-gradient(-45deg, #dddddd, #dddddd 3px, #fff 3px, #fff 6px);
     background-color: #c4c4c4;
     color: #9E9E9E; }
+    input::-webkit-file-upload-button:disabled:hover, input::-webkit-file-upload-button:disabled:focus, input::-webkit-file-upload-button:disabled:active {
+      cursor: default !important;
+      border: 2px solid #eaeaea;
+      background: repeating-linear-gradient(-45deg, #dddddd, #dddddd 3px, #fff 3px, #fff 6px);
+      background-color: #c4c4c4;
+      color: #9E9E9E; }
 
 input:disabled::-webkit-file-upload-button {
   cursor: default !important;
@@ -1599,6 +1620,12 @@ input::-ms-browse {
     background: repeating-linear-gradient(-45deg, #dddddd, #dddddd 3px, #fff 3px, #fff 6px);
     background-color: #c4c4c4;
     color: #9E9E9E; }
+    input::-ms-browse:disabled:hover, input::-ms-browse:disabled:focus, input::-ms-browse:disabled:active {
+      cursor: default !important;
+      border: 2px solid #eaeaea;
+      background: repeating-linear-gradient(-45deg, #dddddd, #dddddd 3px, #fff 3px, #fff 6px);
+      background-color: #c4c4c4;
+      color: #9E9E9E; }
 
 input:disabled::-ms-browse {
   cursor: default !important;

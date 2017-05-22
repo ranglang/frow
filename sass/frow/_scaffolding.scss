@@ -96,6 +96,10 @@ li {
 
   &:disabled {
     @include frow-button-disabled;
+    
+    &:hover, &:focus, &:active {
+      @include frow-button-disabled;
+    }
   }
 }
 
