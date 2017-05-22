@@ -584,8 +584,7 @@ a.next-page[type="button"] {
 
 a.next-page[type="button"]:hover,
 a.next-page[type="button"]:active,
-a.next-page[type="button"]:focus,
-{
+a.next-page[type="button"]:focus {
   background-color: #105080;
   border-color: #105080;
 }
