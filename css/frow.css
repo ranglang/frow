@@ -1185,7 +1185,6 @@ li {
   list-style-type: none; }
 
 button,
-html [type="button"],
 [type="button"],
 [type="reset"],
 [type="submit"] {
@@ -1205,46 +1204,25 @@ html [type="button"],
   justify-content: center;
   align-items: center;
   transition: transform 0.1s, background 0.4s, color 0.4s, box-shadow 0.4s; }
-  button:hover, button:focus, button:active, a:hover button, a:visited button, a:focus button, a:active button,
-  html [type="button"]:hover,
-  html [type="button"]:focus,
-  html [type="button"]:active, a:hover
-  html [type="button"], a:visited
-  html [type="button"], a:focus
-  html [type="button"], a:active
-  html [type="button"],
+  button:hover, button:focus, button:active,
   [type="button"]:hover,
   [type="button"]:focus,
-  [type="button"]:active, a:hover
-  [type="button"], a:visited
-  [type="button"], a:focus
-  [type="button"], a:active
-  [type="button"],
+  [type="button"]:active,
   [type="reset"]:hover,
   [type="reset"]:focus,
-  [type="reset"]:active, a:hover
-  [type="reset"], a:visited
-  [type="reset"], a:focus
-  [type="reset"], a:active
-  [type="reset"],
+  [type="reset"]:active,
   [type="submit"]:hover,
   [type="submit"]:focus,
-  [type="submit"]:active, a:hover
-  [type="submit"], a:visited
-  [type="submit"], a:focus
-  [type="submit"], a:active
-  [type="submit"] {
+  [type="submit"]:active {
     background-color: #29292a;
     outline: none;
     text-decoration: none; }
   button:active,
-  html [type="button"]:active,
   [type="button"]:active,
   [type="reset"]:active,
   [type="submit"]:active {
     transform: scale(0.96); }
   button:disabled,
-  html [type="button"]:disabled,
   [type="button"]:disabled,
   [type="reset"]:disabled,
   [type="submit"]:disabled {
@@ -1567,7 +1545,7 @@ input::-webkit-file-upload-button {
   justify-content: center;
   align-items: center;
   transition: transform 0.1s, background 0.4s, color 0.4s, box-shadow 0.4s; }
-  input::-webkit-file-upload-button:hover, input::-webkit-file-upload-button:focus, input::-webkit-file-upload-button:active, a:hover input::-webkit-file-upload-button, a:visited input::-webkit-file-upload-button, a:focus input::-webkit-file-upload-button, a:active input::-webkit-file-upload-button {
+  input::-webkit-file-upload-button:hover, input::-webkit-file-upload-button:focus, input::-webkit-file-upload-button:active {
     background-color: #29292a;
     outline: none;
     text-decoration: none; }
@@ -1606,7 +1584,7 @@ input::-ms-browse {
   justify-content: center;
   align-items: center;
   transition: transform 0.1s, background 0.4s, color 0.4s, box-shadow 0.4s; }
-  input::-ms-browse:hover, input::-ms-browse:focus, input::-ms-browse:active, a:hover input::-ms-browse, a:visited input::-ms-browse, a:focus input::-ms-browse, a:active input::-ms-browse {
+  input::-ms-browse:hover, input::-ms-browse:focus, input::-ms-browse:active {
     background-color: #29292a;
     outline: none;
     text-decoration: none; }
