@@ -179,7 +179,7 @@ $sizes-names: map-keys($sizes);
     margin-right: -$grid-gutter-width / 2;
 
     @each $size in $sizes-names {
-      & > [class|=col-#{$size}] {
+      & > [class*=col-#{$size}] {
         padding-left: $grid-gutter-width / 2;
         padding-right: $grid-gutter-width / 2;
       }
