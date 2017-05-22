@@ -485,6 +485,10 @@ p a {
   }
 }
 
+.inline-example {
+  padding: 0 10px;
+}
+
 /* MD, LG */
 @media (min-width: 992px) {
   .home-height {

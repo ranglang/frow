@@ -478,6 +478,8 @@ template {
     align-items: flex-end;
     align-content: flex-end;
     justify-content: flex-start; }
+  .frow.inline {
+    display: inline-flex; }
   .frow.wrap {
     flex-wrap: wrap; }
   .frow.wrap-reverse {
@@ -1303,6 +1305,8 @@ label {
     align-items: flex-end;
     align-content: flex-end;
     justify-content: flex-start; }
+  label.inline {
+    display: inline-flex; }
   label.wrap {
     flex-wrap: wrap; }
   label.wrap-reverse {
