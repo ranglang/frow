@@ -103,7 +103,7 @@ li {
   
   // Buttons
   button,
-  [type="button"],
+  html [type="button"], // HACK: html required because of Android bug, see Normalize.css
   [type="reset"],
   [type="submit"] {
     @include frow-button;
