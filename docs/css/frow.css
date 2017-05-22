@@ -1205,19 +1205,35 @@ html [type="button"],
   justify-content: center;
   align-items: center;
   transition: transform 0.1s, background 0.4s, color 0.4s, box-shadow 0.4s; }
-  button:hover, button:focus, button:active,
+  button:hover, button:focus, button:active, a:hover button, a:visited button, a:focus button, a:active button,
   html [type="button"]:hover,
   html [type="button"]:focus,
-  html [type="button"]:active,
+  html [type="button"]:active, a:hover
+  html [type="button"], a:visited
+  html [type="button"], a:focus
+  html [type="button"], a:active
+  html [type="button"],
   [type="button"]:hover,
   [type="button"]:focus,
-  [type="button"]:active,
+  [type="button"]:active, a:hover
+  [type="button"], a:visited
+  [type="button"], a:focus
+  [type="button"], a:active
+  [type="button"],
   [type="reset"]:hover,
   [type="reset"]:focus,
-  [type="reset"]:active,
+  [type="reset"]:active, a:hover
+  [type="reset"], a:visited
+  [type="reset"], a:focus
+  [type="reset"], a:active
+  [type="reset"],
   [type="submit"]:hover,
   [type="submit"]:focus,
-  [type="submit"]:active {
+  [type="submit"]:active, a:hover
+  [type="submit"], a:visited
+  [type="submit"], a:focus
+  [type="submit"], a:active
+  [type="submit"] {
     background-color: #29292a;
     outline: none;
     text-decoration: none; }
@@ -1551,7 +1567,7 @@ input::-webkit-file-upload-button {
   justify-content: center;
   align-items: center;
   transition: transform 0.1s, background 0.4s, color 0.4s, box-shadow 0.4s; }
-  input::-webkit-file-upload-button:hover, input::-webkit-file-upload-button:focus, input::-webkit-file-upload-button:active {
+  input::-webkit-file-upload-button:hover, input::-webkit-file-upload-button:focus, input::-webkit-file-upload-button:active, a:hover input::-webkit-file-upload-button, a:visited input::-webkit-file-upload-button, a:focus input::-webkit-file-upload-button, a:active input::-webkit-file-upload-button {
     background-color: #29292a;
     outline: none;
     text-decoration: none; }
@@ -1590,7 +1606,7 @@ input::-ms-browse {
   justify-content: center;
   align-items: center;
   transition: transform 0.1s, background 0.4s, color 0.4s, box-shadow 0.4s; }
-  input::-ms-browse:hover, input::-ms-browse:focus, input::-ms-browse:active {
+  input::-ms-browse:hover, input::-ms-browse:focus, input::-ms-browse:active, a:hover input::-ms-browse, a:visited input::-ms-browse, a:focus input::-ms-browse, a:active input::-ms-browse {
     background-color: #29292a;
     outline: none;
     text-decoration: none; }

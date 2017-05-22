@@ -83,7 +83,7 @@ li {
   align-items: center;
   transition: transform 0.1s, background $frow-animate-speed, color $frow-animate-speed, box-shadow $frow-animate-speed;
   
-  &:hover, &:focus, &:active, a &:hover, a &:visited, a &:focus, a &:active {
+  &:hover, &:focus, &:active, a:hover &, a:visited &, a:focus &, a:active & {
     background-color: darken($gray-darker, 15%);
     outline: none;
     text-decoration: none;
