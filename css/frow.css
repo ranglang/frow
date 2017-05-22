@@ -1185,7 +1185,7 @@ li {
   list-style-type: none; }
 
 button,
-[type="button"],
+html [type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: none;
@@ -1205,9 +1205,9 @@ button,
   align-items: center;
   transition: transform 0.1s, background 0.4s, color 0.4s, box-shadow 0.4s; }
   button:hover, button:focus, button:active,
-  [type="button"]:hover,
-  [type="button"]:focus,
-  [type="button"]:active,
+  html [type="button"]:hover,
+  html [type="button"]:focus,
+  html [type="button"]:active,
   [type="reset"]:hover,
   [type="reset"]:focus,
   [type="reset"]:active,
@@ -1218,12 +1218,12 @@ button,
     outline: none;
     text-decoration: none; }
   button:active,
-  [type="button"]:active,
+  html [type="button"]:active,
   [type="reset"]:active,
   [type="submit"]:active {
     transform: scale(0.96); }
   button:disabled,
-  [type="button"]:disabled,
+  html [type="button"]:disabled,
   [type="reset"]:disabled,
   [type="submit"]:disabled {
     cursor: default !important;
