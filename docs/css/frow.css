@@ -1,6 +1,6 @@
 /*!
  * Frow (https://github.com/Beg-in/frow)
- * Copyright 2016 Cody Sherman
+ * Copyright 2017 Cody Sherman
  * Licensed under MIT (https://github.com/Beg-in/frow/blob/master/LICENSE)
  */
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -1756,7 +1756,7 @@ textarea {
   .frow.hidden-lg {
     display: none !important; } }
 
-@media (min-width: 0px) {
+@media (max-width: 767px) {
   .direction-row-xs {
     flex-direction: row; }
   .direction-reverse-xs {
@@ -1766,7 +1766,7 @@ textarea {
   .direction-column-reverse-xs {
     flex-direction: column-reverse; } }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .direction-row-sm {
     flex-direction: row; }
   .direction-reverse-sm {
@@ -1776,7 +1776,7 @@ textarea {
   .direction-column-reverse-sm {
     flex-direction: column-reverse; } }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .direction-row-md {
     flex-direction: row; }
   .direction-reverse-md {

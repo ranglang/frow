@@ -2,7 +2,7 @@
 // Responsive: Utility classes
 // --------------------------------------------------
 
-
+// Responsive hidden and visible classes
 $visible-sizes-all: ();
 $hidden-sizes-all: ();
 $frow-hidden-sizes-all: ();
@@ -31,70 +31,68 @@ $frow-hidden-sizes-all: ();
   display: flex !important;
 }
 
-@each $size in $sizes-names {
-  @if index($sizes-names, $size) == 1 {
-    @media (max-width: nth(nth($sizes, 2), 2)-1) {
-      .visible-#{$size} {
-        display: block !important;
-      }
-      .frow.visible-#{$size} {
-        display: flex !important;
-      }
-      .hidden-#{$size} {
-        display: none !important;
-      }
-      .frow.hidden-#{$size} {
-        display: none !important;
-      }
-    }
+@mixin visible-classes($size) {
+  .visible-#{$size} {
+    display: block !important;
   }
-  @else if index($sizes-names, $size) != 1 and index($sizes-names, $size) < length($sizes) {
-    @media (min-width: map-get($sizes, $size)) and (max-width: nth(nth($sizes, index($sizes-names, $size)+1), 2)-1) {
-      .visible-#{$size} {
-        display: block !important;
-      }
-      .frow.visible-#{$size} {
-        display: flex !important;
-      }
-      .hidden-#{$size} {
-        display: none !important;
-      }
-      .frow.hidden-#{$size} {
-        display: none !important;
-      }
-    }
+  .frow.visible-#{$size} {
+    display: flex !important;
   }
-  @else if index($sizes-names, $size) == length($sizes) {
-    @media (min-width: nth(nth($sizes, length($sizes)), 2)) {
-      .visible-#{$size} {
-        display: block !important;
-      }
-      .frow.visible-#{$size} {
-        display: flex !important;
-      }
-      .hidden-#{$size} {
-        display: none !important;
-      }
-      .frow.hidden-#{$size} {
-        display: none !important;
-      }
-    }
+  .hidden-#{$size} {
+    display: none !important;
+  }
+  .frow.hidden-#{$size} {
+    display: none !important;
   }
 }
 
 @each $size in $sizes-names {
-  @media (min-width: map-get($sizes, $size)) {
-    .direction-row-#{$size} {
-      flex-direction: row;
+  @if index($sizes-names, $size) == 1 {
+    @media (max-width: nth(nth($sizes, 2), 2)-1) {
+      @include visible-classes($size);
     }
-    .direction-reverse-#{$size} {
-      flex-direction: row-reverse;
+  }
+  @else if index($sizes-names, $size) != 1 and index($sizes-names, $size) < length($sizes) {
+    @media (min-width: map-get($sizes, $size)) and (max-width: nth(nth($sizes, index($sizes-names, $size)+1), 2)-1) {
+      @include visible-classes($size);
     }
-    .direction-column-#{$size} {
-      flex-direction: column;
+  }
+  @else if index($sizes-names, $size) == length($sizes) {
+    @media (min-width: nth(nth($sizes, length($sizes)), 2)) {
+      @include visible-classes($size);
     }
-    .direction-column-reverse-#{$size} {
-      flex-direction: column-reverse;
+  }
+}
+
+// Reponsive flex direction classes
+@mixin flex-directions($size) {
+  .direction-row-#{$size} {
+    flex-direction: row;
+  }
+  .direction-reverse-#{$size} {
+    flex-direction: row-reverse;
+  }
+  .direction-column-#{$size} {
+    flex-direction: column;
+  }
+  .direction-column-reverse-#{$size} {
+    flex-direction: column-reverse;
+  }
+}
+@each $size in $sizes-names {
+  @if index($sizes-names, $size) == 1 {
+    @media (max-width: nth(nth($sizes, 2), 2)-1) {
+      @include flex-directions($size);
+    }
+  }
+  @else if index($sizes-names, $size) != 1 and index($sizes-names, $size) < length($sizes) {
+    @media (min-width: map-get($sizes, $size)) and (max-width: nth(nth($sizes, index($sizes-names, $size)+1), 2)-1) {
+      @include flex-directions($size);
+    }
+  }
+  @else if index($sizes-names, $size) == length($sizes) {
+    @media (min-width: nth(nth($sizes, length($sizes)), 2)) {
+      @include flex-directions($size);
     }
   }
 }
