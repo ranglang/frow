@@ -62,6 +62,7 @@ li {
   background: repeating-linear-gradient(-45deg, darken($gray-lighter, 5%), darken($gray-lighter, 5%) 3px, #fff 3px, #fff 6px);
   background-color: darken($gray-lighter, 15%);
   color: $gray-light;
+  transform: scale(1);
 }
 
 @mixin frow-button {
@@ -78,9 +79,6 @@ li {
   text-align: center;
   outline: none;
   padding: 7px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: transform 0.1s, background $frow-animate-speed, border-color $frow-animate-speed, color $frow-animate-speed, box-shadow $frow-animate-speed;
   
   &:hover, &:focus, &:active {
@@ -242,7 +240,7 @@ li {
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='8 8 36 36' version='1.1' xml:space='preserve'><path d='M14.1 27.2l7.1 7.2 16.7-16.8' fill='none' stroke='rgb(255,255,255)' stroke-width='5'/></svg>");
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='8 8 36 36' version='1.1' xml:space='preserve'><path d='M14.1 27.2l7.1 7.2 16.7-16.8' fill='none' stroke='#{convert-to-rgb(#fff)}' stroke-width='5'/></svg>");
       
         &:hover, &:focus {
           background-color: darken($gray-darker, 15%);
@@ -321,6 +319,11 @@ li {
         color: transparent;
       }
       
+      // Remove dotted border in Firefox
+      &::-moz-focus-outer {
+        border: 0;
+      }
+      
       // Range Thumb
       @mixin thumb-styles {
         cursor: pointer;
@@ -328,6 +331,7 @@ li {
         height: 18px;
         width: 18px;
         border-radius: 50%;
+        border: 0;
         transition: background $frow-animate-speed;
       }
       
@@ -492,7 +496,7 @@ li {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: transparent;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{$gray-dark}'/></g></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{convert-to-rgb($gray-dark)}'/></g></svg>");
     background-position: right center;
     background-repeat: no-repeat;
     display: block;
@@ -506,17 +510,17 @@ li {
     padding: 3px 24px 3px 5px;
     width: 100%;
     cursor: pointer;
-    transition: border-color $frow-animate-speed, color $frow-animate-speed;
+    transition: border-color $frow-animate-speed, color $frow-animate-speed, background $frow-animate-speed;
   
     &:hover, &:focus {
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{darken($gray-dark, 15%)}'/></g></svg>");
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{convert-to-rgb(darken($gray-dark, 15%))}'/></g></svg>");
       outline: none;
       border-color: darken($gray-light, 15%);
     }
   
     &:disabled {
       padding-bottom: 4px;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{$gray-light}'/></g></svg>");
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{convert-to-rgb($gray-light)}'/></g></svg>");
       border-bottom: 1px dotted $gray-light;
       cursor: default !important;
       color: $gray-light;
