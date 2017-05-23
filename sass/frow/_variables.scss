@@ -18,7 +18,8 @@ $near-black: #333333 !default;
 $white: #FFF !default;
 $black: #000 !default;
 
-@function convert-to-rgb($color){ // NOTE: This is because Firefox can't have hashtags in svg background urls
+// HACK: This is because Firefox can't have hashtags in svg background urls
+@function convert-to-rgb($color){
   @return 'rgb(' + red($color) + ',' + green($color) + ',' + blue($color) + ')';
 }
 

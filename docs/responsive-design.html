@@ -459,7 +459,23 @@
             </div>
           </div>
           <h4>
-            Using Media Queries for XS, SM, MD, LG
+            Responsive Content Direction
+          </h4>
+          <p>
+            Sometimes you want your content to switch direction depending on screen size. Any of the four "Flex-Direction" shortcuts from the <a href="frow-shortcuts.html">Frow Shortcuts</a> page can be set to appear as different orientations based on screen size. Just add a -[size] to the end of the class.
+          </p>
+          <div class="fake-code">
+            <span class="fake-comment">// This will reverse the column order on mobile devices</span><br>
+            &lt;div class="frow direction-column-reverse-xs direction-column-reverse-sm"&gt;&lt;/div&gt;<br>
+            <br>
+            <span class="fake-comment">// This will reverse the row order on large screens only</span><br>
+            &lt;div class="frow direction-row-reverse-lg"&gt;&lt;/div&gt;<br>
+          </div>
+          <p class="bottom-margin">
+            A use case example of this would be, for example, if you had content in one column on the left, and an image on the right. Normally, when going mobile, they would stack left to right and have the image under the content. If the image being on top is preferred, using ".direction-column-reverse-xs" would place the image on top for mobile devices.
+          </p>
+          <h4>
+            Styling Your CSS Using Media Queries
           </h4>
           <p>
             You can use media queries in your CSS to have your code change alongside the same breakpoints that Frow uses.
@@ -480,7 +496,7 @@
             }<br>
           </div>
           <p>
-            Here are some pre-made media queries of the most popular cases.
+            Here are some pre-made media queries of the most popular cases, for easy copying and pasting.
           </p>
           <div class="fake-code">
             /* XS */<br>
