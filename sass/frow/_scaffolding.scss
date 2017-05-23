@@ -222,7 +222,7 @@ li {
       margin: 0 5px 0 0;
       cursor: pointer;
       border: 2px solid $gray-darker;
-      transition: background $frow-animate-speed, border-color $frow-animate-speed, box-shadow $frow-animate-speed;
+      transition: background-color $frow-animate-speed, border-color $frow-animate-speed, box-shadow $frow-animate-speed;
       
       &:hover, &:focus {
         border-color: darken($gray-darker, 15%);
@@ -250,7 +250,6 @@ li {
           border-color: darken($gray-lighter, 5%);
           background-color: darken($gray-lighter, 5%);
         }
-        
       }
     }
     

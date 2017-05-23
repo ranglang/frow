@@ -1413,7 +1413,7 @@ input {
     margin: 0 5px 0 0;
     cursor: pointer;
     border: 2px solid #4F4F51;
-    transition: background 0.4s, border-color 0.4s, box-shadow 0.4s; }
+    transition: background-color 0.4s, border-color 0.4s, box-shadow 0.4s; }
     input[type="checkbox"]:hover, input[type="checkbox"]:focus {
       border-color: #29292a; }
     input[type="checkbox"]:disabled {
@@ -1755,6 +1755,46 @@ textarea {
     display: none !important; }
   .frow.hidden-lg {
     display: none !important; } }
+
+@media (min-width: 0px) {
+  .direction-row-xs {
+    flex-direction: row; }
+  .direction-reverse-xs {
+    flex-direction: row-reverse; }
+  .direction-column-xs {
+    flex-direction: column; }
+  .direction-column-reverse-xs {
+    flex-direction: column-reverse; } }
+
+@media (min-width: 768px) {
+  .direction-row-sm {
+    flex-direction: row; }
+  .direction-reverse-sm {
+    flex-direction: row-reverse; }
+  .direction-column-sm {
+    flex-direction: column; }
+  .direction-column-reverse-sm {
+    flex-direction: column-reverse; } }
+
+@media (min-width: 992px) {
+  .direction-row-md {
+    flex-direction: row; }
+  .direction-reverse-md {
+    flex-direction: row-reverse; }
+  .direction-column-md {
+    flex-direction: column; }
+  .direction-column-reverse-md {
+    flex-direction: column-reverse; } }
+
+@media (min-width: 1200px) {
+  .direction-row-lg {
+    flex-direction: row; }
+  .direction-reverse-lg {
+    flex-direction: row-reverse; }
+  .direction-column-lg {
+    flex-direction: column; }
+  .direction-column-reverse-lg {
+    flex-direction: column-reverse; } }
 
 .clickable:not([disabled]), *[onclick]:not([disabled]) {
   cursor: pointer !important; }

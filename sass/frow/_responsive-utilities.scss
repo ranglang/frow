@@ -81,3 +81,20 @@ $frow-hidden-sizes-all: ();
     }
   }
 }
+
+@each $size in $sizes-names {
+  @media (min-width: map-get($sizes, $size)) {
+    .direction-row-#{$size} {
+      flex-direction: row;
+    }
+    .direction-reverse-#{$size} {
+      flex-direction: row-reverse;
+    }
+    .direction-column-#{$size} {
+      flex-direction: column;
+    }
+    .direction-column-reverse-#{$size} {
+      flex-direction: column-reverse;
+    }
+  }
+}
