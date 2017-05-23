@@ -1501,7 +1501,8 @@ input {
       width: 18px;
       border-radius: 50%;
       border: 0;
-      transition: background 0.4s; }
+      transition: background 0.4s;
+      margin-top: -1px; }
     input[type="range"]:active::-webkit-slider-thumb, input[type="range"]:hover::-webkit-slider-thumb, input[type="range"]:focus::-webkit-slider-thumb {
       background: #4F4F51;
       outline: none; }
@@ -1554,7 +1555,7 @@ input {
     input[type="range"]:disabled::-ms-track {
       cursor: default !important; }
     input[type="range"]::-ms-fill-lower {
-      background: #2a6495;
+      background: #eaeaea;
       border-radius: 2.6px; }
     input[type="range"]:active::-ms-fill-lower {
       background: #eaeaea; }

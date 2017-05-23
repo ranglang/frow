@@ -357,6 +357,7 @@ li {
       
       &::-ms-thumb {
         @include thumb-styles;
+        margin-top: -1px;
       }
       
       &:active, &:hover, &:focus {
@@ -450,7 +451,7 @@ li {
       }
       
       &::-ms-fill-lower {
-        background: #2a6495;
+        background: $gray-lighter;
         border-radius: 2.6px;
       }
       
