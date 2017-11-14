@@ -2,6 +2,51 @@
 // Utility classes
 // --------------------------------------------------
 
+// Margin and padding classes
+// -------------------------
+$frow-box-model: '', h, v, t, r, b, l;
+
+@mixin box-model($letter, $type, $amount, $multiplier) {
+  .#{str-slice($type, 1, 1) + $letter}-#{$amount * $multiplier} {
+    @if $letter == '' {
+      #{$type}: $amount * $multiplier + px;
+    }
+    @if $letter == 'h' {
+      #{$type}-right: $amount * $multiplier + px;
+      #{$type}-left: $amount * $multiplier + px;
+    }
+    @if $letter == 'v' {
+      #{$type}-top: $amount * $multiplier + px;
+      #{$type}-bottom: $amount * $multiplier + px;
+    }
+    @if $letter == 't' {
+      #{$type}-top: $amount * $multiplier + px;
+    }
+    @if $letter == 'r' {
+      #{$type}-right: $amount * $multiplier + px;
+    }
+    @if $letter == 'b' {
+      #{$type}-bottom: $amount * $multiplier + px;
+    }
+    @if $letter == 'l' {
+      #{$type}-left: $amount * $multiplier + px;
+    }
+  }
+}
+
+@each $type in margin, padding {
+  @each $letter in $frow-box-model {
+    @for $amount from 1 through 5 {
+      $multiplier: 5;
+      @include box-model($letter, $type, $amount, $multiplier);
+    }
+    @for $amount from 3 through 10 {
+      $multiplier: 10;
+      @include box-model($letter, $type, $amount, $multiplier);
+    }
+  }
+}
+
 // Cursor pointer classes
 // -------------------------
 .clickable:not([disabled]), *[onclick]:not([disabled]) {
