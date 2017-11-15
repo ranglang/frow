@@ -4,27 +4,27 @@
 
 // Margin and padding classes
 // -------------------------
-@if $frow-enable-box-model-shorcuts == true {
-  @mixin box-model($direction, $type, $amount, $multiplier) {
-    .#{str-slice($type, 1, 1) + $direction}-#{$amount * $multiplier} {
-      @if $direction == '' {
-        #{$type}: $amount * $multiplier + px;
-      }
-      @if $direction == 't' or $direction == 'v' {
-        #{$type}-top: $amount * $multiplier + px;
-      }
-      @if $direction == 'r' or $direction == 'h' {
-        #{$type}-right: $amount * $multiplier + px;
-      }
-      @if $direction == 'b' or $direction == 'v' {
-        #{$type}-bottom: $amount * $multiplier + px;
-      }
-      @if $direction == 'l' or $direction == 'h' {
-        #{$type}-left: $amount * $multiplier + px;
-      }
+@mixin box-model($direction, $type, $amount, $multiplier) {
+  .#{str-slice($type, 1, 1) + $direction}-#{$amount * $multiplier} {
+    @if $direction == '' {
+      #{$type}: $amount * $multiplier + px !important;
+    }
+    @if $direction == 't' or $direction == 'v' {
+      #{$type}-top: $amount * $multiplier + px !important;
+    }
+    @if $direction == 'r' or $direction == 'h' {
+      #{$type}-right: $amount * $multiplier + px !important;
+    }
+    @if $direction == 'b' or $direction == 'v' {
+      #{$type}-bottom: $amount * $multiplier + px !important;
+    }
+    @if $direction == 'l' or $direction == 'h' {
+      #{$type}-left: $amount * $multiplier + px !important;
     }
   }
+}
   
+@if $frow-enable-box-model-shorcuts == true {
   @each $type in margin, padding {
     $frow-box-model-directions: '', h, v, t, r, b, l;
     @each $direction in $frow-box-model-directions {
@@ -35,6 +35,23 @@
       @for $amount from 3 through 10 {
         $multiplier: 10;
         @include box-model($direction, $type, $amount, $multiplier);
+      }
+      .#{str-slice($type, 1, 1) + $direction}-auto {
+        @if $direction == '' {
+          #{$type}: auto;
+        }
+        @if $direction == 't' or $direction == 'v' {
+          #{$type}-top: auto;
+        }
+        @if $direction == 'r' or $direction == 'h' {
+          #{$type}-right: auto;
+        }
+        @if $direction == 'b' or $direction == 'v' {
+          #{$type}-bottom: auto;
+        }
+        @if $direction == 'l' or $direction == 'h' {
+          #{$type}-left: auto;
+        }
       }
     }
   }
@@ -50,14 +67,22 @@
   cursor: default !important;
 }
 
-// Height and width rules
+// Width and height rules
 // -------------------------
-.height-100 {
-  height: 100%;
+.width-100 {
+  width: 100% !important;
 }
 
-.width-100 {
-  width: 100%;
+.width-auto {
+  width: auto !important;
+}
+
+.height-100 {
+  height: 100% !important;
+}
+
+.height-auto {
+  height: auto !important;
 }
 
 // Hidden rule for letsGo (letsgojs.com)
@@ -69,25 +94,39 @@
 // Card shadows
 // -------------------------
 .card-shadow {
-  box-shadow: $card-shadow;
+  box-shadow: $card-shadow !important;
 }
 
 .dark-card-shadow {
-  box-shadow: $dark-card-shadow;
+  box-shadow: $dark-card-shadow !important;
+}
+
+// Text align
+// -------------------------
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
 }
 
 // Text transforms
 // -------------------------
 .uppercase {
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 .lowercase {
-  text-transform: lowercase;
+  text-transform: lowercase !important;
 }
 
 .capitalize {
-  text-transform: capitalize;
+  text-transform: capitalize !important;
 }
 
 // Clearfix
