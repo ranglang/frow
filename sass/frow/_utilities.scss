@@ -36,21 +36,23 @@
         $multiplier: 10;
         @include box-model($direction, $type, $amount, $multiplier);
       }
-      .#{str-slice($type, 1, 1) + $direction}-auto {
-        @if $direction == '' {
-          #{$type}: auto;
-        }
-        @if $direction == 't' or $direction == 'v' {
-          #{$type}-top: auto;
-        }
-        @if $direction == 'r' or $direction == 'h' {
-          #{$type}-right: auto;
-        }
-        @if $direction == 'b' or $direction == 'v' {
-          #{$type}-bottom: auto;
-        }
-        @if $direction == 'l' or $direction == 'h' {
-          #{$type}-left: auto;
+      @if $type == 'margin' {
+        .#{str-slice($type, 1, 1) + $direction}-auto {
+          @if $direction == '' {
+            #{$type}: auto;
+          }
+          @if $direction == 't' or $direction == 'v' {
+            #{$type}-top: auto;
+          }
+          @if $direction == 'r' or $direction == 'h' {
+            #{$type}-right: auto;
+          }
+          @if $direction == 'b' or $direction == 'v' {
+            #{$type}-bottom: auto;
+          }
+          @if $direction == 'l' or $direction == 'h' {
+            #{$type}-left: auto;
+          }
         }
       }
     }
