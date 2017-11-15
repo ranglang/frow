@@ -14,13 +14,7 @@ input, textarea, select, button {
   font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
@@ -596,6 +590,10 @@ a.next-page[type="button"]:focus {
 .by-line {
   margin-top: 60px;
   text-align: center;
+}
+
+.responsive-list {
+  font-family: Inconsolata;
 }
 
 .form-example-contain {

@@ -2502,6 +2502,9 @@ textarea {
 .text-right {
   text-align: right !important; }
 
+.text-justify {
+  text-align: justify !important; }
+
 .uppercase {
   text-transform: uppercase !important; }
 
