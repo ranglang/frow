@@ -92,10 +92,15 @@ svg {
   
   // Buttons
   button,
-  html [type="button"], // HACK: html required because of Android bug, see Normalize.css
+  [type="button"],
   [type="reset"],
   [type="submit"] {
     @include frow-button;
+  }
+  
+  // HACK: html required because of Android bug, see Normalize.css
+  html [type="button"] {
+    -webkit-appearance: none;
   }
 }
 

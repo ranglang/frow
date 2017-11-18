@@ -1350,7 +1350,7 @@ svg {
   display: block; }
 
 button,
-html [type="button"],
+[type="button"],
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: none;
@@ -1372,9 +1372,9 @@ html [type="button"],
   transition: transform 0.1s, background 0.4s, border-color 0.4s, color 0.4s, box-shadow 0.4s;
   transition: transform 0.1s, background 0.4s, border-color 0.4s, color 0.4s, box-shadow 0.4s, -webkit-transform 0.1s, -webkit-box-shadow 0.4s; }
   button:hover, button:focus, button:active,
-  html [type="button"]:hover,
-  html [type="button"]:focus,
-  html [type="button"]:active,
+  [type="button"]:hover,
+  [type="button"]:focus,
+  [type="button"]:active,
   [type="reset"]:hover,
   [type="reset"]:focus,
   [type="reset"]:active,
@@ -1386,13 +1386,13 @@ html [type="button"],
     outline: none;
     text-decoration: none; }
   button:active,
-  html [type="button"]:active,
+  [type="button"]:active,
   [type="reset"]:active,
   [type="submit"]:active {
     -webkit-transform: scale(0.96);
             transform: scale(0.96); }
   button:disabled,
-  html [type="button"]:disabled,
+  [type="button"]:disabled,
   [type="reset"]:disabled,
   [type="submit"]:disabled {
     cursor: default !important;
@@ -1403,9 +1403,9 @@ html [type="button"],
     -webkit-transform: scale(1);
             transform: scale(1); }
     button:disabled:hover, button:disabled:focus, button:disabled:active,
-    html [type="button"]:disabled:hover,
-    html [type="button"]:disabled:focus,
-    html [type="button"]:disabled:active,
+    [type="button"]:disabled:hover,
+    [type="button"]:disabled:focus,
+    [type="button"]:disabled:active,
     [type="reset"]:disabled:hover,
     [type="reset"]:disabled:focus,
     [type="reset"]:disabled:active,
@@ -1419,6 +1419,9 @@ html [type="button"],
       color: #9E9E9E;
       -webkit-transform: scale(1);
               transform: scale(1); }
+
+html [type="button"] {
+  -webkit-appearance: none; }
 
 fieldset {
   border: none;

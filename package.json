@@ -1,6 +1,6 @@
 {
   "name": "frow",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Flex Row CSS Grid System http://frowcss.com",
   "main": "sass/_frow.scss",
   "scripts": {
@@ -9,18 +9,14 @@
     "addnormalize": "FROW=`echo '/*! Frow CSS with Normalize.css (Vendor Prefixed) */' | cat - node_modules/normalize.css/normalize.css css/frow.css` && echo \"$FROW\" > css/frow.css",
     "cssnano": "postcss --no-map -u cssnano -o css/frow.min.css css/frow.css",
     "csscopy": "cp -t docs/styles css/frow.css css/frow.min.css",
+    "letsgocopy": "cp -t docs/scripts node_modules/letsgo/letsgo.js",
     "build:css": "run-s sass autoprefixer addnormalize cssnano csscopy",
+    "build:js": "run-s letsgocopy",
     "build": "run-s build:*",
-    "watch:css": "onchange \"src/styles\" -- run-s build:css",
-    "watch:js": "onchange \"src/scripts\" -- run-s build:js",
-    "watch:images": "onchange \"src/images\" -- run-s build:images",
-    "watch:html": "onchange \"src/views\" -- run-s build:html",
-    "watch:other": "onchange \"src/**/*\" -e \"src/images\" -e \"src/scripts\" -e \"src/styles\" -e \"src/views\" -- clean build:other",
+    "watch:css": "onchange \"sass\" -- run-s build:css",
     "watch": "run-p watch:*",
     "server": "browser-sync start --f \"docs/**/*\" --server \"docs\" --port 8081",
     "running": "run-p watch server",
-    
-    
     "start": "run-s build running"
   },
   "repository": {
@@ -48,18 +44,15 @@
     "url": "https://github.com/Beg-in/frow/issues"
   },
   "homepage": "http://frowcss.com",
-  "peerDependencies": {
-    "normalize.css": "*"
-  },
   "devDependencies": {
-    "autoprefixer": "^7.1.5",
+    "autoprefixer": "^7.1.6",
     "browser-sync": "^2.18.13",
     "cssnano": "^4.0.0-rc.2",
+    "letsgo": "^0.2.3",
     "node-sass": "^4.7.1",
-    "node-sass-tilde-importer": "^1.0.0",
-    "npm-run-all": "^4.1.1",
+    "normalize.css": "*",
+    "npm-run-all": "^4.1.2",
     "onchange": "^3.2.1",
-    "postcss-cli": "^4.1.1",
-    "normalize.css": "*"
+    "postcss-cli": "^4.1.1"
   }
 }
