@@ -9,7 +9,7 @@
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in
- *  IE on Windows Phone and in iOS.
+ *    IE on Windows Phone and in iOS.
  */
 html {
   line-height: 1.15;
@@ -240,7 +240,7 @@ select {
 
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *  controls in Android 4.
+ *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 button,
@@ -279,7 +279,7 @@ fieldset {
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
- *  `fieldset` elements in all browsers.
+ *    `fieldset` elements in all browsers.
  */
 legend {
   box-sizing: border-box;
@@ -1177,15 +1177,6 @@ a {
 svg {
   display: block; }
 
-ul {
-  margin: 0;
-  padding: 0; }
-  p ul {
-    list-style-type: disc; }
-
-li {
-  list-style-type: none; }
-
 button,
 html [type="button"],
 [type="reset"],
@@ -1842,7 +1833,7 @@ textarea {
   margin: 100px !important; }
 
 .m-auto {
-  margin: auto; }
+  margin: auto !important; }
 
 .mh-0 {
   margin-right: 0px !important;
@@ -1901,8 +1892,8 @@ textarea {
   margin-left: 100px !important; }
 
 .mh-auto {
-  margin-right: auto;
-  margin-left: auto; }
+  margin-right: auto !important;
+  margin-left: auto !important; }
 
 .mv-0 {
   margin-top: 0px !important;
@@ -1961,8 +1952,8 @@ textarea {
   margin-bottom: 100px !important; }
 
 .mv-auto {
-  margin-top: auto;
-  margin-bottom: auto; }
+  margin-top: auto !important;
+  margin-bottom: auto !important; }
 
 .mt-0 {
   margin-top: 0px !important; }
@@ -2007,7 +1998,7 @@ textarea {
   margin-top: 100px !important; }
 
 .mt-auto {
-  margin-top: auto; }
+  margin-top: auto !important; }
 
 .mr-0 {
   margin-right: 0px !important; }
@@ -2052,7 +2043,7 @@ textarea {
   margin-right: 100px !important; }
 
 .mr-auto {
-  margin-right: auto; }
+  margin-right: auto !important; }
 
 .mb-0 {
   margin-bottom: 0px !important; }
@@ -2097,7 +2088,7 @@ textarea {
   margin-bottom: 100px !important; }
 
 .mb-auto {
-  margin-bottom: auto; }
+  margin-bottom: auto !important; }
 
 .ml-0 {
   margin-left: 0px !important; }
@@ -2142,7 +2133,7 @@ textarea {
   margin-left: 100px !important; }
 
 .ml-auto {
-  margin-left: auto; }
+  margin-left: auto !important; }
 
 .p-0 {
   padding: 0px !important; }

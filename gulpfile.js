@@ -8,6 +8,7 @@ var gulp = require('gulp');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var tildeImporter = require('node-sass-tilde-importer');
 
 var src = 'sass/';
 var dest = 'css/';
@@ -18,6 +19,7 @@ gulp.task('styles', function() {
     .pipe(rename("frow.scss"))
     // .pipe(sourcemaps.init()) breaks from the file rename?
     .pipe(sass({
+      importer: tildeImporter,
       includePaths: [src]
     }))
     .pipe(rename("frow.css"))

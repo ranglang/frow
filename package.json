@@ -31,11 +31,17 @@
     "url": "https://github.com/Beg-in/frow/issues"
   },
   "homepage": "http://frowcss.com",
+  "peerDependencies": {
+    "normalize.css": "*"
+  },
   "devDependencies": {
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-cssnano": "^2.1.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssnano": "^2.1.2",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "node-sass-tilde-importer": "^1.0.0",
+    "normalize.css": "*"
   }
 }

@@ -189,16 +189,13 @@ p a {
   padding: 25px;
 }
 
-.mobile-sidebar-content li {
-  font-size: 18px;
-  width: 100%;
-}
-
 .mobile-sidebar-content a,
 .mobile-sidebar-content a:hover,
 .mobile-sidebar-content a:focus,
 .mobile-sidebar-content a:active,
 .mobile-sidebar-content a:visited {
+  font-size: 18px;
+  width: 100%;
   display: block;
   padding: 20px 0;
   text-decoration: none;
@@ -286,37 +283,29 @@ p a {
   height: 50px;
 }
 
-.tab-bar ul {
-  margin: 0;
-  list-style-type: none;
-}
-
-.tab-bar ul li {
+.tab-bar nav a {
   margin: 0 15px;
-}
-
-.tab-bar ul li:first-child {
-  margin-left: 0px;
-}
-
-.tab-bar ul li:last-child {
-  margin-right: 0px;
-}
-
-.tab-bar ul li a {
   font-size: 18px;
 }
 
-.tab-bar a:hover,
-.tab-bar a:focus,
-.tab-bar a:active,
-.tab-bar a:visited {
+.tab-bar nav a:hover,
+.tab-bar nav a:focus,
+.tab-bar nav a:active,
+.tab-bar nav a:visited {
   text-decoration: none;
+}
+
+.tab-bar nav a:first-child {
+  margin-left: 0px;
+}
+
+.tab-bar nav a:last-child {
+  margin-right: 0px;
 }
 
 /* XS, SM */
 @media (max-width: 991px) {
-  .tab-bar ul li a {
+  .tab-bar nav a {
     font-size: 15px;
   }
 }

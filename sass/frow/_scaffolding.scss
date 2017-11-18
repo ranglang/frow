@@ -41,21 +41,6 @@ svg {
   display: block;
 }
 
-// Unordered lists
-ul {
-  margin: 0;
-  padding: 0;
-  
-  p & {
-    list-style-type: disc;
-  }
-}
-
-// List items
-li {
-  list-style-type: none;
-}
-
 @mixin frow-button-disabled {
   cursor: default !important;
   border: 2px solid $gray-lighter;

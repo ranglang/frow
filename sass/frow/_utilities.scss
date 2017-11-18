@@ -39,19 +39,19 @@
       @if $type == 'margin' {
         .#{str-slice($type, 1, 1) + $direction}-auto {
           @if $direction == '' {
-            #{$type}: auto;
+            #{$type}: auto !important;
           }
           @if $direction == 't' or $direction == 'v' {
-            #{$type}-top: auto;
+            #{$type}-top: auto !important;
           }
           @if $direction == 'r' or $direction == 'h' {
-            #{$type}-right: auto;
+            #{$type}-right: auto !important;
           }
           @if $direction == 'b' or $direction == 'v' {
-            #{$type}-bottom: auto;
+            #{$type}-bottom: auto !important;
           }
           @if $direction == 'l' or $direction == 'h' {
-            #{$type}-left: auto;
+            #{$type}-left: auto !important;
           }
         }
       }

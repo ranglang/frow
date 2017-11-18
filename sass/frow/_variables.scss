@@ -28,6 +28,9 @@ $black: #000 !default;
 //
 //## Settings to remove Frow features
 
+//** Columns
+$frow-enable-columns: true !default;
+
 //** Form values
 $frow-enable-buttons: true !default;
 $frow-enable-forms: true !default;
