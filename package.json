@@ -4,7 +4,41 @@
   "description": "Flex Row CSS Grid System http://frowcss.com",
   "main": "sass/_frow.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "node-sass sass/_frow.scss css/frow.css --importer=node_modules/node-sass-tilde-importer",
+    "csscopy": "rsync -r -I --include=\"*/\" --include=\"*.css\" --exclude=\"*\" src/styles/* docs/styles",
+    "autoprefixer": "postcss -u autoprefixer -r css/frow.css",
+    "cssnano": "postcss -u cssnano -r docs/styles/*.css' npm run testfiles",
+    "uglify:prep": "mkdirp docs/scripts; cp -f src/scripts/_includes.txt docs/scripts/_includes.txt; test `tail -c 1 docs/scripts/_includes.txt` && echo \"\n\" >> docs/scripts/_includes.txt",
+    "uglify:list": "SOURCE='src/scripts/*.js' COMMAND='echo \"src/scripts/*.js\" >> docs/scripts/_includes.txt' npm run testfiles; SOURCE='src/scripts/**/*.js' COMMAND='echo \"src/scripts/**/*.js\" >> docs/scripts/_includes.txt' npm run testfiles",
+    "uglify:run": "test `cat docs/scripts/_includes.txt | egrep -v \"^\\s*(#|$)\"` && uglifyjs $(cat docs/scripts/_includes.txt | egrep -v \"^\\s*(#|$)\") -m -c -o docs/scripts/app.js || true",
+    "uglify:clean": "rimraf docs/scripts/_includes.txt",
+    "uglify": "run-s uglify:*",
+    "svgmin": "htmlclean -o docs/images -i src/images",
+    "imagemin": "mkdirp docs/images; imagemin src/images/**/*.{png,jpg,jpeg,gif,ico} -o docs/images",
+    "othermove": "rsync -r -I --exclude=\"images\" --exclude=\"scripts\" --exclude=\"images\" --exclude=\"styles\" --exclude=\"views\" src/ docs",
+    "pug": "pug src/views -o docs",
+    "htmlmove": "rsync -r -I --include=\"*/\" --include=\"*.html\" --exclude=\"*\" src/views/* docs",
+    "htmlmin": "htmlclean -o docs -i src/views",
+    "build:css": "run-s sass autoprefixer cssnano csscopy",
+    "build:js": "run-s uglify",
+    "build:images": "run-s svgmin imagemin",
+    "build:other": "run-s othermove",
+    "build:html": "run-s pug htmlmove htmlmin",
+    "build": "run-s build:*",
+    
+    
+    
+    "watch:css": "onchange \"src/styles\" -- run-s build:css",
+    "watch:js": "onchange \"src/scripts\" -- run-s build:js",
+    "watch:images": "onchange \"src/images\" -- run-s build:images",
+    "watch:html": "onchange \"src/views\" -- run-s build:html",
+    "watch:other": "onchange \"src/**/*\" -e \"src/images\" -e \"src/scripts\" -e \"src/styles\" -e \"src/views\" -- clean build:other",
+    "watch": "run-p watch:*",
+    "server": "browser-sync start --f \"docs/**/*\" --server \"docs\" --port 8081",
+    "running": "run-p watch server",
+    
+    
+    "start": "run-s build running"
   },
   "repository": {
     "type": "git",
@@ -41,7 +75,15 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
+    
+    "autoprefixer": "^7.1.5",
+    "browser-sync": "^2.18.13",
+    "cssnano": "^4.0.0-rc.2",
+    "node-sass": "^4.7.1",
     "node-sass-tilde-importer": "^1.0.0",
+    "npm-run-all": "^4.1.1",
+    "onchange": "^3.2.1",
+    "postcss-cli": "^4.1.1",
     "normalize.css": "*"
   }
 }
