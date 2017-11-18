@@ -4,10 +4,12 @@
   "description": "Flex Row CSS Grid System http://frowcss.com",
   "main": "sass/_frow.scss",
   "scripts": {
-    "sass": "node-sass sass/_frow.scss css/frow.css --importer=node_modules/node-sass-tilde-importer",
+    "sass": "node-sass sass/_frow.scss css/frow.css",
+    "autoprefixer": "postcss --no-map -u autoprefixer -r css/frow.css",
+    "addnormalize": "FROW=`echo '/*! Frow CSS with Normalize.css (Vendor Prefixed) */' | cat - node_modules/normalize.css/normalize.css css/frow.css` && echo \"$FROW\" > css/frow.css",
+    "addheader": "echo '/*! Frow CSS with Normalize.css (Vendor Prefixed) */' | cat - node_modules/normalize.css/normalize.css css/frow-no-normalize.css",
+    "cssnano": "postcss --no-map -u cssnano -o css/frow.min.css css/frow.css",
     "csscopy": "rsync -r -I --include=\"*/\" --include=\"*.css\" --exclude=\"*\" src/styles/* docs/styles",
-    "autoprefixer": "postcss -u autoprefixer -r css/frow.css",
-    "cssnano": "postcss -u cssnano -r docs/styles/*.css' npm run testfiles",
     "uglify:prep": "mkdirp docs/scripts; cp -f src/scripts/_includes.txt docs/scripts/_includes.txt; test `tail -c 1 docs/scripts/_includes.txt` && echo \"\n\" >> docs/scripts/_includes.txt",
     "uglify:list": "SOURCE='src/scripts/*.js' COMMAND='echo \"src/scripts/*.js\" >> docs/scripts/_includes.txt' npm run testfiles; SOURCE='src/scripts/**/*.js' COMMAND='echo \"src/scripts/**/*.js\" >> docs/scripts/_includes.txt' npm run testfiles",
     "uglify:run": "test `cat docs/scripts/_includes.txt | egrep -v \"^\\s*(#|$)\"` && uglifyjs $(cat docs/scripts/_includes.txt | egrep -v \"^\\s*(#|$)\") -m -c -o docs/scripts/app.js || true",
@@ -19,7 +21,7 @@
     "pug": "pug src/views -o docs",
     "htmlmove": "rsync -r -I --include=\"*/\" --include=\"*.html\" --exclude=\"*\" src/views/* docs",
     "htmlmin": "htmlclean -o docs -i src/views",
-    "build:css": "run-s sass autoprefixer cssnano csscopy",
+    "build:css": "run-s sass autoprefixer addnormalize cssnano",
     "build:js": "run-s uglify",
     "build:images": "run-s svgmin imagemin",
     "build:other": "run-s othermove",
@@ -69,13 +71,6 @@
     "normalize.css": "*"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    
     "autoprefixer": "^7.1.5",
     "browser-sync": "^2.18.13",
     "cssnano": "^4.0.0-rc.2",
