@@ -232,13 +232,18 @@ p a {
   opacity: 0;
 }
 
-#mobile-sidebar-button {
+#mobile-sidebar-button,
+#mobile-sidebar-button:hover,
+#mobile-sidebar-button:active,
+#mobile-sidebar-button:focus {
   position: absolute;
   top: 0;
   left: 0;
   color: #fff;
   font-size: 25px;
   padding: 10px;
+  background: none;
+  border: none;
 }
 
 #mobile-sidebar-button div {
@@ -576,7 +581,7 @@ a.next-page[type="button"]:focus {
   border-color: #105080;
 }
 
-.by-line {
+footer {
   margin-top: 60px;
   text-align: center;
 }
