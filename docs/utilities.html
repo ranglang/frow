@@ -91,26 +91,26 @@
             <p>
               To quickly set an element's margin or padding, you can use shortcuts built into Frow. You can set margin and padding in ranges of 0 to 25 by 5 pixel increments and from 30 to 100 in 10 pixel increments. Margin shortcuts can also be set to auto.
             </p>
-            <div class="fake-code">
-              <span class="fake-comment"> // Margin shortcuts</span><br>
-              &lt;div class="m-0"&gt;&lt;/div&gt;<span class="fake-comment"> // 0px margin on all sides</span><br>
-              &lt;div class="mh-5"&gt;&lt;/div&gt;<span class="fake-comment"> // 5px margin on the left and right sides</span><br>
-              &lt;div class="mv-10"&gt;&lt;/div&gt;<span class="fake-comment"> // 10px margin on the top and bottom sides</span><br>
-              &lt;div class="mt-15"&gt;&lt;/div&gt;<span class="fake-comment"> // 15px margin on the top side</span><br>
-              &lt;div class="mr-20"&gt;&lt;/div&gt;<span class="fake-comment"> // 20px margin on the right side</span><br>
-              &lt;div class="mb-25"&gt;&lt;/div&gt;<span class="fake-comment"> // 25px margin on the bottom side</span><br>
-              &lt;div class="ml-30"&gt;&lt;/div&gt;<span class="fake-comment"> // 30px margin on the left side</span><br>
-              &lt;div class="mh-auto"&gt;&lt;/div&gt;<span class="fake-comment"> // margin:auto on the left and right sides</span><br>
-              <br>
-              <span class="fake-comment"> // Padding shortcuts</span><br>
-              &lt;div class="p-40"&gt;&lt;/div&gt;<span class="fake-comment"> // 40px padding on all sides</span><br>
-              &lt;div class="ph-50"&gt;&lt;/div&gt;<span class="fake-comment"> // 50px padding on the left and right sides</span><br>
-              &lt;div class="pv-60"&gt;&lt;/div&gt;<span class="fake-comment"> // 60px padding on the top and bottom sides</span><br>
-              &lt;div class="pt-70"&gt;&lt;/div&gt;<span class="fake-comment"> // 70px padding on the top side</span><br>
-              &lt;div class="pr-80"&gt;&lt;/div&gt;<span class="fake-comment"> // 80px padding on the right side</span><br>
-              &lt;div class="pb-90"&gt;&lt;/div&gt;<span class="fake-comment"> // 90px padding on the bottom side</span><br>
-              &lt;div class="pl-100"&gt;&lt;/div&gt;<span class="fake-comment"> // 100px padding on the left side</span><br>
-            </div>
+            <pre class="fake-code">
+<!--       --><span class="fake-comment">// Margin shortcuts</span>
+<!--       -->&lt;div class="m-0"&gt;&lt;/div&gt;<span class="fake-comment"> // 0px margin on all sides</span>
+<!--       -->&lt;div class="mh-5"&gt;&lt;/div&gt;<span class="fake-comment"> // 5px margin on the left and right sides</span>
+<!--       -->&lt;div class="mv-10"&gt;&lt;/div&gt;<span class="fake-comment"> // 10px margin on the top and bottom sides</span>
+<!--       -->&lt;div class="mt-15"&gt;&lt;/div&gt;<span class="fake-comment"> // 15px margin on the top side</span>
+<!--       -->&lt;div class="mr-20"&gt;&lt;/div&gt;<span class="fake-comment"> // 20px margin on the right side</span>
+<!--       -->&lt;div class="mb-25"&gt;&lt;/div&gt;<span class="fake-comment"> // 25px margin on the bottom side</span>
+<!--       -->&lt;div class="ml-30"&gt;&lt;/div&gt;<span class="fake-comment"> // 30px margin on the left side</span>
+<!--       -->&lt;div class="mh-auto"&gt;&lt;/div&gt;<span class="fake-comment"> // margin:auto on the left and right sides</span>
+<!--       -->
+<!--       --><span class="fake-comment">// Padding shortcuts</span>
+<!--       -->&lt;div class="p-40"&gt;&lt;/div&gt;<span class="fake-comment"> // 40px padding on all sides</span>
+<!--       -->&lt;div class="ph-50"&gt;&lt;/div&gt;<span class="fake-comment"> // 50px padding on the left and right sides</span>
+<!--       -->&lt;div class="pv-60"&gt;&lt;/div&gt;<span class="fake-comment"> // 60px padding on the top and bottom sides</span>
+<!--       -->&lt;div class="pt-70"&gt;&lt;/div&gt;<span class="fake-comment"> // 70px padding on the top side</span>
+<!--       -->&lt;div class="pr-80"&gt;&lt;/div&gt;<span class="fake-comment"> // 80px padding on the right side</span>
+<!--       -->&lt;div class="pb-90"&gt;&lt;/div&gt;<span class="fake-comment"> // 90px padding on the bottom side</span>
+<!--       -->&lt;div class="pl-100"&gt;&lt;/div&gt;<span class="fake-comment"> // 100px padding on the left side</span>
+<!--     --></pre>
             <p class="bottom-margin">
               <strong>Important Note:</strong> You can disable the margin and padding shortcuts by setting the variable "$frow-enable-box-model-shorcuts" to false in Sass before importing Frow.
             </p>
@@ -120,80 +120,80 @@
             <p>
               Two simple classes to change which cursor appears on an element. Clickable's rule is also automatically applied to any elements with the attribute of onclick.
             </p>
-            <div class="fake-code bottom-margin">
-              <span class="fake-comment"> // .clickable and .not-clickable</span><br>
-              <br>
-              <span class="fake-comment"> // These would all make the cursor change to a pointer on hover</span><br>
-              <span class="clickable">&lt;div class="clickable"&gt;&lt;/div&gt;</span><br>
-              <span class="clickable">&lt;div onclick="function()"&gt;&lt;/div&gt;</span><br>
-              <br>
-              <span class="fake-comment"> // This would force the cursor to not change to a pointer</span><br>
-              <span class="not-clickable" onclick="alert('Yay! You clicked despite your instincts and found this secret! :D')">&lt;a href="http://frowcss.com" class="not-clickable"&gt;&lt;/a&gt;</span><br>
-            </div>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// .clickable and .not-clickable</span>
+<!--       -->
+<!--       --><span class="fake-comment">// These would all make the cursor change to a pointer on hover</span>
+<!--       --><span class="clickable">&lt;div class="clickable"&gt;&lt;/div&gt;</span>
+<!--       --><span class="clickable">&lt;div onclick="function()"&gt;&lt;/div&gt;</span>
+<!--       -->
+<!--       --><span class="fake-comment">// This would force the cursor to not change to a pointer</span>
+<!--       --><span class="not-clickable" onclick="alert('Yay! You clicked despite your instincts and found this secret! :D')">&lt;a href="http://frowcss.com" class="not-clickable"&gt;&lt;/a&gt;</span>
+<!--     --></pre>
             <h5>
               Full Width Shortcut
             </h5>
             <p>
               This class simply adds a quick width:100% rule to elements.
             </p>
-            <div class="fake-code bottom-margin">
-              <span class="fake-comment"> // .width-100</span><br>
-              <br>
-              <span class="fake-comment"> // A full width div</span><br>
-              &lt;html&gt;<br>
-              &nbsp;&nbsp;&lt;body&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="width-100"&gt;<span class="fake-comment"> // Without this class, the div wouldn't be full width</span><br>
-              &nbsp;&nbsp;&lt;/body&gt;<br>
-              &lt;/html&gt;<br>
-            </div>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// .width-100</span>
+<!--       -->
+<!--       --><span class="fake-comment">// A full width div</span>
+<!--       -->&lt;html&gt;
+<!--       -->  &lt;body&gt;
+<!--       -->    &lt;div class="width-100"&gt;<span class="fake-comment"> // Without this class, the div wouldn't be full width</span>
+<!--       -->  &lt;/body&gt;
+<!--       -->&lt;/html&gt;
+<!--     --></pre>
             <h5>
               Full Height Shortcut
             </h5>
             <p>
               This class simply adds a quick height:100% rule to elements. Super handy in certain cases, especially when wanting to do full-height webpages, where you have to make sure all elements are height:100% from &lt;html&gt; and &lt;body&gt; downwards.
             </p>
-            <div class="fake-code bottom-margin">
-              <span class="fake-comment"> // .height-100</span><br>
-              <br>
-              <span class="fake-comment"> // A full height div</span><br>
-              &lt;html class="height-100"&gt;<span class="fake-comment"> // Without this class, the div wouldn't be full height</span><br>
-              &nbsp;&nbsp;&lt;body class="height-100"&gt;<span class="fake-comment"> // Without this class, the div wouldn't be full height</span><br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="height-100" style="background-color:#03A9F4;color:#fff;"&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cool!<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-              &nbsp;&nbsp;&lt;/body&gt;<br>
-              &lt;/html&gt;<br>
-            </div>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// .height-100</span>
+<!--       -->
+<!--       --><span class="fake-comment">// A full height div</span>
+<!--       -->&lt;html class="height-100"&gt;<span class="fake-comment"> // Without this class, the div wouldn't be full height</span>
+<!--       -->  &lt;body class="height-100"&gt;<span class="fake-comment"> // Without this class, the div wouldn't be full height</span>
+<!--       -->    &lt;div class="height-100" style="background-color:#03A9F4;color:#fff;"&gt;
+<!--       -->      Cool!
+<!--       -->    &lt;/div&gt;
+<!--       -->  &lt;/body&gt;
+<!--       -->&lt;/html&gt;
+<!--     --></pre>
             <h5>
               Auto Width and Height Shortcuts
             </h5>
             <p>
               These classes simply adds quick width:auto or height:auto rules to elements.
             </p>
-            <div class="fake-code bottom-margin">
-              <span class="fake-comment"> // .width-auto and .height-auto</span><br>
-              <br>
-              <span class="fake-comment"> // To force width:auto</span><br>
-              &lt;div class="width-auto"&gt;&lt;/div&gt;<br>
-              <br>
-              <span class="fake-comment"> // To force height:auto</span><br>
-              &lt;div class="height-auto"&gt;&lt;/div&gt;<br>
-            </div>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// .width-auto and .height-auto</span>
+<!--       -->
+<!--       --><span class="fake-comment">// To force width:auto</span>
+<!--       -->&lt;div class="width-auto"&gt;&lt;/div&gt;
+<!--       -->
+<!--       --><span class="fake-comment">// To force height:auto</span>
+<!--       -->&lt;div class="height-auto"&gt;&lt;/div&gt;
+<!--     --></pre>
             <h5>
               Drop Shadow Shortcuts
             </h5>
             <p>
               Make items pop off the page a little with these nice looking classes. The elements will look as though they are cards set upon the webpage.
             </p>
-            <div class="fake-code">
-              <span class="fake-comment"> // .card-shadow and .dark-card-shadow</span><br>
-              <br>
-              <span class="fake-comment"> // For light-colored backgrounds</span><br>
-              &lt;div class="card-shadow"&gt;&lt;/div&gt;<br>
-              <br>
-              <span class="fake-comment"> // For dark-colored backgrounds</span><br>
-              &lt;div class="dark-card-shadow"&gt;&lt;/div&gt;<br>
-            </div>
+            <pre class="fake-code">
+<!--       --><span class="fake-comment">// .card-shadow and .dark-card-shadow</span>
+<!--       -->
+<!--       --><span class="fake-comment">// For light-colored backgrounds</span>
+<!--       -->&lt;div class="card-shadow"&gt;&lt;/div&gt;
+<!--       -->
+<!--       --><span class="fake-comment">// For dark-colored backgrounds</span>
+<!--       -->&lt;div class="dark-card-shadow"&gt;&lt;/div&gt;
+<!--     --></pre>
             <div class="card-shadow-demo">
               <div class="frow gutters">
                 <div class="col-md-1-2">
@@ -219,45 +219,45 @@
             <p>
               Use these pre-made text align rules to avoid having to make specific classes for elements.
             </p>
-            <div class="fake-code bottom-margin">
-              <span class="fake-comment"> // Text Align Shorcuts</span><br>
-              <br>
-              &lt;p class="text-left"&gt;&lt;/p&gt;<span class="fake-comment"> // Makes text right justified</span><br>
-              &lt;p class="text-center"&gt;&lt;/p&gt;<span class="fake-comment"> // Makes text centerjustified</span><br>
-              &lt;p class="text-right"&gt;&lt;/p&gt;<span class="fake-comment"> // Makes text left justified</span><br>
-              &lt;p class="text-justify"&gt;&lt;/p&gt;<span class="fake-comment"> // Makes text justified</span><br>
-            </div>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Text Align Shorcuts</span>
+<!--       -->
+<!--       -->&lt;p class="text-left"&gt;&lt;/p&gt;<span class="fake-comment"> // Makes text right justified</span>
+<!--       -->&lt;p class="text-center"&gt;&lt;/p&gt;<span class="fake-comment"> // Makes text center justified</span>
+<!--       -->&lt;p class="text-right"&gt;&lt;/p&gt;<span class="fake-comment"> // Makes text left justified</span>
+<!--       -->&lt;p class="text-justify"&gt;&lt;/p&gt;<span class="fake-comment"> // Makes text justified</span>
+<!--     --></pre>
             <h5>
               Text Transform Shortcuts
             </h5>
             <p>
               Use these pre-made text transform rules to avoid having to make specific classes for elements.
             </p>
-            <div class="fake-code bottom-margin">
-              <span class="fake-comment"> // Makes text uppercase</span><br>
-              &lt;p class="uppercase"&gt;Hello world&lt;/p&gt;<br>
-              <span class="fake-comment"> // Displays as: HELLO WORLD</span><br>
-              <br>
-              <span class="fake-comment"> // Makes text lowercase</span><br>
-              &lt;p class="lowercase"&gt;Hello world&lt;/p&gt;<br>
-              <span class="fake-comment"> // Displays as: hello world</span><br>
-              <br>
-              <span class="fake-comment"> // Makes text capitalized</span><br>
-              &lt;p class="capitalize"&gt;Hello world&lt;/p&gt;<br>
-              <span class="fake-comment"> // Displays as: Hello World</span><br>
-            </div>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Makes text uppercase</span>
+<!--       -->&lt;p class="uppercase"&gt;Hello world&lt;/p&gt;
+<!--       --><span class="fake-comment">// Displays as: HELLO WORLD</span>
+<!--       -->
+<!--       --><span class="fake-comment">// Makes text lowercase</span>
+<!--       -->&lt;p class="lowercase"&gt;Hello world&lt;/p&gt;
+<!--       --><span class="fake-comment">// Displays as: hello world</span>
+<!--       -->
+<!--       --><span class="fake-comment">// Makes text capitalized</span>
+<!--       -->&lt;p class="capitalize"&gt;Hello world&lt;/p&gt;
+<!--       --><span class="fake-comment">// Displays as: Hello World</span>
+<!--     --></pre>
             <h5>
               Clearfix
             </h5>
             <p>
               As a flexbox enthusiast, I strongly encourage you to figure out a way to do EVERYTHING with display:flex. However, for those times when you absolutely must use a CSS float, I've included a clearfix class.
             </p>
-            <div class="fake-code">
-              <span class="fake-comment"> // .clearfix</span><br>
-              <br>
-              &lt;div style="float:right;"&gt;Eww.&lt;/div&gt;<br>
-              &lt;div class="clearfix"&gt;&lt;/div&gt;<span class="fake-comment"> // Just add this line</span><br>
-            </div>
+            <pre class="fake-code">
+<!--       --><span class="fake-comment">// .clearfix</span>
+<!--       -->
+<!--       -->&lt;div style="float:right;"&gt;Eww.&lt;/div&gt;
+<!--       -->&lt;div class="clearfix"&gt;&lt;/div&gt;<span class="fake-comment"> // Just add this line</span>
+<!--     --></pre>
             <p>
               <strong>Unimportant Note:</strong> This website is 100% organic and <a href="http://cssstats.com/stats?url=http%3A%2F%2Ffrowcss.com&ua=Browser%20Default" target="_blank" rel="noopener">float-free</a>.
             </p>

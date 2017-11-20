@@ -1349,6 +1349,9 @@ a {
 svg {
   display: block; }
 
+pre {
+  margin: 0; }
+
 button,
 [type="button"],
 [type="reset"],
@@ -1384,6 +1387,7 @@ button,
     background-color: #29292a;
     border-color: #29292a;
     outline: none;
+    color: #fff;
     text-decoration: none; }
   button:active,
   [type="button"]:active,
@@ -1898,6 +1902,7 @@ input::-webkit-file-upload-button {
     background-color: #29292a;
     border-color: #29292a;
     outline: none;
+    color: #fff;
     text-decoration: none; }
   input::-webkit-file-upload-button:active {
     -webkit-transform: scale(0.96);
@@ -1951,6 +1956,7 @@ input::-ms-browse {
     background-color: #29292a;
     border-color: #29292a;
     outline: none;
+    color: #fff;
     text-decoration: none; }
   input::-ms-browse:active {
     transform: scale(0.96); }

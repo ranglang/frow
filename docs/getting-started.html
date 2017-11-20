@@ -157,15 +157,15 @@
             </h5>
             <span class="section-install-npm section-install">
               <p>Navigate to your project's folder, and then download Frow via <a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a>:</p>
-              <div class="fake-code bottom-margin">
-                $ npm install frow
-              </div>
+              <pre class="fake-code bottom-margin">
+<!--         -->$ npm install frow
+<!--       --></pre>
             </span>
             <span class="section-install-bower section-install letsGo-hide">
               <p>Navigate to your project's folder, and then download Frow via <a href="http://bower.io/" target="_blank" rel="noopener">Bower</a>:</p>
-              <div class="fake-code bottom-margin">
-                $ bower install frow
-              </div>
+              <pre class="fake-code bottom-margin">
+<!--         -->$ bower install frow
+<!--       --></pre>
             </span>
             <span class="section-install-download section-install letsGo-hide">
               <p class="bottom-margin">Download a Frow .zip via <a href="https://github.com/Beg-in/frow/releases/latest" title="Frow Latest Release" target="_blank" rel="noopener">GitHub</a>, then place the unzipped folder inside of your project's folder.</p>
@@ -176,41 +176,41 @@
             <h5>
               2. Include HTML5 DOCTYPE in your HTML file
             </h5>
-            <div class="fake-code bottom-margin">
-              &lt;!DOCTYPE html&gt;<br>
-              &lt;html&gt;<br>
-              ...<br>
-              &lt;/html&gt;<br>
-            </div>
+            <pre class="fake-code bottom-margin">
+<!--       -->&lt;!DOCTYPE html&gt;
+<!--       -->&lt;html&gt;
+<!--       -->...
+<!--       -->&lt;/html&gt;
+<!--     --></pre>
             <h5>
               3. Add mobile viewport meta tag
             </h5>
             <p>Recommended:</p>
-            <div class="fake-code">
-              &lt;!DOCTYPE html&gt;<br>
-              &lt;html&gt;<br>
-              &nbsp;&nbsp;&lt;head&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Frow Project&lt;/title&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;...<br>
-              &nbsp;&nbsp;&lt;/head&gt;<br>
-              &nbsp;&nbsp;...<br>
-              &lt;/html&gt;<br>
-            </div>
+            <pre class="fake-code">
+<!--       -->&lt;!DOCTYPE html&gt;
+<!--       -->&lt;html&gt;
+<!--       -->  &lt;head&gt;
+<!--       -->    &lt;meta charset="utf-8"&gt;
+<!--       -->    &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"&gt;
+<!--       -->    &lt;title&gt;Frow Project&lt;/title&gt;
+<!--       -->    ...
+<!--       -->  &lt;/head&gt;
+<!--       -->  ...
+<!--       -->&lt;/html&gt;
+<!--     --></pre>
             <p>Or, to allow mobile zooming:</p>
-            <div class="fake-code bottom-margin">
-              &lt;!DOCTYPE html&gt;<br>
-              &lt;html&gt;<br>
-              &nbsp;&nbsp;&lt;head&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Frow Project&lt;/title&gt;<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;...<br>
-              &nbsp;&nbsp;&lt;/head&gt;<br>
-              &nbsp;&nbsp;...<br>
-              &lt;/html&gt;<br>
-            </div>
+            <pre class="fake-code bottom-margin">
+<!--       -->&lt;!DOCTYPE html&gt;
+<!--       -->&lt;html&gt;
+<!--       -->  &lt;head&gt;
+<!--       -->    &lt;meta charset="utf-8"&gt;
+<!--       -->    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+<!--       -->    &lt;title&gt;Frow Project&lt;/title&gt;
+<!--       -->    ...
+<!--       -->  &lt;/head&gt;
+<!--       -->  ...
+<!--       -->&lt;/html&gt;
+<!--     --></pre>
             <span class="section-style-all">
               <span class="section-style-sass section-style">
                 <h5>
@@ -219,15 +219,15 @@
                 <p>
                   <strong>FYI:</strong> For better rendering across all browsers, Frow has <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">Normalize.css</a> built-in.
                 </p>
-                <div class="fake-code mb-0">
-                  <span class="fake-comment">// Tip: Place your personal variables file first (if you have one) to overrule any of Frow's defaults</span><br>
-                  <span class="fake-comment">// @import '[your-path-to]/variables';</span><br>
-                  <br>
-                  @import '[your-path-to]/frow/sass/frow';<br>
-                  <br>
-                  <span class="fake-comment">// Import your personal Sass files after Frow</span><br>
-                  <span class="fake-comment">// @import '[the-rest-of-your-sass-files]';</span><br>
-                </div>
+                <pre class="fake-code mb-0">
+<!--           --><span class="fake-comment">// Tip: Place your personal variables file first (if you have one) to overrule any of Frow's defaults</span>
+<!--           --><span class="fake-comment">// @import '[your-path-to]/variables';</span>
+<!--           -->
+<!--           -->@import '[your-path-to]/frow/sass/frow';
+<!--           -->
+<!--           --><span class="fake-comment">// Import your personal Sass files after Frow</span>
+<!--           --><span class="fake-comment">// @import '[the-rest-of-your-sass-files]';</span>
+<!--         --></pre>
                 <p><strong>Important Note:</strong> Don't forget to <a href="https://github.com/postcss/autoprefixer" title="Autoprefixer">add vendor prefixes</a> and minify when converting to CSS!</p>
               </span>
               <span class="section-style-css section-style letsGo-hide">
@@ -238,19 +238,19 @@
                   <strong>FYI:</strong> For better rendering across all browsers, Frow has <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">Normalize.css</a> built-in.
                 </p>
                 <p>Frow's CSS files come already vendor-prefixed and minified.</p>
-                <div class="fake-code mb-0">
-                  &lt;!DOCTYPE html&gt;<br>
-                  &lt;html&gt;<br>
-                  &nbsp;&nbsp;&lt;head&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Frow Project&lt;/title&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="[your-path-to]/frow/css/frow.min.css"&gt;<br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;...<br>
-                  &nbsp;&nbsp;&lt;/head&gt;<br>
-                  &nbsp;&nbsp;...<br>
-                  &lt;/html&gt;<br>
-                </div>
+                <pre class="fake-code mb-0">
+<!--           -->&lt;!DOCTYPE html&gt;
+<!--           -->&lt;html&gt;
+<!--           -->  &lt;head&gt;
+<!--           -->    &lt;meta charset="utf-8"&gt;
+<!--           -->    &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"&gt;
+<!--           -->    &lt;title&gt;Frow Project&lt;/title&gt;
+<!--           -->    &lt;link rel="stylesheet" href="[your-path-to]/frow/css/frow.min.css"&gt;
+<!--           -->    ...
+<!--           -->  &lt;/head&gt;
+<!--           -->  ...
+<!--           -->&lt;/html&gt;
+<!--         --></pre>
               </span>
             </span>
             <span class="section-cdn letsGo-hide">
@@ -261,19 +261,19 @@
                 <strong>FYI:</strong> For better rendering across all browsers, Frow has <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">Normalize.css</a> built-in.
               </p>
               <p>You will need to pick out the version of Frow you would like to use, most likely the latest. A list of all releases is available on <a href="https://github.com/Beg-in/frow/releases" title="Frow Releases" target="_blank" rel="noopener">GitHub</a>.</p>
-              <div class="fake-code mb-0">
-                &lt;!DOCTYPE html&gt;<br>
-                &lt;html&gt;<br>
-                &nbsp;&nbsp;&lt;head&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Frow Project&lt;/title&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="https://cdn.rawgit.com/Beg-in/frow/[X.Y.Z VERSION HERE]/css/frow.min.css"&gt;<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;...<br>
-                &nbsp;&nbsp;&lt;/head&gt;<br>
-                &nbsp;&nbsp;...<br>
-                &lt;/html&gt;<br>
-              </div>
+              <pre class="fake-code mb-0">
+<!--         -->&lt;!DOCTYPE html&gt;
+<!--         -->&lt;html&gt;
+<!--         -->  &lt;head&gt;
+<!--         -->    &lt;meta charset="utf-8"&gt;
+<!--         -->    &lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"&gt;
+<!--         -->    &lt;title&gt;Frow Project&lt;/title&gt;
+<!--         -->    &lt;link rel="stylesheet" href="https://cdn.rawgit.com/Beg-in/frow/[X.Y.Z VERSION HERE]/css/frow.min.css"&gt;
+<!--         -->    ...
+<!--         -->  &lt;/head&gt;
+<!--         -->  ...
+<!--         -->&lt;/html&gt;
+<!--       --></pre>
               <p><strong>Important Note:</strong> Make sure you replace the [X.Y.Z VERSION HERE] with the version you want to use (remove the brackets too).</p>
             </span>
           </div>

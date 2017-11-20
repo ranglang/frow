@@ -90,13 +90,13 @@
           <p>
             Every element with a .frow class is given the CSS property display:flex and becomes a horizontal row. Here is a basic .frow containing some squares:
           </p>
-          <div class="fake-code">
-            &lt;div class="frow"&gt; <span class="fake-comment">// This div is a Frow row, containing three divs</span><br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-          </div>
+          <pre class="fake-code">
+<!--     -->&lt;div class="frow"&gt; <span class="fake-comment">// This div is a Frow row, containing three divs</span>
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->&lt;/div&gt;
+<!--   --></pre>
           <div class="grid-example">
             <div class="frow">
               <div class="grid-example-square"></div>
@@ -107,13 +107,13 @@
           <p>
             Frow's library includes a lot of other classes to make it easy and quick to modify the elements within the .frow element.
           </p>
-          <div class="fake-code">
-            &lt;div class="frow justify-start"&gt; <span class="fake-comment">// A single new class changes the behavior</span><br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-          </div>
+          <pre class="fake-code">
+<!--     -->&lt;div class="frow justify-start"&gt; <span class="fake-comment">// A single new class changes the behavior</span>
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->&lt;/div&gt;
+<!--  --></pre>
           <div class="grid-example">
             <div class="frow justify-start">
               <div class="grid-example-square"></div>
@@ -137,18 +137,18 @@
           <p>
             Notice that each .frow <strong>takes up the whole horizontal row</strong>, so the next one will be <b>underneath</b> the last.
           </p>
-          <div class="fake-code">
-            &lt;div class="frow"&gt; <span class="fake-comment">// The first Frow</span><br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-            &lt;div class="frow justify-start"&gt; <span class="fake-comment">// The second Frow</span><br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-          </div>
+          <pre class="fake-code">
+<!--     -->&lt;div class="frow"&gt; <span class="fake-comment">// The first Frow</span>
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->&lt;/div&gt;
+<!--     -->&lt;div class="frow justify-start"&gt; <span class="fake-comment">// The second Frow</span>
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->&lt;/div&gt;
+<!--   --></pre>
           <div class="grid-example">
             <div class="frow">
               <div class="grid-example-square"></div>
@@ -164,19 +164,19 @@
           <p>
             You can of course also use a Frow inside of another Frow.
           </p>
-          <div class="fake-code">
-            &lt;div class="frow"&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="frow"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="smaller-grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="smaller-grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="smaller-grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-          </div>
+          <pre class="fake-code">
+<!--     -->&lt;div class="frow"&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;
+<!--     -->    &lt;div class="frow"&gt;
+<!--     -->      &lt;div class="smaller-grid-example-square"&gt;&lt;/div&gt;
+<!--     -->      &lt;div class="smaller-grid-example-square"&gt;&lt;/div&gt;
+<!--     -->      &lt;div class="smaller-grid-example-square"&gt;&lt;/div&gt;
+<!--     -->    &lt;/div&gt;
+<!--     -->  &lt;/div&gt;
+<!--     -->&lt;/div&gt;
+<!--   --></pre>
           <div class="grid-example">
             <div class="frow">
               <div class="grid-example-square"></div>
@@ -199,30 +199,30 @@
           <p>
             The obvious thing to do would be to add your class to the .frow div:
           </p>
-          <div class="fake-code">
-            <span class="fake-comment">// DON'T DO THIS</span><br>
-            &lt;div class="frow red-background"&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-          </div>
+          <pre class="fake-code">
+<!--     --><span class="fake-comment">// DON'T DO THIS</span>
+<!--     -->&lt;div class="frow red-background"&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->&lt;/div&gt;
+<!--   --></pre>
           <p>
             While seemingly fine, <strong>don't do that</strong>.
           </p>
           <p>
             Frow divs should ONLY get classes made for Frow added to them. Changing the background color might not break anything, but in the future other classes you add could conflict with Frow. To add your own classes and rules, just wrap the .frow within a new div.
           </p>
-          <div class="fake-code">
-            <span class="fake-comment">// CORRECT</span><br>
-            &lt;div class="red-background"&gt;<br>
-            &nbsp;&nbsp;&lt;div class="frow"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="grid-example-square"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-          </div>
+          <pre class="fake-code">
+<!--     --><span class="fake-comment">// CORRECT</span>
+<!--     -->&lt;div class="red-background"&gt;
+<!--     -->  &lt;div class="frow"&gt;
+<!--     -->    &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->    &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->    &lt;div class="grid-example-square"&gt;&lt;/div&gt;
+<!--     -->  &lt;/div&gt;
+<!--     -->&lt;/div&gt;
+<!--   --></pre>
           <div class="grid-example mb-20">
             <div class="red-background">
               <div class="frow">

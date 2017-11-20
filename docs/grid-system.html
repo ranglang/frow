@@ -87,13 +87,13 @@
           <p>
             For building your website's overall framework, you can use columns. Columns break up each .frow into fractions. For example, a .col-md-1-3 creates a column that is one third of the row.
           </p>
-          <div class="fake-code">
-            &lt;div class="frow"&gt;<br>
-            &nbsp;&nbsp;&lt;div class="col-md-1-3"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="col-md-1-3"&gt;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;div class="col-md-1-3"&gt;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-          </div>
+          <pre class="fake-code">
+<!--     -->&lt;div class="frow"&gt;
+<!--     -->  &lt;div class="col-md-1-3"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="col-md-1-3"&gt;&lt;/div&gt;
+<!--     -->  &lt;div class="col-md-1-3"&gt;&lt;/div&gt;
+<!--     -->&lt;/div&gt;
+<!--  --></pre>
           <div class="grid-example mb-0">
             <div class="frow">
               <div class="col-md-1-3 col-sm-1-3 col-xs-1-3">
@@ -440,9 +440,9 @@
           <p>
             If the fractions add up to less than a whole, Frow centers them. Don't like it? A quick class switches the behavior. See all of the available classes in <a href="frow-shortcuts.html">Frow Shortcuts</a>.</span>
           </p>
-          <div class="grid-frow-code">
-            class="frow" <span class="fake-comment">// Centers columns horizontally by default</span>
-          </div>
+          <pre class="grid-frow-code">
+<!--     -->class="frow" <span class="fake-comment">// Centers columns horizontally by default</span>
+<!--   --></pre>
           <div class="grid-example">
             <div class="frow">
               <div class="col-md-3-5 col-sm-3-5 col-xs-3-5">
@@ -454,9 +454,9 @@
               </div>
             </div>
           </div>
-          <div class="grid-frow-code">
-            class="frow row-start" <span class="fake-comment">// Switches to the typical left align</span>
-          </div>
+          <pre class="grid-frow-code">
+<!--     -->class="frow row-start" <span class="fake-comment">// Switches to the typical left align</span>
+<!--   --></pre>
           <div class="grid-example">
             <div class="frow row-start">
               <div class="col-md-3-5 col-sm-3-5 col-xs-3-5">
@@ -468,9 +468,9 @@
               </div>
             </div>
           </div>
-          <div class="grid-frow-code">
-            class="frow row-end" <span class="fake-comment">// Switches to right align</span>
-          </div>
+          <pre class="grid-frow-code">
+<!--     -->class="frow row-end" <span class="fake-comment">// Switches to right align</span>
+<!--   --></pre>
           <div class="grid-example">
             <div class="frow row-end">
               <div class="col-md-3-5 col-sm-3-5 col-xs-3-5">
@@ -485,9 +485,9 @@
           <p>
             CSS Flex even allows for elements to be centered horizontally AND vertically! With Frow, one class and you're done.
           </p>
-          <div class="grid-frow-code">
-            class="frow centered" <span class="fake-comment">// See all shortcuts: <a href="frow-shortcuts.html">Frow Shortcuts</a></span>
-          </div>
+          <pre class="grid-frow-code">
+<!--     -->class="frow centered" <span class="fake-comment">// See all shortcuts: <a href="frow-shortcuts.html">Frow Shortcuts</a></span>
+<!--   --></pre>
           <div class="grid-example" style="height:300px;">
             <div class="frow centered">
               <div class="col-md-1-3 col-sm-1-3 col-xs-1-3">
@@ -505,9 +505,9 @@
           <p>
             For your website's main grid system, make everything have uniform distance between them via gutters. Just add the .gutters class to the .frow and you're done. With default settings, the gutters are 30 pixels wide.
           </p>
-          <div class="grid-frow-code">
-            class="frow gutters"
-          </div>
+          <pre class="grid-frow-code">
+<!--     -->class="frow gutters"
+<!--   --></pre>
           <div class="grid-example">
             <div class="frow gutters">
               <div class="col-xs-1-4">
@@ -539,21 +539,21 @@
           <p>
             Just like the .frow elements, <strong>don't combine your own personal classes with .col-* classes</strong>.
           </p>
-          <div class="fake-code">
-            <span class="fake-comment">// WRONG</span><br>
-            &lt;div class="frow"&gt;<br>
-            &nbsp;&nbsp;&lt;div class="col-md-1-2 red-background"&gt;<br>
-            &nbsp;&nbsp;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-            <br>
-            <span class="fake-comment">// RIGHT</span><br>
-            &lt;div class="frow"&gt;<br>
-            &nbsp;&nbsp;&lt;div class="col-md-1-2"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="red-background"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-            &nbsp;&nbsp;&lt;/div&gt;<br>
-            &lt;/div&gt;<br>
-          </div>
+          <pre class="fake-code">
+<!--     --><span class="fake-comment">// WRONG</span>
+<!--     -->&lt;div class="frow"&gt;
+<!--     -->  &lt;div class="col-md-1-2 red-background"&gt;
+<!--     -->  &lt;/div&gt;
+<!--     -->&lt;/div&gt;
+<!--     -->
+<!--     --><span class="fake-comment">// RIGHT</span>
+<!--     -->&lt;div class="frow"&gt;
+<!--     -->  &lt;div class="col-md-1-2"&gt;
+<!--     -->    &lt;div class="red-background"&gt;
+<!--     -->    &lt;/div&gt;
+<!--     -->  &lt;/div&gt;
+<!--     -->&lt;/div&gt;
+<!--   --></pre>
           <p>
             Again, it seems redundant to have another div wrapper, but it's worth just getting into the habit to avoid the headache of accidentally adding a conflicting class.
           </p>

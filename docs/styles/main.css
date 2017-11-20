@@ -107,6 +107,10 @@ p a {
   font-size: 18px;
 }
 
+pre {
+  font-family: Inconsolata;
+}
+
 /* XS, SM */
 @media (max-width: 991px) {
   p, p a {
@@ -341,26 +345,24 @@ p a {
   font-size: 14px;
 }
 
-.fake-code {
+.fake-code,
+.grid-frow-code {
   padding: 10px 10px;
   display: block;
   border-radius: 3px;
   background-color: #4F4F51;
   color: #E6E6E6;
-  font-family: 'Inconsolata', monospace;
   font-size: 16px;
+  white-space: pre-wrap;
+}
+
+.fake-code {
   margin-bottom: 20px;
 }
 
 .grid-frow-code {
-  padding: 10px 10px;
-  display: block;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  background-color: #4F4F51;
-  color: #E6E6E6;
-  font-family: 'Inconsolata', monospace;
-  font-size: 16px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .fake-comment {
@@ -584,10 +586,6 @@ a.next-page[type="button"]:focus {
 footer {
   margin-top: 60px;
   text-align: center;
-}
-
-.responsive-list {
-  font-family: Inconsolata;
 }
 
 .form-example-contain {
