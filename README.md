@@ -1,4 +1,4 @@
 # Frow CSS
-Flex Row CSS Grid System
+## Flexbox Toolkit & Grid
 
-Information at: <http://frowcss.com>
+Full Documentation at: <http://frowcss.com>

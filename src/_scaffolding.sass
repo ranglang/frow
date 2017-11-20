@@ -14,6 +14,11 @@
 body
   color: $near-black
 
+// Reset h1-h6 margin and padding
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+
 // Links
 a
   cursor: pointer
@@ -37,6 +42,7 @@ svg
 pre
   margin: 0
 
+// Buttons
 =frow-button-disabled
   cursor: default !important
   border: 2px solid $gray-lighter
@@ -78,7 +84,6 @@ pre
     &:hover, &:focus, &:active
       +frow-button-disabled
 
-// Buttons
 @if $frow-enable-buttons == true
   // Buttons
   button,

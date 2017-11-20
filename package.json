@@ -1,8 +1,8 @@
 {
   "name": "frow",
   "version": "3.0.0",
-  "description": "Flex Row CSS Grid System http://frowcss.com",
-  "main": "_main.sass",
+  "description": "Flexbox Toolkit & Grid",
+  "main": "_frow.sass",
   "scripts": {
     "sass": "node-sass frow.sass dist/frow.css",
     "autoprefixer": "postcss --no-map -u autoprefixer -r dist/frow.css",
