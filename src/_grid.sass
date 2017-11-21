@@ -2,25 +2,6 @@
 //
 // Generate semantic grid columns with these mixins.
 
-// Centered container element
-.frow-container
-  margin-right: auto
-  margin-left: auto
-  padding-left: $grid-gutter-width / 2
-  padding-right: $grid-gutter-width / 2
-
-@media (min-width: 768px)
-  .frow-container
-    width: 750px
-
-@media (min-width: 992px)
-  .frow-container
-    width: 970px
-
-@media (min-width: 1200px)
-  .frow-container
-    width: 1170px
-
 =flexbox-rules
   // Shortcuts
   &.centered
@@ -167,14 +148,15 @@ $sizes-names: map-keys($sizes)
   justify-content: center
   align-content: flex-start
 
-  &.gutters
-    margin-left: -$grid-gutter-width / 2
-    margin-right: -$grid-gutter-width / 2
+  @if $frow-enable-columns == true
+    &.gutters
+      margin-left: -$grid-gutter-width / 2
+      margin-right: -$grid-gutter-width / 2
 
-    @each $size in $sizes-names
-      & > [class*=col-#{$size}]
-        padding-left: $grid-gutter-width / 2
-        padding-right: $grid-gutter-width / 2
+      @each $size in $sizes-names
+        & > [class*=col-#{$size}]
+          padding-left: $grid-gutter-width / 2
+          padding-right: $grid-gutter-width / 2
 
   +flexbox-rules
 

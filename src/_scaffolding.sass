@@ -2,45 +2,46 @@
 // Scaffolding
 // --------------------------------------------------
 
-// Reset the box-sizing
-*, :after, :before
-  box-sizing: border-box
+@if $frow-enable-html-basics == true
+  // Reset the box-sizing
+  *, :after, :before
+    box-sizing: border-box
 
-// Remove tap highlight color
-*
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+  // Remove tap highlight color
+  *
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 
-// Set default text color
-body
-  color: $near-black
+  // Set default text color
+  body
+    color: $near-black
 
-// Reset h1-h6 margin and padding
-h1, h2, h3, h4, h5, h6
-  margin: 0
-  padding: 0
+  // Reset h1-h6 margin and padding
+  h1, h2, h3, h4, h5, h6
+    margin: 0
+    padding: 0
 
-// Links
-a
-  cursor: pointer
-  color: $link-color
-  text-decoration: none
+  // Links
+  a
+    cursor: pointer
+    color: $link-color
+    text-decoration: none
 
-  &:hover,
-  &:focus,
-  &:active
-    color: $link-hover-color
-    text-decoration: underline
+    &:hover,
+    &:focus,
+    &:active
+      color: $link-hover-color
+      text-decoration: underline
 
-  p &
-    text-decoration: underline
+    p &
+      text-decoration: underline
 
-// SVGs
-svg
-  display: block
+  // SVGs
+  svg
+    display: block
 
-// Pre
-pre
-  margin: 0
+  // Pre
+  pre
+    margin: 0
 
 // Buttons
 =frow-button-disabled
