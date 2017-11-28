@@ -70,7 +70,7 @@
 @if $frow-enable-utilities == true
   // Cursor pointer classes
   // -------------------------
-  .clickable:not([disabled]), *[onclick]:not([disabled])
+  .clickable:not([disabled]), [onclick]:not([disabled])
     cursor: pointer !important
 
   .not-clickable, .not-clickable[onclick]
@@ -83,10 +83,10 @@
 
   // Card shadows
   // -------------------------
-  .card-shadow
+  .shadow-light
     box-shadow: $card-shadow !important
 
-  .dark-card-shadow
+  .shadow-dark
     box-shadow: $dark-card-shadow !important
 
   // Text align

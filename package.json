@@ -8,7 +8,7 @@
     "autoprefixer": "postcss --no-map -u autoprefixer -r dist/frow.css",
     "addnormalize": "FROW=`echo \"/*! Frow CSS with Normalize.css (Vendor Prefixed) */\" | cat - node_modules/normalize.css/normalize.css dist/frow.css` && echo \"$FROW\" > dist/frow.css",
     "cssnano": "postcss --no-map -u cssnano -o dist/frow.min.css dist/frow.css",
-    "csscopy": "cp -t docs/styles dist/frow.css",
+    "csscopy": "FROW=`echo \"/* This code is not minified for example purposes only, remember to minify your code! */\" | cat - dist/frow.css` && echo \"$FROW\" > docs/styles/frow.css",
     "letsgocopy": "cp -t docs/scripts node_modules/letsgo/letsgo.js",
     "build:css": "run-s sass autoprefixer addnormalize cssnano csscopy",
     "build:js": "run-s letsgocopy",

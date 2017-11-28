@@ -1,4 +1,4 @@
-/* This code is not minified for only example purposes, remember to minify your code! */
+/* This code is not minified for example purposes only, remember to minify your code! */
 
 body {
   margin-bottom: 25px;
@@ -414,16 +414,16 @@ pre {
 
   }
   55% {
-    width: 80px;
+    border-radius: 3px;
   }
   60% {
-    width: 100px;
+    border-radius: 20px;
   }
   65% {
-    width: 100px;
+    border-radius: 20px;
   }
   70% {
-    width: 80px;
+    border-radius: 3px;
   }
   75% {
 
@@ -431,18 +431,22 @@ pre {
   80% {
     height: 80px;
     width: 80px;
+    border-radius: 3px;
   }
   85% {
-    height: 150px;
-    width: 40px
+    height: 160px;
+    width: 40px;
+    border-radius: 0px;
   }
   90% {
-    height: 150px;
+    height: 160px;
     width: 40px;
+    border-radius: 0px;
   }
   95% {
     height: 80px;
-    width: 80px
+    width: 80px;
+    border-radius: 3px;
   }
   100% {
 
@@ -484,16 +488,16 @@ pre {
 
   }
   55% {
-    width: 80px;
+    border-radius: 3px;
   }
   60% {
-    width: 100px;
+    border-radius: 20px;
   }
   65% {
-    width: 100px;
+    border-radius: 20px;
   }
   70% {
-    width: 80px;
+    border-radius: 3px;
   }
   75% {
 
@@ -501,18 +505,22 @@ pre {
   80% {
     height: 80px;
     width: 80px;
+    border-radius: 3px;
   }
   85% {
-    height: 150px;
+    height: 160px;
     width: 40px;
+    border-radius: 0px;
   }
   90% {
-    height: 150px;
+    height: 160px;
     width: 40px;
+    border-radius: 0px;
   }
   95% {
     height: 80px;
     width: 80px;
+    border-radius: 3px;
   }
   100% {
 
@@ -574,19 +582,23 @@ pre {
   }
   80% {
     height: 80px;
-    width: 80px
+    width: 80px;
+    border-radius: 3px;
   }
   85% {
-    height: 150px;
-    width: 40px
+    height: 160px;
+    width: 40px;
+    border-radius: 0px;
   }
   90% {
-    height: 150px;
-    width: 40px
+    height: 160px;
+    width: 40px;
+    border-radius: 0px;
   }
   95% {
     height: 80px;
     width: 80px;
+    border-radius: 3px;
   }
   100% {
 
@@ -649,18 +661,22 @@ pre {
   80% {
     height: 80px;
     width: 80px;
+    border-radius: 3px;
   }
   85% {
-    height: 150px;
+    height: 160px;
     width: 40px;
+    border-radius: 0px;
   }
   90% {
-    height: 150px;
+    height: 160px;
     width: 40px;
+    border-radius: 0px;
   }
   95% {
     height: 80px;
     width: 80px;
+    border-radius: 3px;
   }
   100% {
 
@@ -726,19 +742,23 @@ pre {
   }
   80% {
     height: 80px;
-    width: 80px
+    width: 80px;
+    border-radius: 3px;
   }
   85% {
-    height: 150px;
-    width: 40px
+    height: 160px;
+    width: 40px;
+    border-radius: 0px;
   }
   90% {
-    height: 150px;
+    height: 160px;
     width: 40px;
+    border-radius: 0px;
   }
   95% {
     height: 80px;
-    width: 80px
+    width: 80px;
+    border-radius: 3px;
   }
   100% {
 
@@ -805,18 +825,22 @@ pre {
   80% {
     height: 80px;
     width: 80px;
+    border-radius: 3px;
   }
   85% {
-    height: 150px;
+    height: 160px;
     width: 40px;
+    border-radius: 0px;
   }
   90% {
-    height: 150px;
+    height: 160px;
     width: 40px;
+    border-radius: 0px;
   }
   95% {
     height: 80px;
     width: 80px;
+    border-radius: 3px;
   }
   100% {
 
@@ -824,8 +848,8 @@ pre {
 }
 
 #home-flexbox-example {
-  -webkit-animation: flexbox-all 6s infinite;
-          animation: flexbox-all 6s infinite;
+  -webkit-animation: flexbox-all 5s infinite;
+          animation: flexbox-all 5 infinite;
 }
 
 #home-flexbox-example div {
@@ -837,18 +861,18 @@ pre {
 }
 
 #home-flexbox-example div:nth-child(1) {
-  -webkit-animation: flexbox-1 12s infinite;
-          animation: flexbox-1 12s infinite;
+  -webkit-animation: flexbox-1 10s infinite;
+          animation: flexbox-1 10s infinite;
 }
 
 #home-flexbox-example div:nth-child(2) {
-  -webkit-animation: flexbox-2 12s infinite;
-          animation: flexbox-2 12s infinite;
+  -webkit-animation: flexbox-2 10s infinite;
+          animation: flexbox-2 10s infinite;
 }
 
 #home-flexbox-example div:nth-child(3) {
-  -webkit-animation: flexbox-3 12s infinite;
-          animation: flexbox-3 12s infinite;
+  -webkit-animation: flexbox-3 10s infinite;
+          animation: flexbox-3 10s infinite;
 }
 
 #titles-example, #headers-example {
@@ -923,9 +947,21 @@ pre {
   background-color: #339be8;
   height: 70px;
   margin-bottom: 10px;
-  border: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
   border-radius: 3px;
   font-size: 15px;
+}
+
+.frow.column-center>[class*=col-]>.grid-example-div,
+.frow.column-start>[class*=col-]>.grid-example-div,
+.frow.column-end>[class*=col-]>.grid-example-div,
+.frow.centered-column>[class*=col-]>.grid-example-div,
+.frow.direction-column>[class*=col-]>.grid-example-div,
+.frow.direction-column-reverse>[class*=col-]>.grid-example-div {
+  border: none;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 .plain-grid-example-div p {
@@ -958,7 +994,7 @@ pre {
 
 .grid-example-div.dotted-div {
   background-color: transparent;
-  border: 2px dashed #333;
+  border: 1px dashed #333;
   margin: 0 2px;
 }
 
@@ -987,8 +1023,8 @@ pre {
   margin-top: 10px;
 }
 
-.grid-example>.frow:last-of-type .grid-example-div {
-  margin: 0;
+.grid-example>.frow:last-child .grid-example-div {
+  margin-bottom: 0;
 }
 
 /* XS, SM */
@@ -1430,7 +1466,8 @@ textarea.my-custom-textarea {
   border: 0;
   border-radius: 3px;
   background-color: WhiteSmoke;
-  box-shadow: inset 0 0 7px #aaa;
+  -webkit-box-shadow: inset 0 0 7px #aaa;
+          box-shadow: inset 0 0 7px #aaa;
 }
 
 button.blue {
