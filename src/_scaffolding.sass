@@ -2,6 +2,10 @@
 // Scaffolding
 // --------------------------------------------------
 
+// Convert Hex colors to RGB for use within SVGs
+@function convert-to-rgb($color)
+  @return "rgb(" + red($color) + "," + green($color) + "," + blue($color) + ")"
+
 @if $frow-enable-html-basics == true
   // Reset the box-sizing and tap highlight color
   *, :after, :before

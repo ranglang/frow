@@ -40,10 +40,6 @@ $off-black: #333 !default
 $white: #FFF !default
 $black: #000 !default
 
-// HACK: This is because Firefox can't have hashtags in svg background urls
-@function convert-to-rgb($color)
-  @return "rgb(" + red($color) + "," + green($color) + "," + blue($color) + ")"
-
 
 
 //== Scaffolding
