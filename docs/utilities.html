@@ -86,7 +86,7 @@
               Utilities
             </h3>
             <div class="tagline">
-              Classes to Add Some Extra Utilities
+              Classes to Quickly Tweak Elements
             </div>
             <h5>
               Margin and Padding Shortcuts
@@ -94,7 +94,7 @@
             <p>
               To quickly set an element's margin or padding, you can use shortcuts built into Frow. You can set margin and padding in ranges of 0 to 25 by 5 pixel increments and from 30 to 100 in 10 pixel increments. Margin shortcuts can also be set to auto.
             </p>
-            <pre class="fake-code">
+            <pre class="fake-code bottom-margin">
 <!--       --><span class="fake-comment">// Margin shortcuts</span>
 <!--       -->&lt;div class="m-0"&gt;<span class="fake-comment">      //   0px margin on all sides</span>
 <!--       -->&lt;div class="mh-5"&gt;<span class="fake-comment">     //   5px margin on the left and right</span>
@@ -114,25 +114,7 @@
 <!--       -->&lt;div class="pb-90"&gt;<span class="fake-comment">    //  90px padding on the bottom</span>
 <!--       -->&lt;div class="pl-100"&gt;<span class="fake-comment">   // 100px padding on the left</span>
 <!--     --></pre>
-            <p class="bottom-margin">
-              <strong>Important Note:</strong> You can disable these classes using Frow's <a href="customize.html">Sass Variables</a>.
             </p>
-            <h5>
-              Clickable/Not-Clickable Shortcuts
-            </h5>
-            <p>
-              Two simple classes to change which cursor appears on an element. Clickable's rule is also automatically applied to any elements with the attribute of onclick.
-            </p>
-            <pre class="fake-code bottom-margin">
-<!--       --><span class="fake-comment">// .clickable and .not-clickable</span>
-<!--       -->
-<!--       --><span class="fake-comment">// These would all make the cursor change to a pointer on hover</span>
-<!--       --><span class="clickable">&lt;div class="clickable"&gt;&lt;/div&gt;</span>
-<!--       --><span class="clickable">&lt;div onclick="function()"&gt;&lt;/div&gt;</span>
-<!--       -->
-<!--       --><span class="fake-comment">// This would force the cursor to not change to a pointer</span>
-<!--       --><span class="not-clickable" onclick="alert('Yay! You clicked despite your instincts and found this secret! :D')">&lt;a href="http://frowcss.com" class="not-clickable"&gt;&lt;/a&gt;</span>
-<!--     --></pre>
             <h5>
               Full Width Shortcut
             </h5>
@@ -238,16 +220,32 @@
             </p>
             <pre class="fake-code bottom-margin">
 <!--       --><span class="fake-comment">// Makes text uppercase</span>
-<!--       -->&lt;p class="uppercase"&gt;Hello world&lt;/p&gt;
+<!--       -->&lt;p class="text-uppercase"&gt;Hello world&lt;/p&gt;
 <!--       --><span class="fake-comment">// Displays as: HELLO WORLD</span>
 <!--       -->
 <!--       --><span class="fake-comment">// Makes text lowercase</span>
-<!--       -->&lt;p class="lowercase"&gt;Hello world&lt;/p&gt;
+<!--       -->&lt;p class="text-lowercase"&gt;Hello world&lt;/p&gt;
 <!--       --><span class="fake-comment">// Displays as: hello world</span>
 <!--       -->
 <!--       --><span class="fake-comment">// Makes text capitalized</span>
-<!--       -->&lt;p class="capitalize"&gt;Hello world&lt;/p&gt;
+<!--       -->&lt;p class="text-capitalize"&gt;Hello world&lt;/p&gt;
 <!--       --><span class="fake-comment">// Displays as: Hello World</span>
+<!--     --></pre>
+            <h5>
+              Clickable/Not-Clickable Shortcuts
+            </h5>
+            <p>
+              Two simple classes to change which cursor appears on an element. Clickable's rule is also automatically applied to any elements with the attribute of onclick.
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// .clickable and .not-clickable</span>
+<!--       -->
+<!--       --><span class="fake-comment">// These would all make the cursor change to a pointer on hover</span>
+<!--       --><span class="clickable">&lt;div class="clickable"&gt;&lt;/div&gt;</span>
+<!--       --><span class="clickable">&lt;div onclick="function()"&gt;&lt;/div&gt;</span>
+<!--       -->
+<!--       --><span class="fake-comment">// This would force the cursor to not change to a pointer</span>
+<!--       --><span class="not-clickable" onclick="alert('Yay! You clicked despite your instincts and found this secret! :D')">&lt;a href="http://frowcss.com" class="not-clickable"&gt;&lt;/a&gt;</span>
 <!--     --></pre>
           </div>
         </div>
@@ -255,7 +253,7 @@
       <div class="frow column-center">
         <div class="next">Next:</div>
         <a type="button" class="next-page shadow-light" href="customize.html">
-          Sass Variables
+          Customize
         </a>
       </div>
     </main>

@@ -125,8 +125,8 @@ pre {
 .example-toggle-button:hover,
 .example-toggle-button:active,
 .example-toggle-button:focus {
-  background-color: #105080;
-  border-color: #105080;
+  background-color: #1574ba;
+  border-color: #1574ba;
 }
 
 .bottom-margin {
@@ -1374,8 +1374,8 @@ a.next-page[type="button"] {
 a.next-page[type="button"]:hover,
 a.next-page[type="button"]:active,
 a.next-page[type="button"]:focus {
-  background-color: #105080;
-  border-color: #105080;
+  background-color: #1574ba;
+  border-color: #1574ba;
 }
 
 footer {

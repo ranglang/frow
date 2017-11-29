@@ -86,7 +86,7 @@
               Customize
             </h3>
             <div class="tagline">
-              Make Frow yours with Sass Variables
+              Make Frow yours with Sass variables
             </div>
             <h4>
               What can Sass variables do?
@@ -105,25 +105,25 @@
             </p>
             <pre class="fake-code bottom-margin">
 <!--       --><span class="fake-comment">// <a href="https://github.com/Beg-in/frow/blob/master/src/_scaffolding.sass" target="_blank" rel="noopener">HTML basics</a> (Minor styling/resets of anchor links, h1-h6, etc.)</span>
-<!--       -->$frow-enable-html-basics:                true
+<!--       -->$frow-enable-html-basics:                true;
 <!--       -->
 <!--       --><span class="fake-comment">// <a href="grid.html">Columns/Grid functionality</a></span>
-<!--       -->$frow-enable-columns:                    true
+<!--       -->$frow-enable-columns:                    true;
 <!--       -->
 <!--       --><span class="fake-comment">// <a href="forms.html">Button styling</a></span>
-<!--       -->$frow-enable-buttons:                    true
+<!--       -->$frow-enable-buttons:                    true;
 <!--       -->
 <!--       --><span class="fake-comment">// <a href="forms.html">Form elements</a></span>
-<!--       -->$frow-enable-forms:                      true
+<!--       -->$frow-enable-forms:                      true;
 <!--       -->
 <!--       --><span class="fake-comment">// <a href="responsive-design.html">Responsive design rules</a></span>
-<!--       -->$frow-enable-responsive-design-classes:  true
+<!--       -->$frow-enable-responsive-design-classes:  true;
 <!--       -->
 <!--       --><span class="fake-comment">// <a href="utilities.html">Margin/Padding classes</a> (.mb-10, .p-15, .mh-auto)</span>
-<!--       -->$frow-enable-box-model-shorcuts:         true
+<!--       -->$frow-enable-box-model-shorcuts:         true;
 <!--       -->
 <!--       --><span class="fake-comment">// <a href="utilities.html">Miscellaneous utilities</a></span>
-<!--       -->$frow-enable-utilities:                  true
+<!--       -->$frow-enable-utilities:                  true;
 <!--     --></pre>
             <h5>
               Grid System
@@ -133,10 +133,10 @@
             </p>
             <pre class="fake-code bottom-margin">
 <!--       --><span class="fake-comment">// Maximum Number of columns to support (.col-md-1-12)</span>
-<!--       -->$grid-max-columns: 12
+<!--       -->$grid-max-columns: 12;
 <!--       -->
 <!--       --><span class="fake-comment">// Gutter width between columns when using .gutters</span>
-<!--       -->$grid-gutter-width: 30px
+<!--       -->$grid-gutter-width: 30px;
 <!--     --></pre>
             <h5>
               Responsive Break Points
@@ -145,11 +145,11 @@
               Change or add to the responsive breakpoints.
             </p>
             <pre class="fake-code bottom-margin">
-<!--       --><span class="fake-comment">// Small screen / tablet</span>
-<!--       -->$sizes-mobile: (xs: 0px, sm: 768px)
+<!--       --><span class="fake-comment">// Small screen / tablet (These assume column 1-1)</span>
+<!--       -->$sizes-mobile: (xs: 0px, sm: 768px);
 <!--       -->
 <!--       --><span class="fake-comment">// Desktops / laptops</span>
-<!--       -->$sizes-desktop: (md: 992px, lg: 1200px)
+<!--       -->$sizes-desktop: (md: 992px, lg: 1200px);
 <!--     --></pre>
             <h5>
               Card Shadows
@@ -159,10 +159,10 @@
             </p>
             <pre class="fake-code bottom-margin">
 <!--       --><span class="fake-comment">// Shadow for light backgrounds</span>
-<!--       -->$shadow-light: 0px 1px 3px 0px #A0A0A0
+<!--       -->$shadow-light: 0px 1px 3px 0px #A0A0A0;
 <!--       -->
 <!--       --><span class="fake-comment">// Shadow for dark backgrounds</span>
-<!--       -->$shadow-dark: 0px 1px 3px 0px #1B1B1B
+<!--       -->$shadow-dark: 0px 1px 3px 0px #1B1B1B;
 <!--     --></pre>
             <h5>
               Animations
@@ -172,10 +172,10 @@
             </p>
             <pre class="fake-code bottom-margin">
 <!--       --><span class="fake-comment">// Animation Speed (Mostly form elements)</span>
-<!--       -->$animate-speed: 0.4s
+<!--       -->$animate-speed: 0.4s;
 <!--       -->
 <!--       --><span class="fake-comment">// Fast Animation Speed (Mostly button hover)</span>
-<!--       -->$animate-speed-fast: 0.1s
+<!--       -->$animate-speed-fast: 0.1s;
 <!--     --></pre>
             <h5>
               Colors
@@ -185,18 +185,18 @@
             </p>
             <pre class="fake-code bottom-margin">
 <!--       --><span class="fake-comment">// Basic grays to use</span>
-<!--       -->$gray-lighter: #EAEAEA
-<!--       -->$gray-light: #9E9E9E
-<!--       -->$gray-dark: #888888
-<!--       -->$gray-darker: #4F4F51
+<!--       -->$gray-lighter: #EAEAEA;
+<!--       -->$gray-light: #9E9E9E;
+<!--       -->$gray-dark: #888888;
+<!--       -->$gray-darker: #4F4F51;
 <!--       -->
 <!--       --><span class="fake-comment">// Off colors</span>
-<!--       -->$off-white: #BBB
-<!--       -->$off-black: #333
+<!--       -->$off-white: #BBB;
+<!--       -->$off-black: #333;
 <!--       -->
 <!--       --><span class="fake-comment">// Pure colors</span>
-<!--       -->$white: #FFF
-<!--       -->$black: #000
+<!--       -->$white: #FFF;
+<!--       -->$black: #000;
 <!--     --></pre>
             <h5>
               Scaffolding
@@ -206,16 +206,16 @@
             </p>
             <pre class="fake-code bottom-margin">
 <!--       --><span class="fake-comment">// Non-white background color</span>
-<!--       -->$background-color: #F6F6F6
+<!--       -->$background-color: #F6F6F6;
 <!--       -->
 <!--       --><span class="fake-comment">// Default text color on body</span>
-<!--       -->$default-text-color: $off-black
+<!--       -->$default-text-color: $off-black;
 <!--       -->
 <!--       --><span class="fake-comment">// Default link color</span>
-<!--       -->$link-color: $off-black
+<!--       -->$link-color: $off-black;
 <!--       -->
 <!--       --><span class="fake-comment">// Default link hover/active/focus color</span>
-<!--       -->$link-hover-color: darken($link-color, 15%)
+<!--       -->$link-hover-color: darken($link-color, 15%);
 <!--     --></pre>
             <h5>
               Buttons
@@ -225,22 +225,22 @@
             </p>
             <pre class="fake-code bottom-margin">
 <!--       --><span class="fake-comment">// Button text color</span>
-<!--       -->$button-text-color: $white
+<!--       -->$button-text-color: $white;
 <!--       -->
 <!--       --><span class="fake-comment">// Button background color</span>
-<!--       -->$button-background-color: $gray-darker
+<!--       -->$button-background-color: $gray-darker;
 <!--       -->
 <!--       --><span class="fake-comment">// Button border color</span>
-<!--       -->$button-border-color: $gray-darker
+<!--       -->$button-border-color: $gray-darker;
 <!--       -->
 <!--       --><span class="fake-comment">// Button disabled text color</span>
-<!--       -->$button-disabled-text-color: $gray-light
+<!--       -->$button-disabled-text-color: $gray-light;
 <!--       -->
 <!--       --><span class="fake-comment">// Button disabled background/border color</span>
-<!--       -->$button-disabled-border-color: $gray-dark
+<!--       -->$button-disabled-border-color: $gray-dark;
 <!--       -->
 <!--       --><span class="fake-comment">// Button active click size</span>
-<!--       -->$button-active-size: 0.96
+<!--       -->$button-active-size: 0.96;
 <!--     --></pre>
             <h5>
               Form Elements
@@ -250,13 +250,13 @@
             </p>
             <pre class="fake-code bottom-margin">
 <!--       --><span class="fake-comment">Form primary color</span>
-<!--       -->$form-color-primary: $gray-darker
+<!--       -->$form-color-primary: $gray-darker;
 <!--       -->
 <!--       --><span class="fake-comment">Form light color</span>
-<!--       -->$form-color-secondary: $gray-light
+<!--       -->$form-color-secondary: $gray-light;
 <!--       -->
 <!--       --><span class="fake-comment">Form focus size</span>
-<!--       -->$form-focus-size: 1.15
+<!--       -->$form-focus-size: 1.15;
 <!--     --></pre>
           </div>
         </div>
