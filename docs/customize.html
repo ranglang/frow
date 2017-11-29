@@ -41,8 +41,8 @@
           <a href="responsive-design.html">Responsive Design</a>
           <a href="frow-shortcuts.html">Frow Shortcuts</a>
           <a href="forms.html">Forms</a>
-          <a href="utilities.html"><b>Utilities</b></a>
-          <a href="customize.html">Customize</a>
+          <a href="utilities.html">Utilities</a>
+          <a href="customize.html"><b>Customize</b></a>
         </nav>
       </div>
     </div>
@@ -73,8 +73,8 @@
           <a href="responsive-design.html">Responsive Design</a>
           <a href="frow-shortcuts.html">Frow Shortcuts</a>
           <a href="forms.html">Forms</a>
-          <a href="utilities.html"><b>Utilities</b></a>
-          <a href="customize.html">Customize</a>
+          <a href="utilities.html">Utilities</a>
+          <a href="customize.html"><b>Customize</b></a>
         </nav>
       </div>
     </header>
@@ -83,180 +83,183 @@
         <div class="col-md-5-6">
           <div class="frow-setup">
             <h3 class="mb-0">
-              Utilities
+              Customize
             </h3>
             <div class="tagline">
-              Classes to Add Some Extra Utilities
+              Make Frow yours with Sass Variables
             </div>
-            <h5>
-              Margin and Padding Shortcuts
-            </h5>
+            <h4>
+              What can Sass variables do?
+            </h4>
             <p>
-              To quickly set an element's margin or padding, you can use shortcuts built into Frow. You can set margin and padding in ranges of 0 to 25 by 5 pixel increments and from 30 to 100 in 10 pixel increments. Margin shortcuts can also be set to auto.
+              This page <strong>only applies</strong> if you're using frow.sass and not frow.css. By using <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a>, you are able to pass in variables that will affect how Frow is compiled to normal CSS.
             </p>
-            <pre class="fake-code">
-<!--       --><span class="fake-comment">// Margin shortcuts</span>
-<!--       -->&lt;div class="m-0"&gt;<span class="fake-comment">      //   0px margin on all sides</span>
-<!--       -->&lt;div class="mh-5"&gt;<span class="fake-comment">     //   5px margin on the left and right</span>
-<!--       -->&lt;div class="mv-10"&gt;<span class="fake-comment">    //  10px margin on the top and bottom</span>
-<!--       -->&lt;div class="mt-15"&gt;<span class="fake-comment">    //  15px margin on the top</span>
-<!--       -->&lt;div class="mr-20"&gt;<span class="fake-comment">    //  20px margin on the right</span>
-<!--       -->&lt;div class="mb-25"&gt;<span class="fake-comment">    //  25px margin on the bottom</span>
-<!--       -->&lt;div class="ml-30"&gt;<span class="fake-comment">    //  30px margin on the left</span>
-<!--       -->&lt;div class="mh-auto"&gt;<span class="fake-comment">  //  margin:auto on the left and right</span>
-<!--       -->
-<!--       --><span class="fake-comment">// Padding shortcuts</span>
-<!--       -->&lt;div class="p-40"&gt;<span class="fake-comment">     //  40px padding on all sides</span>
-<!--       -->&lt;div class="ph-50"&gt;<span class="fake-comment">    //  50px padding on the left and right</span>
-<!--       -->&lt;div class="pv-60"&gt;<span class="fake-comment">    //  60px padding on the top and bottom</span>
-<!--       -->&lt;div class="pt-70"&gt;<span class="fake-comment">    //  70px padding on the top</span>
-<!--       -->&lt;div class="pr-80"&gt;<span class="fake-comment">    //  80px padding on the right</span>
-<!--       -->&lt;div class="pb-90"&gt;<span class="fake-comment">    //  90px padding on the bottom</span>
-<!--       -->&lt;div class="pl-100"&gt;<span class="fake-comment">   // 100px padding on the left</span>
-<!--     --></pre>
             <p class="bottom-margin">
-              <strong>Important Note:</strong> You can disable these classes using Frow's <a href="customize.html">Sass Variables</a>.
+              This customizablity opens up more options for Frow, such as excluding various Frow features to reduce file size, or changing options on Frow's defaults. You can change the maximum number of grid columns, where the various responsive design breakpoints land, or even the color of text, buttons, and shadows.
             </p>
             <h5>
-              Clickable/Not-Clickable Shortcuts
+              Disabling Features
             </h5>
             <p>
-              Two simple classes to change which cursor appears on an element. Clickable's rule is also automatically applied to any elements with the attribute of onclick.
+              Frow is broken into different feature sections, allowing you to disable portions if parts aren't needed or desired.
             </p>
             <pre class="fake-code bottom-margin">
-<!--       --><span class="fake-comment">// .clickable and .not-clickable</span>
+<!--       --><span class="fake-comment">// <a href="https://github.com/Beg-in/frow/blob/master/src/_scaffolding.sass" target="_blank" rel="noopener">HTML basics</a> (Minor styling/resets of anchor links, h1-h6, etc.)</span>
+<!--       -->$frow-enable-html-basics:                true
 <!--       -->
-<!--       --><span class="fake-comment">// These would all make the cursor change to a pointer on hover</span>
-<!--       --><span class="clickable">&lt;div class="clickable"&gt;&lt;/div&gt;</span>
-<!--       --><span class="clickable">&lt;div onclick="function()"&gt;&lt;/div&gt;</span>
+<!--       --><span class="fake-comment">// <a href="grid.html">Columns/Grid functionality</a></span>
+<!--       -->$frow-enable-columns:                    true
 <!--       -->
-<!--       --><span class="fake-comment">// This would force the cursor to not change to a pointer</span>
-<!--       --><span class="not-clickable" onclick="alert('Yay! You clicked despite your instincts and found this secret! :D')">&lt;a href="http://frowcss.com" class="not-clickable"&gt;&lt;/a&gt;</span>
+<!--       --><span class="fake-comment">// <a href="forms.html">Button styling</a></span>
+<!--       -->$frow-enable-buttons:                    true
+<!--       -->
+<!--       --><span class="fake-comment">// <a href="forms.html">Form elements</a></span>
+<!--       -->$frow-enable-forms:                      true
+<!--       -->
+<!--       --><span class="fake-comment">// <a href="responsive-design.html">Responsive design rules</a></span>
+<!--       -->$frow-enable-responsive-design-classes:  true
+<!--       -->
+<!--       --><span class="fake-comment">// <a href="utilities.html">Margin/Padding classes</a> (.mb-10, .p-15, .mh-auto)</span>
+<!--       -->$frow-enable-box-model-shorcuts:         true
+<!--       -->
+<!--       --><span class="fake-comment">// <a href="utilities.html">Miscellaneous utilities</a></span>
+<!--       -->$frow-enable-utilities:                  true
 <!--     --></pre>
             <h5>
-              Full Width Shortcut
+              Grid System
             </h5>
             <p>
-              This class adds a quick width:100% rule to elements.
+              Tweak the defaults involving the column system.
             </p>
             <pre class="fake-code bottom-margin">
-<!--       --><span class="fake-comment">// .width-100</span>
+<!--       --><span class="fake-comment">// Maximum Number of columns to support (.col-md-1-12)</span>
+<!--       -->$grid-max-columns: 12
 <!--       -->
-<!--       --><span class="fake-comment">// A full width div</span>
-<!--       -->&lt;html&gt;
-<!--       -->  &lt;body&gt;
-<!--       -->    &lt;div class="width-100"&gt;<span class="fake-comment"> // Without this class, the div wouldn't be full width</span>
-<!--       -->  &lt;/body&gt;
-<!--       -->&lt;/html&gt;
+<!--       --><span class="fake-comment">// Gutter width between columns when using .gutters</span>
+<!--       -->$grid-gutter-width: 30px
 <!--     --></pre>
             <h5>
-              Full Height Shortcut
+              Responsive Break Points
             </h5>
             <p>
-              This class adds a quick height:100% rule to elements. Super handy in certain cases, especially when wanting to do full-height webpages, where you have to make sure all elements are height:100% from &lt;html&gt; and &lt;body&gt; downwards.
+              Change or add to the responsive breakpoints.
             </p>
             <pre class="fake-code bottom-margin">
-<!--       --><span class="fake-comment">// .height-100</span>
+<!--       --><span class="fake-comment">// Small screen / tablet</span>
+<!--       -->$sizes-mobile: (xs: 0px, sm: 768px)
 <!--       -->
-<!--       --><span class="fake-comment">// A full height div</span>
-<!--       -->&lt;html class="height-100"&gt;<span class="fake-comment"> // Without this class, the div wouldn't be full height</span>
-<!--       -->  &lt;body class="height-100"&gt;<span class="fake-comment"> // Without this class, the div wouldn't be full height</span>
-<!--       -->    &lt;div class="height-100" style="background-color:#03A9F4;color:#fff;"&gt;
-<!--       -->      Cool!
-<!--       -->    &lt;/div&gt;
-<!--       -->  &lt;/body&gt;
-<!--       -->&lt;/html&gt;
+<!--       --><span class="fake-comment">// Desktops / laptops</span>
+<!--       -->$sizes-desktop: (md: 992px, lg: 1200px)
 <!--     --></pre>
             <h5>
-              Auto Width and Height Shortcuts
+              Card Shadows
             </h5>
             <p>
-              These classes add quick width:auto and height:auto rules to elements.
+              Change the default shadow sizes and colors.
             </p>
             <pre class="fake-code bottom-margin">
-<!--       --><span class="fake-comment">// .width-auto and .height-auto</span>
+<!--       --><span class="fake-comment">// Shadow for light backgrounds</span>
+<!--       -->$shadow-light: 0px 1px 3px 0px #A0A0A0
 <!--       -->
-<!--       --><span class="fake-comment">// To force width:auto</span>
-<!--       -->&lt;div class="width-auto"&gt;&lt;/div&gt;
-<!--       -->
-<!--       --><span class="fake-comment">// To force height:auto</span>
-<!--       -->&lt;div class="height-auto"&gt;&lt;/div&gt;
+<!--       --><span class="fake-comment">// Shadow for dark backgrounds</span>
+<!--       -->$shadow-dark: 0px 1px 3px 0px #1B1B1B
 <!--     --></pre>
             <h5>
-              Box Shadow Shortcuts
+              Animations
             </h5>
             <p>
-              Make items pop off the page with these box shadow classes.
-            </p>
-            <pre class="fake-code">
-<!--       --><span class="fake-comment">// .shadow-light and .shadow-dark</span>
-<!--       -->
-<!--       --><span class="fake-comment">// For light-colored backgrounds</span>
-<!--       -->&lt;div class="shadow-light"&gt;&lt;/div&gt;
-<!--       -->
-<!--       --><span class="fake-comment">// For dark-colored backgrounds</span>
-<!--       -->&lt;div class="shadow-dark"&gt;&lt;/div&gt;
-<!--     --></pre>
-            <div class="card-shadow-demo">
-              <div class="frow gutters">
-                <div class="col-md-1-2">
-                  <div class="frow centered">
-                    <div class="card-shadow-demo-card shadow-light">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-1-2">
-                  <div class="frow centered">
-                    <div class="card-shadow-demo-card shadow-dark">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p class="bottom-margin">
-              <strong>Important Note:</strong> These classes only provide the drop shadow, nothing else. This makes it usable on any type of element, such as buttons, etc.
-            </p>
-            <h5>
-              Text Align Shortcuts
-            </h5>
-            <p>
-              Use these pre-made text align rules to avoid having to make specific classes for elements.
+              Adjust the default animation speed.
             </p>
             <pre class="fake-code bottom-margin">
-<!--       --><span class="fake-comment">// Text Align Shorcuts</span>
+<!--       --><span class="fake-comment">// Animation Speed (Mostly form elements)</span>
+<!--       -->$animate-speed: 0.4s
 <!--       -->
-<!--       -->&lt;p class="text-left"&gt;&lt;/p&gt;<span class="fake-comment">     // Makes text left justified</span>
-<!--       -->&lt;p class="text-center"&gt;&lt;/p&gt;<span class="fake-comment">   // Makes text center justified</span>
-<!--       -->&lt;p class="text-right"&gt;&lt;/p&gt;<span class="fake-comment">    // Makes text right justified</span>
-<!--       -->&lt;p class="text-justify"&gt;&lt;/p&gt;<span class="fake-comment">  // Makes text justified</span>
+<!--       --><span class="fake-comment">// Fast Animation Speed (Mostly button hover)</span>
+<!--       -->$animate-speed-fast: 0.1s
 <!--     --></pre>
             <h5>
-              Text Transform Shortcuts
+              Colors
             </h5>
             <p>
-              Use these pre-made text transform rules to avoid having to make specific classes for elements.
+              Gray and colors for use across Frow
             </p>
             <pre class="fake-code bottom-margin">
-<!--       --><span class="fake-comment">// Makes text uppercase</span>
-<!--       -->&lt;p class="uppercase"&gt;Hello world&lt;/p&gt;
-<!--       --><span class="fake-comment">// Displays as: HELLO WORLD</span>
+<!--       --><span class="fake-comment">// Basic grays to use</span>
+<!--       -->$gray-lighter: #EAEAEA
+<!--       -->$gray-light: #9E9E9E
+<!--       -->$gray-dark: #888888
+<!--       -->$gray-darker: #4F4F51
 <!--       -->
-<!--       --><span class="fake-comment">// Makes text lowercase</span>
-<!--       -->&lt;p class="lowercase"&gt;Hello world&lt;/p&gt;
-<!--       --><span class="fake-comment">// Displays as: hello world</span>
+<!--       --><span class="fake-comment">// Off colors</span>
+<!--       -->$off-white: #BBB
+<!--       -->$off-black: #333
 <!--       -->
-<!--       --><span class="fake-comment">// Makes text capitalized</span>
-<!--       -->&lt;p class="capitalize"&gt;Hello world&lt;/p&gt;
-<!--       --><span class="fake-comment">// Displays as: Hello World</span>
+<!--       --><span class="fake-comment">// Pure colors</span>
+<!--       -->$white: #FFF
+<!--       -->$black: #000
+<!--     --></pre>
+            <h5>
+              Scaffolding
+            </h5>
+            <p>
+              Basic element color declarations
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Non-white background color</span>
+<!--       -->$background-color: #F6F6F6
+<!--       -->
+<!--       --><span class="fake-comment">// Default text color on body</span>
+<!--       -->$default-text-color: $off-black
+<!--       -->
+<!--       --><span class="fake-comment">// Default link color</span>
+<!--       -->$link-color: $off-black
+<!--       -->
+<!--       --><span class="fake-comment">// Default link hover/active/focus color</span>
+<!--       -->$link-hover-color: darken($link-color, 15%)
+<!--     --></pre>
+            <h5>
+              Buttons
+            </h5>
+            <p>
+              Change the default button design
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Button text color</span>
+<!--       -->$button-text-color: $white
+<!--       -->
+<!--       --><span class="fake-comment">// Button background color</span>
+<!--       -->$button-background-color: $gray-darker
+<!--       -->
+<!--       --><span class="fake-comment">// Button border color</span>
+<!--       -->$button-border-color: $gray-darker
+<!--       -->
+<!--       --><span class="fake-comment">// Button disabled text color</span>
+<!--       -->$button-disabled-text-color: $gray-light
+<!--       -->
+<!--       --><span class="fake-comment">// Button disabled background/border color</span>
+<!--       -->$button-disabled-border-color: $gray-dark
+<!--       -->
+<!--       --><span class="fake-comment">// Button active click size</span>
+<!--       -->$button-active-size: 0.96
+<!--     --></pre>
+            <h5>
+              Form Elements
+            </h5>
+            <p>
+              Basic form element color declarations
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">Form primary color</span>
+<!--       -->$form-color-primary: $gray-darker
+<!--       -->
+<!--       --><span class="fake-comment">Form light color</span>
+<!--       -->$form-color-secondary: $gray-light
+<!--       -->
+<!--       --><span class="fake-comment">Form focus size</span>
+<!--       -->$form-focus-size: 1.15
 <!--     --></pre>
           </div>
         </div>
-      </div>
-      <div class="frow column-center">
-        <div class="next">Next:</div>
-        <a type="button" class="next-page shadow-light" href="customize.html">
-          Sass Variables
-        </a>
       </div>
     </main>
     <footer>

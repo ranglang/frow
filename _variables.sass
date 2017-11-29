@@ -19,7 +19,6 @@ $frow-enable-forms:                      true !default
 //** Responsive design
 $frow-enable-responsive-design-classes:  true !default
 
-
 //** Utilities
 $frow-enable-box-model-shorcuts:         true !default
 $frow-enable-utilities:                  true !default
@@ -35,8 +34,8 @@ $gray-light: #9E9E9E !default
 $gray-dark: #888888 !default
 $gray-darker: #4F4F51 !default
 
-$near-white: #BBB !default
-$near-black: #333333 !default
+$off-white: #BBB !default
+$off-black: #333 !default
 
 $white: #FFF !default
 $black: #000 !default
@@ -51,20 +50,56 @@ $black: #000 !default
 //
 //## Settings for some of the most global styles
 
-//** Default text color
-$default-text-color: $near-black !default
-
 //** Background color
 $background-color: #F6F6F6 !default
 
 //** Global text color on `<body>`
-$text-color: $near-black !default
+$text-color: $off-black !default
 
 //** Global textual link color
-$link-color: $near-black !default
+$link-color: $off-black !default
 
 //** Link hover color set via `darken()` function
-$link-hover-color: darken($near-black, 15%) !default
+$link-hover-color: darken($link-color, 15%) !default
+
+
+
+//== Button colors
+//
+//## Define the various button colors
+
+//** Global button text color
+$button-text-color: $white !default
+
+//** Global button background color
+$button-background-color: $gray-darker !default
+
+//** Global button border color
+$button-border-color: $gray-darker !default
+
+//** Global button disabled text color
+$button-disabled-text-color: $gray-dark !default
+
+//** Global button disabled background/border color
+$button-disabled-border-color: $gray-lighter !default
+
+//** Button active click size
+$button-active-size: 0.96 !default
+
+
+
+//== Form element colors
+//
+//## Define various form element colors
+
+//** Form primary color
+$form-color-primary: $gray-darker !default
+
+//** Form light color
+$form-color-secondary: $gray-light !default
+
+//** Form focus size
+$form-focus-size: 1.15 !default
 
 
 
@@ -92,15 +127,15 @@ $grid-gutter-width: 30px !default
 
 
 
-//== Shadows
+//== Box Shadows
 //
 //## Define shadow for material style cards
 
 //** Shadow design for light backgrounds
-$card-shadow: 0px 1px 3px 0px #A0A0A0 !default
+$shadow-light: 0px 1px 3px 0px #A0A0A0 !default
 
 //** Shadow design for dark backgrounds
-$dark-card-shadow: 0px 1px 3px 0px #1B1B1B !default
+$shadow-dark: 0px 1px 3px 0px #1B1B1B !default
 
 
 
@@ -109,4 +144,7 @@ $dark-card-shadow: 0px 1px 3px 0px #1B1B1B !default
 //## Define speed for animations
 
 //** Default Animation speed
-$frow-animate-speed: 0.4s !default
+$animate-speed: 0.4s !default
+
+//** Fast Animation speed
+$animate-speed-fast: 0.1s !default
