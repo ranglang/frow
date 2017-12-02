@@ -189,7 +189,7 @@
               3. Add mobile viewport meta tag
             </h5>
             <p>Recommended:</p>
-            <pre class="fake-code">
+            <pre class="fake-code bottom-margin">
 <!--       -->&lt;!doctype html&gt;
 <!--       -->&lt;html&gt;
 <!--       -->  &lt;head&gt;
@@ -210,15 +210,15 @@
                   <strong>FYI:</strong> For better rendering across all browsers, Frow has <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">Normalize.css</a> built-in.
                 </p>
                 <pre class="fake-code mb-0">
-<!--           --><span class="fake-comment">// Tip: Place your personal variables file first (if you have one) to overrule any of Frow's defaults</span>
+<!--           --><span class="fake-comment">// Tip: Place your personal variables file first (if you have one) to <a href="customize.html">customize Frow.</a></span>
 <!--           --><span class="fake-comment">// @import '[your-path-to]/variables';</span>
 <!--           -->
-<!--           -->@import '[your-path-to]/frow/sass/frow';
+<!--           -->@import '[your-path-to]/frow/frow';
 <!--           -->
 <!--           --><span class="fake-comment">// Import your personal Sass files after Frow</span>
 <!--           --><span class="fake-comment">// @import '[the-rest-of-your-sass-files]';</span>
 <!--         --></pre>
-                <p><strong>Important Note:</strong> Don't forget to <a href="https://github.com/postcss/autoprefixer" title="Autoprefixer">add vendor prefixes</a> and minify when converting to CSS!</p>
+                <p><strong>Important Note:</strong> Besides including Normalize.css, don't forget to also import <a href="https://github.com/postcss/autoprefixer" title="Autoprefixer">add vendor prefixes</a> and minify when converting to CSS!</p>
               </span>
               <span class="section-style-css section-style letsGo-hide">
                 <h5>
@@ -235,7 +235,7 @@
 <!--           -->    &lt;meta charset="utf-8"&gt;
 <!--           -->    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
 <!--           -->    &lt;title&gt;Frow Project&lt;/title&gt;
-<!--           -->    &lt;link rel="stylesheet" href="[your-path-to]/frow/css/frow.min.css"&gt;
+<!--           -->    &lt;link rel="stylesheet" href="[your-path-to]/frow/dist/frow.min.css"&gt;
 <!--           -->    ...
 <!--           -->  &lt;/head&gt;
 <!--           -->  ...

@@ -829,6 +829,8 @@ input {
     -webkit-appearance: none;
     -moz-appearance: none;
          appearance: none;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     width: 20px;
     height: 20px;
     margin: 0 5px 0 0;
@@ -861,6 +863,8 @@ input {
     -webkit-appearance: none;
     -moz-appearance: none;
          appearance: none;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     width: 20px;
     height: 20px;
     margin: 0 5px 0 0;
