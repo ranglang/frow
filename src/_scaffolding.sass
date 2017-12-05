@@ -3,8 +3,8 @@
 // --------------------------------------------------
 
 // Convert Hex colors to RGB for use within SVGs
-@function convert-to-rgb($color)
-  @return "rgb(" + red($color) + "," + green($color) + "," + blue($color) + ")"
+@function convert-to-rgba($color)
+  @return "rgba(" + red($color) + "," + green($color) + "," + blue($color) + "," + opacity($color) + ")"
 
 @if $frow-enable-html-basics == true
   // Reset the box-sizing and tap highlight color
@@ -218,12 +218,12 @@
         background-repeat: no-repeat
         background-position: center
         background-size: contain
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='8 8 36 36' version='1.1' xml:space='preserve'><path d='M14.1 27.2l7.1 7.2 16.7-16.8' fill='none' stroke='#{convert-to-rgb($white)}' stroke-width='5'/></svg>")
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='8 8 36 36' version='1.1' xml:space='preserve'><path d='M14.1 27.2l7.1 7.2 16.7-16.8' fill='none' stroke='#{convert-to-rgba($white)}' stroke-width='5'/></svg>")
 
         &:disabled
           border-color: $button-disabled-border-color
           background-color: darken($button-disabled-border-color, 15%)
-          background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='8 8 36 36' version='1.1' xml:space='preserve'><path d='M14.1 27.2l7.1 7.2 16.7-16.8' fill='none' stroke='#{convert-to-rgb($form-color-primary)}' stroke-width='5'/></svg>"), repeating-linear-gradient(45deg, darken($button-disabled-border-color, 5%), darken($button-disabled-border-color, 5%) 3px, $white 3px, $white 6px)
+          background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='8 8 36 36' version='1.1' xml:space='preserve'><path d='M14.1 27.2l7.1 7.2 16.7-16.8' fill='none' stroke='#{convert-to-rgba($form-color-primary)}' stroke-width='5'/></svg>"), repeating-linear-gradient(45deg, darken($button-disabled-border-color, 5%), darken($button-disabled-border-color, 5%) 3px, $white 3px, $white 6px)
 
     // Radio Buttons
     &[type="radio"]
@@ -401,7 +401,7 @@
     -webkit-appearance: none
     -moz-appearance: none
     background: transparent
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{convert-to-rgb($form-color-secondary)}'/></g></svg>")
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{convert-to-rgba($form-color-secondary)}'/></g></svg>")
     background-position: right center
     background-repeat: no-repeat
     display: block
@@ -418,13 +418,13 @@
     transition: border-color $animate-speed, color $animate-speed, background $animate-speed
 
     &:hover, &:focus
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{convert-to-rgb($form-color-primary)}'/></g></svg>")
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{convert-to-rgba($form-color-primary)}'/></g></svg>")
       outline: none
       border-color: $form-color-primary
 
     &:disabled
       padding-bottom: 4px
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{convert-to-rgb($form-color-secondary)}'/></g></svg>")
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' version='1.1' xml:space='preserve' stroke-linejoin='round'><g transform='matrix(-0.613836,-7.51732e-17,7.51732e-17,-0.613836,19.9111,16.8669)'><path d='M12.9 2.9L22.7 12.9 3.1 12.9 12.9 2.9Z' fill='#{convert-to-rgba($form-color-secondary)}'/></g></svg>")
       border-bottom: 1px dotted $form-color-secondary
       cursor: default !important
       color: $form-color-secondary

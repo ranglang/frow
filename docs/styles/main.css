@@ -729,8 +729,7 @@ pre {
   background-color: #339be8;
   height: 70px;
   margin-bottom: 10px;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border: 1px solid #eee;
   border-radius: 3px;
   font-size: 15px;
 }
@@ -806,7 +805,7 @@ pre {
 }
 
 .grid-example>.frow:last-child .grid-example-div {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 /* XS, SM */
@@ -1093,40 +1092,40 @@ pre {
 #home-forms-example select:focus,
 #home-forms-example select:hover,
 #home-forms-example select:active {
-  -webkit-animation: rainbow-border 20s infinite;
-          animation: rainbow-border 20s infinite;
+  -webkit-animation: rainbow-border 15s infinite;
+          animation: rainbow-border 15s infinite;
 }
 
 #home-forms-example input[type="checkbox"]:checked,
 #home-forms-example input[type="checkbox"]:checked:focus,
 #home-forms-example input[type="checkbox"]:checked:hover,
 #home-forms-example input[type="checkbox"]:checked:active {
-  -webkit-animation: rainbow-background 20s infinite, rainbow-border 20s infinite;
-          animation: rainbow-background 20s infinite, rainbow-border 20s infinite;
+  -webkit-animation: rainbow-background 15s infinite, rainbow-border 15s infinite;
+          animation: rainbow-background 15s infinite, rainbow-border 15s infinite;
 }
 
 #home-forms-example input[type="radio"]:checked,
 #home-forms-example input[type="radio"]:checked:focus,
 #home-forms-example input[type="radio"]:checked:hover,
 #home-forms-example input[type="radio"]:checked:active {
-  -webkit-animation: rainbow-background 20s infinite, rainbow-border 20s infinite;
-          animation: rainbow-background 20s infinite, rainbow-border 20s infinite;
+  -webkit-animation: rainbow-background 15s infinite, rainbow-border 15s infinite;
+          animation: rainbow-background 15s infinite, rainbow-border 15s infinite;
 }
 
 #home-forms-example #home-custom-button-example,
 #home-forms-example #home-custom-button-example:focus,
 #home-forms-example #home-custom-button-example:hover,
 #home-forms-example #home-custom-button-example:active {
-  -webkit-animation: rainbow-border 20s infinite, rainbow-text 20s infinite;
-          animation: rainbow-border 20s infinite, rainbow-text 20s infinite;
+  -webkit-animation: rainbow-border 15s infinite, rainbow-text 15s infinite;
+          animation: rainbow-border 15s infinite, rainbow-text 15s infinite;
 }
 
 #home-forms-example #home-button-example,
 #home-forms-example #home-button-example:focus,
 #home-forms-example #home-button-example:hover,
 #home-forms-example #home-button-example:active {
-  -webkit-animation: rainbow-background 20s infinite, rainbow-border 20s infinite;
-          animation: rainbow-background 20s infinite, rainbow-border 20s infinite;
+  -webkit-animation: rainbow-background 15s infinite, rainbow-border 15s infinite;
+          animation: rainbow-background 15s infinite, rainbow-border 15s infinite;
 }
 
 #home-forms-example #home-custom-button-example,
