@@ -13,7 +13,11 @@ $sizes-names: map-keys($sizes)
   display: flex
   flex-wrap: wrap
   justify-content: center
-  align-content: flex-start
+  // align-content: flex-start
+
+  // Fix for IE text not wrapping wihin a Frow
+  > *
+    max-width: 100%
 
   +flexbox-rules
 

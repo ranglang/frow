@@ -1185,9 +1185,9 @@ textarea {
       flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: start;
-      align-content: flex-start; }
+          justify-content: center; }
+  .frow > * {
+    max-width: 100%; }
   .frow.centered {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
