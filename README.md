@@ -1,4 +1,41 @@
-# Frow CSS
-## Flexbox Toolkit & Grid
+<p align="center"><a href="http://frowcss.com"><img src="http://frowcss.com/readme-logo.png" /></a></p>
+<h3 align="center">Flexbox Toolkit & Grid</h3>
 
-Full Documentation at: <http://frowcss.com>
+# Frow CSS
+
+Frow is an open source HTML and CSS framework for creating quick & responsive projects on the web, powered by Flexbox.
+
+### Documentation & Features
+
+Please view the extensive, full documentation at: [FrowCSS.com](http://frowcss.com)
+
+### Installation
+
+Refer to the [Getting Started Guide](http://frowcss.com/getting-started.html) for full instructions.
+
+**NPM:**
+
+`npm install frow`
+
+**CDN:**
+
+```
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Frow Project</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Beg-in/frow/[X.Y.Z VERSION HERE]/dist/frow.min.css">
+    ...
+  </head>
+  ...
+</html>
+```
+
+### Creator
+
+**Cody Sherman**
+
+- <http://codysherman.com>
+- <https://github.com/codysherman>
