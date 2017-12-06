@@ -151,34 +151,28 @@ pre {
 #mobile-sidebar.letsGo-hide-remove {
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
-  -o-transition: transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
   -webkit-transform: translateX(-100%);
-          -ms-transform: translateX(-100%);
       transform: translateX(-100%);
 }
 
 #mobile-sidebar.letsGo-hide-remove.letsGo-hide-remove-active {
   -webkit-transform: translateX(0);
-          -ms-transform: translateX(0);
       transform: translateX(0);
 }
 
 #mobile-sidebar.letsGo-hide-add {
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
-  -o-transition: transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
   -webkit-transform: translateX(0);
-          -ms-transform: translateX(0);
       transform: translateX(0);
 }
 
 #mobile-sidebar.letsGo-hide-add.letsGo-hide-add-active {
   -webkit-transform: translateX(-100%);
-          -ms-transform: translateX(-100%);
       transform: translateX(-100%);
 }
 
@@ -223,7 +217,6 @@ pre {
 
 #click-cover.letsGo-hide-remove {
   -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   opacity: 0;
 }
@@ -234,7 +227,6 @@ pre {
 
 #click-cover.letsGo-hide-add {
   -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   opacity: 0.7;
 }
@@ -384,6 +376,80 @@ pre {
   }
 }
 
+@-webkit-keyframes flexbox-1 {
+  0% {
+
+  }
+  5% {
+    width: 80px;
+  }
+  10% {
+    width: 60px;
+  }
+  15% {
+    width: 60px;
+  }
+  20% {
+    width: 80px;
+  }
+  25% {
+
+  }
+  30% {
+    border-radius: 3px;
+  }
+  35% {
+    border-radius: 50%;
+  }
+  40% {
+    border-radius: 50%;
+  }
+  45% {
+    border-radius: 3px;
+  }
+  50% {
+
+  }
+  55% {
+    border-radius: 3px;
+  }
+  60% {
+    border-radius: 20px;
+  }
+  65% {
+    border-radius: 20px;
+  }
+  70% {
+    border-radius: 3px;
+  }
+  75% {
+
+  }
+  80% {
+    height: 80px;
+    width: 80px;
+    border-radius: 3px;
+  }
+  85% {
+    height: 160px;
+    width: 40px;
+    border-radius: 0px;
+  }
+  90% {
+    height: 160px;
+    width: 40px;
+    border-radius: 0px;
+  }
+  95% {
+    height: 80px;
+    width: 80px;
+    border-radius: 3px;
+  }
+  100% {
+
+  }
+}
+
 @keyframes flexbox-1 {
   0% {
 
@@ -429,6 +495,84 @@ pre {
   }
   70% {
     border-radius: 3px;
+  }
+  75% {
+
+  }
+  80% {
+    height: 80px;
+    width: 80px;
+    border-radius: 3px;
+  }
+  85% {
+    height: 160px;
+    width: 40px;
+    border-radius: 0px;
+  }
+  90% {
+    height: 160px;
+    width: 40px;
+    border-radius: 0px;
+  }
+  95% {
+    height: 80px;
+    width: 80px;
+    border-radius: 3px;
+  }
+  100% {
+
+  }
+}
+
+@-webkit-keyframes flexbox-2 {
+  0% {
+
+  }
+  5% {
+    width: 80px;
+  }
+  10% {
+    width: 140px;
+  }
+  15% {
+    width: 140px;
+  }
+  20% {
+    width: 80px;
+  }
+  25% {
+
+  }
+  30% {
+    height: 80px;
+    width: 80px;
+  }
+  35% {
+    height: 240px;
+    width: 50px;
+  }
+  40% {
+    height: 240px;
+    width: 50px;
+  }
+  45% {
+    height: 80px;
+    width: 80px;
+  }
+  50% {
+
+  }
+  55% {
+    width: 80px;
+  }
+  60% {
+    width: 190px;
+  }
+  65% {
+    width: 190px;
+  }
+  70% {
+    width: 80px;
   }
   75% {
 
@@ -507,6 +651,88 @@ pre {
   }
   70% {
     width: 80px;
+  }
+  75% {
+
+  }
+  80% {
+    height: 80px;
+    width: 80px;
+    border-radius: 3px;
+  }
+  85% {
+    height: 160px;
+    width: 40px;
+    border-radius: 0px;
+  }
+  90% {
+    height: 160px;
+    width: 40px;
+    border-radius: 0px;
+  }
+  95% {
+    height: 80px;
+    width: 80px;
+    border-radius: 3px;
+  }
+  100% {
+
+  }
+}
+
+@-webkit-keyframes flexbox-3 {
+  0% {
+
+  }
+  5% {
+    width: 80px;
+  }
+  10% {
+    width: 60px;
+  }
+  15% {
+    width: 60px;
+  }
+  20% {
+    width: 80px;
+  }
+  25% {
+
+  }
+  30% {
+    height: 80px;
+    width: 80px;
+  }
+  35% {
+    height: 200px;
+    width: 40px;
+  }
+  40% {
+    height: 200px;
+    width: 40px;
+  }
+  45% {
+    height: 80px;
+    width: 80px;
+  }
+  50% {
+
+  }
+  55% {
+    width: 80px;
+    margin: 10px;
+  }
+  60% {
+    width: 0px;
+    margin: 10px 0;
+  }
+  65% {
+    width: 0px;
+    margin: 10px 0;
+  }
+  70% {
+    width: 80px;
+    margin: 10px;
   }
   75% {
 
@@ -828,7 +1054,6 @@ pre {
 
 .home-example.letsGo-hide-add {
   -webkit-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   opacity: 1;
 }
