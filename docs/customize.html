@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Frow CSS | Getting Started</title>
+    <title>Frow CSS | Customize</title>
     <link rel="alternate" type="application/rss+xml" href="https://github.com/Beg-in/frow/releases.atom">
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="description" content="Frow is an HTML and CSS framework for creating quick, responsive, mobile-first projects on the web.">
@@ -35,14 +35,14 @@
       <div class="mobile-sidebar-content">
         <nav class="frow column-start">
           <a href="index.html">Introduction</a>
-          <a href="getting-started.html"><b>Getting Started</b></a>
+          <a href="getting-started.html">Getting Started</a>
           <a href="basics.html">Basics</a>
           <a href="grid-system.html">Grid System</a>
           <a href="responsive-design.html">Responsive Design</a>
           <a href="frow-shortcuts.html">Frow Shortcuts</a>
           <a href="forms.html">Forms</a>
           <a href="utilities.html">Utilities</a>
-          <a href="customize.html">Customize</a>
+          <a href="customize.html"><b>Customize</b></a>
         </nav>
       </div>
     </div>
@@ -67,203 +67,220 @@
       </div>
       <div class="tab-bar hidden-xs width-100">
         <nav class="frow centered">
-          <a href="getting-started.html"><b>Getting Started</b></a>
+          <a href="getting-started.html">Getting Started</a>
           <a href="basics.html">Basics</a>
           <a href="grid-system.html">Grid System</a>
           <a href="responsive-design.html">Responsive Design</a>
           <a href="frow-shortcuts.html">Frow Shortcuts</a>
           <a href="forms.html">Forms</a>
           <a href="utilities.html">Utilities</a>
-          <a href="customize.html">Customize</a>
+          <a href="customize.html"><b>Customize</b></a>
         </nav>
       </div>
     </header>
     <main class="frow-container">
       <div class="frow">
         <div class="col-md-5-6">
-          <h3>
-            Getting Started with Frow
-          </h3>
-          <h4>
-            Initial Page Setup
-          </h4>
-          <div class="frow gutters">
-            <div class="col-md-1-2">
-              <h5>Preferred download source:</h5>
-              <label class="display-selector row-start">
-                <input type="radio"
-                     name="install"
-                     checked
-                     onclick="letsGo('.section-install', 'hide', true);
-                        letsGo('.section-install-npm', 'show', true);
-                        letsGo('#preferred-css-selector', 'show', true);
-                        letsGo('.section-style-all', 'show');
-                        letsGo('.section-cdn', 'hide');"/>
-                npm
-              </label>
-              <label class="display-selector row-start">
-                <input type="radio"
-                     name="install"
-                     onclick="letsGo('.section-install', 'hide', true);
-                        letsGo('.section-install-bower', 'show', true);
-                        letsGo('#preferred-css-selector', 'show', true);
-                        letsGo('.section-style-all', 'show');
-                        letsGo('.section-cdn', 'hide');"/>
-                Bower
-              </label>
-              <label class="display-selector row-start">
-                <input type="radio"
-                     name="install"
-                     onclick="letsGo('.section-install', 'hide', true);
-                        letsGo('.section-install-download', 'show', true);
-                        letsGo('#preferred-css-selector', 'show', true);
-                        letsGo('.section-style-all', 'show');
-                        letsGo('.section-cdn', 'hide');"/>
-                Manual Download
-              </label>
-              <label class="display-selector row-start">
-                <input type="radio"
-                     name="install"
-                     onclick="letsGo('#preferred-css-selector', 'hide', true);
-                        letsGo('.section-install', 'hide', true);
-                        letsGo('.section-style-all', 'hide', true);
-                        letsGo('.section-cdn', 'show', true);"/>
-                None (Import via CDN)
-              </label>
-            </div>
-            <div class="col-md-1-2">
-              <span id="preferred-css-selector">
-                <h5>Preferred CSS preprocessor:</h5>
-                <label class="display-selector row-start">
-                  <input type="radio"
-                       name="css"
-                       checked
-                       onclick="letsGo('.section-style', 'hide', true);
-                          letsGo('.section-style-sass', 'show', true);"/>
-                  <div class="control__indicator"></div>
-                   Sass
-                </label>
-                <label class="display-selector row-start">
-                  <input type="radio"
-                       name="css"
-                       onclick="letsGo('.section-style', 'hide', true);
-                          letsGo('.section-style-css', 'show', true);"/>
-                  <div class="control__indicator"></div>
-                  None (Use regular CSS)
-                </label>
-              </span>
-            </div>
-          </div>
           <div class="frow-setup">
+            <h3 class="mb-0">
+              Customize
+            </h3>
+            <div class="tagline">
+              Make Frow yours with Sass variables
+            </div>
+            <h4>
+              What can Sass variables do?
+            </h4>
+            <p>
+              This page <strong>only applies</strong> if you're using frow.sass and not frow.css. By using <a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a>, you are able to pass in variables that will affect how Frow is compiled to normal CSS.
+            </p>
+            <p class="bottom-margin">
+              This customizability opens up more options for Frow, such as excluding various Frow features to reduce file size, or changing options on Frow's defaults. You can change the maximum number of grid columns, where the various responsive design breakpoints land, or even the color of text, buttons, and shadows.
+            </p>
             <h5>
-              1. Get Frow
+              Loading Your Variables File
             </h5>
-            <span class="section-install-npm section-install">
-              <p>Navigate to your project's folder, and then download Frow via <a href="https://www.npmjs.com/package/frow" target="_blank" rel="noopener">npm</a>:</p>
-              <pre class="fake-code bottom-margin">
-<!--         -->$ npm install frow
-<!--       --></pre>
-            </span>
-            <span class="section-install-bower section-install letsGo-hide">
-              <p>Navigate to your project's folder, and then download Frow via <a href="http://bower.io/" target="_blank" rel="noopener">Bower</a>:</p>
-              <pre class="fake-code bottom-margin">
-<!--         -->$ bower install frow
-<!--       --></pre>
-            </span>
-            <span class="section-install-download section-install letsGo-hide">
-              <p class="bottom-margin">Download a Frow .zip via <a href="https://github.com/Beg-in/frow/releases/latest" title="Frow Latest Release" target="_blank" rel="noopener">GitHub</a>, then place the unzipped folder inside of your project's folder.</p>
-            </span>
-            <span class="section-cdn section-install letsGo-hide">
-              <p class="bottom-margin">No need to download anything, a CDN for Frow is provided via <a href="https://rawgit.com/" target="_blank" rel="noopener">RawGit</a>. However, as a free service, there are no uptime guarantees.</p>
-            </span>
-            <h5>
-              2. Include HTML5 doctype and add mobile viewport meta tag
-            </h5>
+            <p>
+              Load your variables before Frow is imported to overwrite Frow's defaults.
+            </p>
             <pre class="fake-code bottom-margin">
-<!--       -->&lt;!doctype html&gt;
-<!--       -->&lt;html&gt;
-<!--       -->  &lt;head&gt;
-<!--       -->    &lt;meta charset="utf-8"&gt;
-<!--       -->    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
-<!--       -->    &lt;title&gt;Frow Project&lt;/title&gt;
-<!--       -->    ...
-<!--       -->  &lt;/head&gt;
-<!--       -->  &lt;body&gt;
-<!--       -->    ...
-<!--       -->  &lt;/body&gt;
-<!--       -->&lt;/html&gt;
+<!--       --><span class="fake-comment">// Place your project's variables file before importing Frow</span>
+<!--       --><span class="fake-comment">// @import '[your-path-to]/variables';</span>
+<!--       -->
+<!--       -->@import '[your-path-to]/frow/frow';
+<!--       -->
+<!--       --><span class="fake-comment">// Import the rest of your project's Sass files after Frow</span>
+<!--       --><span class="fake-comment">// @import '[the-rest-of-your-sass-files]';</span>
 <!--     --></pre>
-            <span class="section-style-all">
-              <span class="section-style-sass section-style">
-                <h5>
-                  3. Import Frow into your main Sass file
-                </h5>
-                <p>
-                  <strong>FYI:</strong> For better rendering across all browsers, Frow has <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">Normalize.css</a> built-in.
-                </p>
-                <pre class="fake-code mb-0">
-<!--           --><span class="fake-comment">// Place your project's variables file first (if you have one) to <a href="customize.html">customize Frow</a></span>
-<!--           --><span class="fake-comment">// @import '[your-path-to]/variables';</span>
-<!--           -->
-<!--           -->@import '[your-path-to]/frow/frow';
-<!--           -->
-<!--           --><span class="fake-comment">// Import your project's Sass files after Frow</span>
-<!--           --><span class="fake-comment">// @import '[the-rest-of-your-sass-files]';</span>
-<!--         --></pre>
-                <p><strong>Important Note:</strong> Don't forget to <a href="https://github.com/postcss/autoprefixer" title="Autoprefixer">add vendor prefixes</a> and minify when converting to CSS!</p>
-              </span>
-              <span class="section-style-css section-style letsGo-hide">
-                <h5>
-                  3. Import Frow's CSS into your HTML file
-                </h5>
-                <p>
-                  <strong>FYI:</strong> For better rendering across all browsers, Frow has <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">Normalize.css</a> built-in, and has vendor prefixes added.
-                </p>
-                <pre class="fake-code mb-0">
-<!--           -->&lt;!doctype html&gt;
-<!--           -->&lt;html&gt;
-<!--           -->  &lt;head&gt;
-<!--           -->    &lt;meta charset="utf-8"&gt;
-<!--           -->    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
-<!--           -->    &lt;title&gt;Frow Project&lt;/title&gt;
-<!--           -->    &lt;link rel="stylesheet" href="[your-path-to]/frow/dist/frow.min.css"&gt;
-<!--           -->    ...
-<!--           -->  &lt;/head&gt;
-<!--           -->  ...
-<!--           -->&lt;/html&gt;
-<!--         --></pre>
-              </span>
-            </span>
-            <span class="section-cdn letsGo-hide">
-              <h5>
-                3. Add Frow's CDN into your HTML file
-              </h5>
-              <p>
-                <strong>FYI:</strong> For better rendering across all browsers, Frow has <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">Normalize.css</a> built-in, and has vendor prefixes added.
-              </p>
-              <pre class="fake-code mb-0">
-<!--         -->&lt;!doctype html&gt;
-<!--         -->&lt;html&gt;
-<!--         -->  &lt;head&gt;
-<!--         -->    &lt;meta charset="utf-8"&gt;
-<!--         -->    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
-<!--         -->    &lt;title&gt;Frow Project&lt;/title&gt;
-<!--         -->    &lt;link rel="stylesheet" href="https://cdn.rawgit.com/Beg-in/frow/[X.Y.Z VERSION HERE]/dist/frow.min.css"&gt;
-<!--         -->    ...
-<!--         -->  &lt;/head&gt;
-<!--         -->  ...
-<!--         -->&lt;/html&gt;
-<!--       --></pre>
-              <p><strong>Important Note:</strong> Make sure you replace the [X.Y.Z VERSION HERE] with the version you want to use (remove the brackets too). A list of all releases is available on <a href="https://github.com/Beg-in/frow/releases" title="Frow Releases" target="_blank" rel="noopener">GitHub</a>.</p>
-            </span>
+            <h5>
+              Disabling Features
+            </h5>
+            <p>
+              Frow is broken into different feature sections, allowing you to disable portions if parts aren't needed or desired.
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// <a href="https://github.com/Beg-in/frow/blob/master/src/_scaffolding.sass" target="_blank" rel="noopener">HTML basics</a> (Minor styling/resets of anchor links, h1-h6, etc.)</span>
+<!--       -->$frow-enable-html-basics:                true;
+<!--       -->
+<!--       --><span class="fake-comment">// <a href="grid.html">Columns/Grid functionality</a></span>
+<!--       -->$frow-enable-columns:                    true;
+<!--       -->
+<!--       --><span class="fake-comment">// <a href="forms.html">Button styling</a></span>
+<!--       -->$frow-enable-buttons:                    true;
+<!--       -->
+<!--       --><span class="fake-comment">// <a href="forms.html">Form elements</a></span>
+<!--       -->$frow-enable-forms:                      true;
+<!--       -->
+<!--       --><span class="fake-comment">// <a href="responsive-design.html">Responsive design rules</a></span>
+<!--       -->$frow-enable-responsive-design-classes:  true;
+<!--       -->
+<!--       --><span class="fake-comment">// <a href="utilities.html">Margin/Padding classes</a> (.mb-10, .p-15, .mx-auto)</span>
+<!--       -->$frow-enable-box-model-shorcuts:         true;
+<!--       -->
+<!--       --><span class="fake-comment">// <a href="utilities.html">Miscellaneous utilities</a></span>
+<!--       -->$frow-enable-utilities:                  true;
+<!--     --></pre>
+            <h5>
+              Grid System
+            </h5>
+            <p>
+              Tweak the defaults involving the column system.
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Maximum Number of columns to support (.col-md-1-12)</span>
+<!--       -->$grid-max-columns: 12;
+<!--       -->
+<!--       --><span class="fake-comment">// Gutter width between columns when using .gutters</span>
+<!--       -->$grid-gutter-width: 30px;
+<!--     --></pre>
+            <h5>
+              Responsive Break Points
+            </h5>
+            <p>
+              Change or add to the responsive breakpoints.
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Small screen / tablet (These assume column 1-1)</span>
+<!--       -->$sizes-mobile: (xs: 0px, sm: 768px);
+<!--       -->
+<!--       --><span class="fake-comment">// Desktops / laptops</span>
+<!--       -->$sizes-desktop: (md: 992px, lg: 1200px);
+<!--       -->
+<!--       --><span class="fake-comment">// Example: You could add an extra extra small breakpoint with:</span>
+<!--       --><span class="fake-comment">// $sizes-mobile: (xxs: 0px, xs: 576px, sm: 768px);</span>
+<!--     --></pre>
+            <h5>
+              Card Shadows
+            </h5>
+            <p>
+              Change the default shadow sizes and colors.
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Shadow for light backgrounds</span>
+<!--       -->$shadow-light: 0px 1px 3px 0px #A0A0A0;
+<!--       -->
+<!--       --><span class="fake-comment">// Shadow for dark backgrounds</span>
+<!--       -->$shadow-dark: 0px 1px 3px 0px #1B1B1B;
+<!--     --></pre>
+            <h5>
+              Animations
+            </h5>
+            <p>
+              Adjust the default animation speed.
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Animation Speed (Mostly form elements)</span>
+<!--       -->$animate-speed: 0.4s;
+<!--       -->
+<!--       --><span class="fake-comment">// Fast Animation Speed (Mostly button hover)</span>
+<!--       -->$animate-speed-fast: 0.1s;
+<!--     --></pre>
+            <h5>
+              Colors
+            </h5>
+            <p>
+              Gray and colors for use across Frow
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Basic grays to use</span>
+<!--       -->$gray-lighter: #EAEAEA;
+<!--       -->$gray-light: #9E9E9E;
+<!--       -->$gray-dark: #888888;
+<!--       -->$gray-darker: #4F4F51;
+<!--       -->
+<!--       --><span class="fake-comment">// Off colors</span>
+<!--       -->$off-white: #BBB;
+<!--       -->$off-black: #333;
+<!--       -->
+<!--       --><span class="fake-comment">// Pure colors</span>
+<!--       -->$white: #FFF;
+<!--       -->$black: #000;
+<!--     --></pre>
+            <h5>
+              Scaffolding
+            </h5>
+            <p>
+              Basic element color declarations
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Non-white background color</span>
+<!--       -->$background-color: #F6F6F6;
+<!--       -->
+<!--       --><span class="fake-comment">// Default text color on body</span>
+<!--       -->$default-text-color: $off-black;
+<!--       -->
+<!--       --><span class="fake-comment">// Default link color</span>
+<!--       -->$link-color: $off-black;
+<!--       -->
+<!--       --><span class="fake-comment">// Default link hover/active/focus color</span>
+<!--       -->$link-hover-color: darken($link-color, 15%);
+<!--     --></pre>
+            <h5>
+              Buttons
+            </h5>
+            <p>
+              Change the default button design
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Button text color</span>
+<!--       -->$button-text-color: $white;
+<!--       -->
+<!--       --><span class="fake-comment">// Button background color</span>
+<!--       -->$button-background-color: $gray-darker;
+<!--       -->
+<!--       --><span class="fake-comment">// Button border color</span>
+<!--       -->$button-border-color: $gray-darker;
+<!--       -->
+<!--       --><span class="fake-comment">// Button disabled text color</span>
+<!--       -->$button-disabled-text-color: $gray-light;
+<!--       -->
+<!--       --><span class="fake-comment">// Button disabled background/border color</span>
+<!--       -->$button-disabled-border-color: $gray-dark;
+<!--       -->
+<!--       --><span class="fake-comment">// Button active click size</span>
+<!--       -->$button-active-size: 0.96;
+<!--     --></pre>
+            <h5>
+              Form Elements
+            </h5>
+            <p>
+              Basic form element color declarations
+            </p>
+            <pre class="fake-code bottom-margin">
+<!--       --><span class="fake-comment">// Form primary color</span>
+<!--       -->$form-color-primary: $gray-darker;
+<!--       -->
+<!--       --><span class="fake-comment">// Form light color</span>
+<!--       -->$form-color-secondary: $gray-light;
+<!--       -->
+<!--       --><span class="fake-comment">// Form focus size</span>
+<!--       -->$form-focus-size: 1.15;
+<!--       -->
+<!--       --><span class="fake-comment">// Checkmark color</span>
+<!--       -->$form-checkmark-color: $white;
+<!--     --></pre>
           </div>
         </div>
-      </div>
-      <div class="frow column-center">
-        <div class="next">Next:</div>
-        <a type="button" class="next-page shadow-light" href="basics.html">
-          The Basics
-        </a>
       </div>
     </main>
     <footer>
