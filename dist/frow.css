@@ -1342,7 +1342,7 @@ textarea {
   .frow.gutters {
     margin-left: -15px;
     margin-right: -15px; }
-    .frow.gutters > [class*=col-xs], .frow.gutters [class*=col-sm], .frow.gutters [class*=col-md], .frow.gutters [class*=col-lg] {
+    .frow.gutters > [class*=col-xs], .frow.gutters > [class*=col-sm], .frow.gutters > [class*=col-md], .frow.gutters > [class*=col-lg] {
       padding-left: 15px;
       padding-right: 15px; }
   .frow [class*=col-xs], .frow [class*=col-sm], .frow [class*=col-md], .frow [class*=col-lg] {
