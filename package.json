@@ -1,6 +1,6 @@
 {
   "name": "frow",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Flexbox Toolkit & Grid",
   "main": "frow.sass",
   "scripts": {
@@ -44,7 +44,7 @@
   },
   "homepage": "http://frowcss.com",
   "dependencies": {
-    "normalize.css": "*"
+    "normalize.css": ">=8.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.1",
