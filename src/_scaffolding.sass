@@ -150,6 +150,45 @@
     box-shadow: none
     border-color: $button-disabled-border-color
 
+// Range Thumb
+=thumb-styles
+  cursor: pointer
+  background: $form-color-primary
+  height: 18px
+  width: 18px
+  border-radius: 50%
+  border: 0
+  transition: transform $animate-speed
+
+=thumb-styles-focus
+  outline: none
+  transform: scale($form-focus-size)
+
+=thumb-styles-disabled
+  cursor: default !important
+  background: repeating-linear-gradient(45deg, darken($button-disabled-border-color, 5%), darken($button-disabled-border-color, 5%) 2px, $white 2px, $white 4px)
+
+// Range Track
+=track-styles-basics
+  width: 100%
+  height: 3px
+  cursor: pointer
+  border-radius: 2px
+
+=track-styles-background
+  background: $form-color-secondary
+
+=track-styles-focus
+  background: $form-color-secondary
+  transition: background $animate-speed
+
+=track-styles-disabled
+  cursor: default !important
+
+=track-styles
+  +track-styles-basics
+  +track-styles-background
+
 // Forms
 @if $frow-enable-forms == true
   // Fieldsets
@@ -261,24 +300,6 @@
       &::-moz-focus-outer
         border: 0
 
-      // Range Thumb
-      =thumb-styles
-        cursor: pointer
-        background: $form-color-primary
-        height: 18px
-        width: 18px
-        border-radius: 50%
-        border: 0
-        transition: transform $animate-speed
-
-      =thumb-styles-focus
-        outline: none
-        transform: scale($form-focus-size)
-
-      =thumb-styles-disabled
-        cursor: default !important
-        background: repeating-linear-gradient(45deg, darken($button-disabled-border-color, 5%), darken($button-disabled-border-color, 5%) 2px, $white 2px, $white 4px)
-
       &::-webkit-slider-thumb
         -webkit-appearance: none
         margin-top: -8px
@@ -311,27 +332,6 @@
 
         &::-ms-thumb
           +thumb-styles-disabled
-
-      // Range Track
-      =track-styles-basics
-        width: 100%
-        height: 3px
-        cursor: pointer
-        border-radius: 2px
-
-      =track-styles-background
-        background: $form-color-secondary
-
-      =track-styles-focus
-        background: $form-color-secondary
-        transition: background $animate-speed
-
-      =track-styles-disabled
-        cursor: default !important
-
-      =track-styles
-        +track-styles-basics
-        +track-styles-background
 
       &::-webkit-slider-runnable-track
         +track-styles

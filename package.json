@@ -1,6 +1,6 @@
 {
   "name": "frow",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Flexbox Toolkit & Grid",
   "main": "frow.sass",
   "scripts": {
@@ -51,7 +51,7 @@
     "browser-sync": "^2.18.13",
     "cssnano": "^4.0.0-rc.2",
     "letsgo": "^0.2.3",
-    "node-sass": "^4.7.2",
+    "node-sass": "^4.8.3",
     "node-sass-tilde-importer": "^1.0.0",
     "npm-run-all": "^4.1.2",
     "onchange": "^3.2.1",
