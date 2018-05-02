@@ -327,6 +327,9 @@ svg {
 pre {
   margin: 0; }
 
+canvas:focus {
+  outline: none; }
+
 button,
 [type="button"],
 [type="reset"],
