@@ -37,24 +37,24 @@
     "framework",
     "web"
   ],
-  "author": "Cody Sherman <cody@beg.in> (http://codysherman.com)",
+  "author": "Cody Sherman <cody@beg.in> (https://codysherman.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Beg-in/frow/issues"
   },
-  "homepage": "http://frowcss.com",
+  "homepage": "https://frowcss.com",
   "dependencies": {
     "normalize.css": ">=8.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.1",
-    "browser-sync": "^2.18.13",
+    "autoprefixer": "^8.4.1",
+    "browser-sync": "^2.24.1",
     "cssnano": "^4.0.0-rc.2",
     "letsgo": "^0.2.3",
-    "node-sass": "^4.8.3",
-    "node-sass-tilde-importer": "^1.0.0",
+    "node-sass": "^4.9.0",
+    "node-sass-tilde-importer": "^1.0.2",
     "npm-run-all": "^4.1.2",
-    "onchange": "^3.2.1",
-    "postcss-cli": "^4.1.1"
+    "onchange": "^3.3.0",
+    "postcss-cli": "^5.0.0"
   }
 }

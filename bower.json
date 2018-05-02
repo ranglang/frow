@@ -1,8 +1,8 @@
 {
   "name": "frow",
-  "homepage": "http://frowcss.com",
+  "homepage": "https://frowcss.com",
   "authors": [
-    "Cody Sherman <cody@beg.in> (http://codysherman.com)"
+    "Cody Sherman <cody@beg.in> (https://codysherman.com)"
   ],
   "description": "Flexbox Toolkit & Grid",
   "main": "_frow.scss",
