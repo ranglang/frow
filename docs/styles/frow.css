@@ -2360,7 +2360,7 @@ textarea {
 .not-clickable, .not-clickable[onclick] {
   cursor: default !important; }
 
-.letsGo-hide {
+.lg-hide {
   display: none !important; }
 
 .shadow-light {
