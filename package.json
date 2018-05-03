@@ -4,7 +4,7 @@
   "description": "Flexbox Toolkit & Grid",
   "main": "frow.sass",
   "scripts": {
-    "sass": "node-sass frow.sass dist/frow.css --importer=node_modules/node-sass-tilde-importer",
+    "sass": "node-sass frow.sass dist/frow.css",
     "autoprefixer": "postcss --no-map -u autoprefixer -r dist/frow.css",
     "cssnano": "postcss --no-map -u cssnano -o dist/frow.min.css dist/frow.css",
     "csscopy": "FROW=`echo \"/* This code is not minified for example purposes only, remember to minify your code! */\" | cat - dist/frow.css` && echo \"$FROW\" > docs/styles/frow.css",
@@ -49,7 +49,6 @@
     "cssnano": "^4.0.0-rc.2",
     "letsgo": "^0.2.3",
     "node-sass": "^4.9.0",
-    "node-sass-tilde-importer": "^1.0.2",
     "npm-run-all": "^4.1.2",
     "onchange": "^3.3.0",
     "postcss-cli": "^5.0.0"
