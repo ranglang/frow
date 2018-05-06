@@ -248,6 +248,9 @@ template, [hidden] {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
+[hidden] {
+  display: none !important; }
+
 body {
   color: #333; }
 
@@ -2359,9 +2362,6 @@ textarea {
 
 .not-clickable, .not-clickable[onclick] {
   cursor: default !important; }
-
-.lg-hide {
-  display: none !important; }
 
 .shadow-light {
   box-shadow: 0px 1px 3px 0px #A0A0A0 !important; }
