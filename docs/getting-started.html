@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <!-- This code is not minified for example purposes only, remember to minify your code! -->
   <head>
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/frow.css" title="Frow CSS">
     <link rel="stylesheet" href="styles/main.css">
 
-    <script type="text/javascript" src="scripts/letsgo.js" async></script>
+    <script src="scripts/letsgo.js" async></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -132,7 +132,7 @@
               </label>
             </div>
             <div class="col-md-1-2">
-              <span id="preferred-css-selector">
+              <div id="preferred-css-selector">
                 <h5>Preferred CSS preprocessor:</h5>
                 <label class="display-selector row-start">
                   <input type="radio"
@@ -151,31 +151,31 @@
                   <div class="control__indicator"></div>
                   None (Use regular CSS)
                 </label>
-              </span>
+              </div>
             </div>
           </div>
           <div class="frow-setup">
             <h5>
               1. Get Frow
             </h5>
-            <span class="section-install-npm section-install">
+            <div class="section-install-npm section-install">
               <p>Navigate to your project's folder, and then download Frow via <a href="https://www.npmjs.com/package/frow" target="_blank" rel="noopener">npm</a>:</p>
               <pre class="fake-code bottom-margin">
 <!--         -->$ npm install frow
 <!--       --></pre>
-            </span>
-            <span class="section-install-bower section-install letsGo-hide">
+            </div>
+            <div class="section-install-bower section-install letsGo-hide">
               <p>Navigate to your project's folder, and then download Frow via <a href="https://bower.io/" target="_blank" rel="noopener">Bower</a>:</p>
               <pre class="fake-code bottom-margin">
 <!--         -->$ bower install frow
 <!--       --></pre>
-            </span>
-            <span class="section-install-download section-install letsGo-hide">
+            </div>
+            <div class="section-install-download section-install letsGo-hide">
               <p class="bottom-margin">Download a Frow .zip via <a href="https://github.com/Beg-in/frow/releases/latest" title="Frow Latest Release" target="_blank" rel="noopener">GitHub</a>, then place the unzipped folder inside of your project's folder.</p>
-            </span>
-            <span class="section-cdn section-install letsGo-hide">
+            </div>
+            <div class="section-cdn section-install letsGo-hide">
               <p class="bottom-margin">No need to download anything, a CDN for Frow is provided via <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">jsDelivr</a>. However, as a free service, there are no uptime guarantees.</p>
-            </span>
+            </div>
             <h5>
               2. Include HTML5 doctype and add mobile viewport meta tag
             </h5>
@@ -193,8 +193,8 @@
 <!--       -->  &lt;/body&gt;
 <!--       -->&lt;/html&gt;
 <!--     --></pre>
-            <span class="section-style-all">
-              <span class="section-style-sass section-style">
+            <div class="section-style-all">
+              <div class="section-style-sass section-style">
                 <h5>
                   3. Import Frow into your main Sass file
                 </h5>
@@ -202,17 +202,17 @@
                   <strong>FYI:</strong> For better rendering across all browsers, Frow has <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="noopener">Normalize.css</a> built-in.
                 </p>
                 <pre class="fake-code mb-0">
-<!--           --><span class="fake-comment">// Place your project's variables file first (if you have one) to <a href="customize.html">customize Frow</a></span>
-<!--           --><span class="fake-comment">// @import '[your-path-to]/variables';</span>
+<!--           --><div class="fake-comment">// Place your project's variables file first (if you have one) to <a href="customize.html">customize Frow</a></div>
+<!--           --><div class="fake-comment">// @import '[your-path-to]/variables';</div>
 <!--           -->
 <!--           -->@import '[your-path-to]/frow/frow';
 <!--           -->
-<!--           --><span class="fake-comment">// Import your project's Sass files after Frow</span>
-<!--           --><span class="fake-comment">// @import '[the-rest-of-your-sass-files]';</span>
+<!--           --><div class="fake-comment">// Import your project's Sass files after Frow</div>
+<!--           --><div class="fake-comment">// @import '[the-rest-of-your-sass-files]';</div>
 <!--         --></pre>
                 <p><strong>Important Note:</strong> Don't forget to <a href="https://github.com/postcss/autoprefixer" title="Autoprefixer">add vendor prefixes</a> and minify when converting to CSS!</p>
-              </span>
-              <span class="section-style-css section-style letsGo-hide">
+              </div>
+              <div class="section-style-css section-style letsGo-hide">
                 <h5>
                   3. Import Frow's CSS into your HTML file
                 </h5>
@@ -232,9 +232,9 @@
 <!--           -->  ...
 <!--           -->&lt;/html&gt;
 <!--         --></pre>
-              </span>
-            </span>
-            <span class="section-cdn letsGo-hide">
+              </div>
+            </div>
+            <div class="section-cdn letsGo-hide">
               <h5>
                 3. Add Frow's CDN into your HTML file
               </h5>
@@ -255,7 +255,7 @@
 <!--         -->&lt;/html&gt;
 <!--       --></pre>
               <p><strong>Important Note:</strong> If you need a specific version of Frow, a list of all releases is available on <a href="https://github.com/Beg-in/frow/releases" title="Frow Releases" target="_blank" rel="noopener">GitHub</a>.</p>
-            </span>
+            </div>
           </div>
         </div>
       </div>
