@@ -26,7 +26,7 @@ Refer to the [Getting Started Guide](https://frowcss.com/getting-started.html) f
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Frow Project</title>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/Beg-in/frow/[X.Y.Z VERSION HERE]/dist/frow.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frow@3/dist/frow.min.css">
     ...
   </head>
   ...
