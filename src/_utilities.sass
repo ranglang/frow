@@ -113,3 +113,20 @@
 
   .text-capitalize
     text-transform: capitalize !important
+
+  // Print display rules
+  // -------------------------
+  .visible-print,
+  .frow.visible-print
+    display: none !important
+
+  @media print
+    .hidden-print,
+    .frow.hidden-print
+      display: none !important
+
+    .visible-print
+      display: block !important
+
+    .frow.visible-print
+      display: flex !important
