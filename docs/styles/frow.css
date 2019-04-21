@@ -2295,6 +2295,18 @@ textarea {
 .height-auto {
   height: auto !important; }
 
+.shrink-0 {
+  flex-shrink: 0 !important; }
+
+.shrink-1 {
+  flex-shrink: 1 !important; }
+
+.grow-0 {
+  flex-grow: 0 !important; }
+
+.grow-1 {
+  flex-grow: 1 !important; }
+
 .clickable:not([disabled]), [onclick]:not([disabled]) {
   cursor: pointer !important; }
 

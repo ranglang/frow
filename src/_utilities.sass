@@ -53,6 +53,7 @@
           @if $direction == "l" or $direction == "x"
             #{$type}-left: auto !important
 
+@if $frow-enable-utilities == true
   // Width and height rules
   // -------------------------
   .width-100
@@ -67,7 +68,20 @@
   .height-auto
     height: auto !important
 
-@if $frow-enable-utilities == true
+  // Flex shrink and grow rules
+  // -------------------------
+  .shrink-0
+    flex-shrink: 0 !important
+
+  .shrink-1
+    flex-shrink: 1 !important
+
+  .grow-0
+    flex-grow: 0 !important
+
+  .grow-1 
+    flex-grow: 1 !important
+
   // Cursor pointer classes
   // -------------------------
   .clickable:not([disabled]), [onclick]:not([disabled])
