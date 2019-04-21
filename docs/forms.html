@@ -268,25 +268,30 @@
             Labels
           </h5>
           <p>
-            To improve the usefulness of wrapping labels around form elements, labels by default are display:flex. You can use any of the <a href="frow-shortcuts.html">Frow Shortcuts</a> to alter the behavior of contents within the label.
+            To improve the usefulness of wrapping labels around form elements, labels by default are display:flex. You can use any of the <a href="frow-shortcuts.html">Frow Shortcuts</a> to alter the behavior of contents within the label. As a bonus, because the label is wrapping the input, they are automatically linked together: Clicking the label jumps to the input.
           </p>
           <div class="frow items-stretch bottom-margin">
             <div class="col-md-1-2">
               <pre class="fake-code height-100">
 <!--         -->&lt;label&gt;
-<!--         -->  Address
+<!--         -->  First Name
 <!--         -->  &lt;input&gt;
 <!--         -->&lt;/label&gt;
 <!--         -->
 <!--         -->&lt;label class="column-center"&gt;
-<!--         -->  Address
+<!--         -->  First Name
 <!--         -->  &lt;input&gt;
 <!--         -->&lt;/label&gt;
 <!--         -->
 <!--         -->&lt;label class="row-start"&gt;
-<!--         -->  Address
+<!--         -->  &lt;span class="shrink-0"&gt;First Name&lt;/span&gt;
 <!--         -->  &lt;input&gt;
 <!--         -->&lt;/label&gt;
+<!--         -->
+<!--         --><span class="fake-comment">// A .label class is provided to style like a label without being a label</span>
+<!--         -->&lt;div class="label"&gt;
+<!--         -->  Group Label
+<!--         -->&lt;/div&gt;
 <!--       --></pre>
             </div>
             <div class="col-md-1-2">
@@ -294,17 +299,20 @@
                 <div class="frow centered">
                   <div class="form-example shadow-light content-center">
                     <label class="mb-40">
-                      Address
+                      First Name
                       <input>
                     </label>
                     <label class="column-center mb-50">
-                      Address
+                      First Name
                       <input>
                     </label>
                     <label class="row-start">
-                      Address
+                      <span class="shrink-0">First Name</span>
                       <input>
                     </label>
+                    <div class="label mt-50">
+                      Group Label
+                    </div>
                   </div>
                 </div>
               </div>
