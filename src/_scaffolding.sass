@@ -6,6 +6,22 @@
 @function convert-to-rgba($color)
   @return "rgba(" + red($color) + "," + green($color) + "," + blue($color) + "," + opacity($color) + ")"
 
+=anchor
+  cursor: pointer
+  color: $link-color
+  text-decoration: none
+
+  &:hover,
+  &:focus,
+  &:active
+    color: $link-hover-color
+    text-decoration: underline
+
+  p &
+    text-decoration: underline
+    display: inline;
+
+
 @if $frow-enable-html-basics == true
   // Reset the box-sizing and tap highlight color
   *, :after, :before
@@ -23,18 +39,7 @@
 
   // Links
   a
-    cursor: pointer
-    color: $link-color
-    text-decoration: none
-
-    &:hover,
-    &:focus,
-    &:active
-      color: $link-hover-color
-      text-decoration: underline
-
-    p &
-      text-decoration: underline
+    +anchor
 
   // SVGs
   svg
@@ -75,7 +80,9 @@
   padding: 7px
   transition: transform $animate-speed-fast, background $animate-speed, border-color $animate-speed, color $animate-speed, box-shadow $animate-speed
 
-  &:hover, &:focus, &:active
+  &:hover,
+  &:focus,
+  &:active
     background-color: darken($button-background-color, 15%)
     border-color: darken($button-border-color, 15%)
     outline: none
@@ -88,7 +95,9 @@
   &:disabled
     +frow-button-disabled
 
-    &:hover, &:focus, &:active
+    &:hover,
+    &:focus,
+    &:active
       +frow-button-disabled
 
 @if $frow-enable-buttons == true
@@ -98,6 +107,43 @@
   [type="reset"],
   [type="submit"]
     +frow-button
+
+    &.button-link
+      &,
+      &:disabled
+        +anchor
+        border: none
+        outline: none
+        padding: 0
+        background: none
+        color: inherit
+        font-weight: inherit
+        font-size: inherit
+        text-transform: none
+      &:disabled
+        &,
+        &:hover,
+        &:focus,
+        &:active
+          color: lighten($link-color, 40%)
+          text-decoration: none;
+
+    &.button-none
+      &,
+      &:focus,
+      &:active,
+      &:hover,
+      &:disabled,
+      &:disabled:hover
+        border: none
+        outline: none
+        margin: 0
+        padding: 0
+        background: none
+        color: inherit
+        font-weight: inherit
+        font-size: inherit
+        text-transform: none
 
 // Inputs
 =input-rules
