@@ -169,17 +169,22 @@
   width: 100%
   transition: border-color $animate-speed, color $animate-speed
 
+  &::placeholder
+    opacity: 1;
+    color: $form-placeholder-color
+
   &:placeholder-shown
-    color: $form-color-secondary
+    color: $form-placeholder-color
 
   &::-webkit-input-placeholder
-    color: $form-color-secondary
+    color: $form-placeholder-color
 
   &::-moz-placeholder
-    color: $form-color-secondary
+    opacity: 1;
+    color: $form-placeholder-color
 
   &:-ms-input-placeholder
-    color: $form-color-secondary
+    color: $form-placeholder-color
 
   &:hover, &:focus
     border-color: $form-color-primary
