@@ -2425,6 +2425,33 @@ textarea {
 .height-auto {
   height: auto !important; }
 
+.overflow-visible {
+  overflow: visible !important; }
+
+.overflow-hidden {
+  overflow: hidden !important; }
+
+.overflow-auto {
+  overflow: auto !important; }
+
+.overflow-y-visible {
+  overflow-y: visible !important; }
+
+.overflow-y-hidden {
+  overflow-y: hidden !important; }
+
+.overflow-y-auto {
+  overflow-y: auto !important; }
+
+.overflow-x-visible {
+  overflow-x: visible !important; }
+
+.overflow-x-hidden {
+  overflow-x: hidden !important; }
+
+.overflow-x-auto {
+  overflow-x: auto !important; }
+
 .shrink-0 {
   flex-shrink: 0 !important; }
 
