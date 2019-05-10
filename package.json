@@ -10,7 +10,6 @@
     "csscopy": "FROW=`echo \"/* This code is not minified for example purposes only, remember to minify your code! */\" | cat - dist/frow.css` && echo \"$FROW\" > docs/styles/frow.css",
     "letsgocopy": "cp -t docs/scripts node_modules/letsgo/letsgo.js",
     "build:css": "run-s sass autoprefixer cssnano csscopy",
-    "build:js": "run-s letsgocopy",
     "build": "run-s build:*",
     "watch:src": "onchange \"frow.sass\" \"_variables.sass\" \"src\" -- run-s build:css",
     "watch": "run-p watch:*",
